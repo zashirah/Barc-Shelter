@@ -10,10 +10,6 @@ A collaboraton of UX Designers and Software Engineers. This document is created 
 
 https://docs.google.com/document/d/1EfjZDBdApXgTKQf4p8k6Wl1ZhXrEm0sApP52E8Vvcc8/edit
 
-## API and Data Sample
-
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
-
 
 ## Wireframes
 
