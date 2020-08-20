@@ -14,9 +14,14 @@ https://docs.google.com/document/d/1EfjZDBdApXgTKQf4p8k6Wl1ZhXrEm0sApP52E8Vvcc8/
 
 Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
 
+
 ## Wireframes
 
 https://whimsical.com/Cfsr52QZEz5tbv9zevyL4X
+
+## Overview
+ The features included in this website are: create a page, edit page, filter thru the all animal page, a button that leads to the donate page, a button that leads to the volunteer page. After creating all of this and making it functional our goal is to add some extra style to the website. Make it responsive and separate the two styles from (the mobile and desktop)so the viewer can tell when you get on the mobile page only a certain style is working. And then, when you are on the desktop page different styles, would be active.
+
 
 ### MVP/PostMVP
 
