@@ -23,7 +23,7 @@ https://whimsical.com/Cfsr52QZEz5tbv9zevyL4X
  The features included in this website are: create a page, edit page, filter thru the all animal page, a button that leads to the donate page, a button that leads to the volunteer page. After creating all of this and making it functional our goal is to add some extra style to the website. Make it responsive and separate the two styles from (the mobile and desktop)so the viewer can tell when you get on the mobile page only a certain style is working. And then, when you are on the desktop page different styles, would be active.
 
 
-#### MVP
+## MVP
 
 - Homepage
 - Render data on page
@@ -82,7 +82,7 @@ CREATE PET (CRUD)
 
 - CreateAnimalForm
 
-#### PostMVP
+## PostMVP
 
 - Create the online Application Form 
 
