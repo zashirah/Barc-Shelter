@@ -4,16 +4,15 @@
 
 Barc Shelter is a website for animals at a shelter to adopt
 
+## Whimsical Diagram
+
+https://whimsical.com/Cfsr52QZEz5tbv9zevyL4X
+
 ## Team Expectations
 
 A collaboraton of UX Designers and Software Engineers. This document is created by Software enginners as a plan to articulate the events taken to produce the product.
 
 https://docs.google.com/document/d/1EfjZDBdApXgTKQf4p8k6Wl1ZhXrEm0sApP52E8Vvcc8/edit
-
-
-## Whimsical Diagram
-
-https://whimsical.com/Cfsr52QZEz5tbv9zevyL4X
 
 ## MongoDB Schema
 ```
@@ -25,6 +24,7 @@ var Pet = new Schema({
   breed: String,
   bioPersonality: String,
   images: [String]
+  })
 ```
 
 ## Overview
