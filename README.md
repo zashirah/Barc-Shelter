@@ -1,14 +1,14 @@
-# Barc-Shelter
+# Barc-Shelter Overview
 
-# Project Overview
+## Barc-Shelter
 
-## Project Name
-
-The name of your project.
+Barc Shelter is a website for animals at a shelter to adopt
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+A collaboraton of UX Designers and Software Engineers. This document is created by Software enginners as a plan to articulate the events taken to produce the product.
+
+https://docs.google.com/document/d/1EfjZDBdApXgTKQf4p8k6Wl1ZhXrEm0sApP52E8Vvcc8/edit
 
 ## API and Data Sample
 
@@ -16,19 +16,70 @@ Specify the API you are using and include a link. Show us a snippet of JSON retu
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+https://whimsical.com/Cfsr52QZEz5tbv9zevyL4X
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
+The functionality will then be divided into two separate lists: MPV and PostMVP. Our MVP consist of the home page, all pets page, pet detail, edit pet, and create pet screens.
 
 #### MVP
 
-_These are examples only. Replace with your own MVP features._
-
-- Find and use external api
+- Homepage
 - Render data on page
-- Allow user to choose favorites
+- Cat List page
+  More Details are:
+  Components:
+  App.js
+
+ALL
+
+- Layout
+- Header
+- Footer
+- SocialButtons (in Footer)
+- AllAnimalsHeaderSection (all but home page)
+- SmallButton (yellow button/black text)
+
+ANCILLARY
+
+- MainButton (orange button/white text)
+
+HOME PAGE
+
+- HomePageCards (x4; needs title)
+- HomePageLargeSection
+- HomePageSmallSection
+- HorizontalAnimalPictureSection
+- Button (Adopt me!)
+- Button (Volunteer Info - vol page wasn't designed by UX)
+- Button (Donate Now)
+
+ALL ANIMALS PAGE
+
+- AnimalCards
+- Filter
+- Sort
+- PageNavigation
+- (links to create animal page, details page)
+
+DETAILS PAGE (CRUD) - Zach
+
+- Carousel
+- InfoSection
+- EligibilityInformationSection
+- Button (Adopt me!)
+- Button (Delete)
+- Button (Edit)
+- (links to edit page, adopt page)
+
+EDIT PET (CRUD)
+
+- same as detail but with edittable text
+- Button (Submit)
+
+CREATE PET (CRUD)
+
+- CreateAnimalForm
 
 #### PostMVP
 
