@@ -25,11 +25,15 @@ const EditPet = () => {
       [name]: value
     })
   }
-
+  
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    await updatePet(id, pet)
+  }
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="name"></label>
         <input
           type="text"
@@ -39,12 +43,11 @@ const EditPet = () => {
           name='name'
           autoFocus
           placeholder='Name'
-          onChange={(e) => handleChange(e)}
+          onChange={handleChange}
         />
-
-
+        <label htmlFor="submitButton"></label>
+        <input type="submit" value="submit" name="submitButton" id="submitButton"/>
       </form>
-      
     </div>
   )
 }
