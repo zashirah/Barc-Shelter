@@ -18,7 +18,7 @@ const AllPets = () => {
   }, [])
 
   const petCardsJSX = queriedPets.map((pet, index) => 
-    <AnimalCard name={pet.name} key={index}/>
+    <AnimalCard name={pet._id} key={index}/>
   )
 
   return (
