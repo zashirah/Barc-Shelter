@@ -22,47 +22,57 @@ const Carousel = () => {
   const index2 = wrap(0, COLORS.length, page+2)
   const index3 = wrap(0, COLORS.length, page+3)
   const index4 = wrap(0, COLORS.length, page+4)
+  
 
   return (
     <div
       style={{
-        display: 'flex'
+        display: 'flex',
+        flexDirection: 'column'
       }}
     >
       <div
         style={{
           height: 400,
           width: 400,
-          backgroundColor: COLORS[index]
+          backgroundColor: COLORS[index],
+          marginBottom: 2.5
         }}
       />
-      <div>
+      <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        width: 400,
+        justifyContent: 'space-between'
+        }}
+      >
 
       <div
         style={{
-          height: 100,
-          width: 100,
+          height: 97.5,
+          width: 97.5,
           backgroundColor: COLORS[index1]
         }}
       />
       <div
         style={{
-          height: 100,
-          width: 100,
+          height: 97.5,
+          width: 97.5,
           backgroundColor: COLORS[index2]
         }}
       />
       <div
         style={{
-          height: 100,
-          width: 100,
+          height: 97.5,
+          width: 97.5,
           backgroundColor: COLORS[index3]
         }}
       />
       <div
         style={{
-          height: 100,
-          width: 100,
+          height: 97.5,
+          width: 97.5,
           backgroundColor: COLORS[index4]
         }}
       />
