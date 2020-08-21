@@ -11,7 +11,6 @@ const AllPets = () => {
   useEffect(() => {
     const fetchPets = async () => {
       const pets = await getPets()
-      console.log(pets)
       setAllPets(pets)
       setQueriedPets(pets)
     }
@@ -19,7 +18,7 @@ const AllPets = () => {
   }, [])
 
   const petCardsJSX = queriedPets.map((pet, index) => 
-    <AnimalCard name={pet.name}/>
+    <AnimalCard name={pet._id} key={index}/>
   )
 
   return (
