@@ -8,7 +8,7 @@ const main = async () => {
     {
       type: "cat",
       name: "Cat 005",
-      age: 2, // in years or months
+      age: 23, // in years or months
       sex: "female",
       breed: "lab",
       bioPersonality: "cat that thinks it's a lab",
@@ -20,7 +20,7 @@ const main = async () => {
     {
       type: "cat",
       name: "Cat 002",
-      age: 2, // in years or months
+      age: 3, // in years or months
       sex: "female",
       breed: "lab",
       bioPersonality: "cat that thinks it's a lab",
@@ -32,7 +32,7 @@ const main = async () => {
     {
       type: "cat",
       name: "Cat 003",
-      age: 2, // in years or months
+      age: 4, // in years or months
       sex: "female",
       breed: "lab",
       bioPersonality: "cat that thinks it's a lab",
@@ -44,7 +44,7 @@ const main = async () => {
     {
       type: "cat",
       name: "Cat 004",
-      age: 2, // in years or months
+      age: 12, // in years or months
       sex: "female",
       breed: "lab",
       bioPersonality: "cat that thinks it's a lab",
