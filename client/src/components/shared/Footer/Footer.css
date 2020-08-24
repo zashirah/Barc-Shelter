@@ -5,3 +5,11 @@ footer {
   flex: 1;
   padding: 20px;
 }
+
+ul {
+  list-style-type: none;
+}
+.col {
+  padding-left: 10px;
+  padding-right: 10px;
+}
