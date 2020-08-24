@@ -24,14 +24,15 @@ const Carousel = () => {
   const index2 = wrap(0, COLORS.length, page+2)
   const index3 = wrap(0, COLORS.length, page+3)
   const index4 = wrap(0, COLORS.length, page+4)
-  
 
   return (
     <div
       style={{
         display: 'flex',
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        width: '50vw'
+
       }}
     >
       <button
