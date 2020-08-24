@@ -24,7 +24,7 @@ const PetDetail = () => {
   return (
     <div>
       <div className="pet-detail-top-section">
-      <Carousel />
+        <Carousel />
       <InfoSection
         name={pet.name}
         age={pet.age}
