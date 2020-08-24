@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react"
+import "./Home.css"
+import HomePageCards from "../../components/HomePageCards/HomePageCards"
+import HeaderImage from "../../components/HeaderImage/HeaderImage"
+import HomePageLargeSection from "../../components/HomePageLargeSection/HomePageLargeSection"
 
 const Home = () => {
   return (
     <div>
-      hi
+      <HeaderImage />
+      <HomePageLargeSection />
+      <HomePageCards />
     </div>
   )
 }
