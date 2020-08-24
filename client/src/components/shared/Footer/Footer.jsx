@@ -10,6 +10,7 @@ const Footer = () => {
       <div className="col">
         <h5>LOCATION</h5>
         <ul>
+          <li></li>
           <li>
             <h6>
               Brooklyn Animal Resource Coalition (BARC) is a 501(c)(3)
@@ -22,7 +23,6 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-
       <div className="col">
         <h5>MAILING ADRESS</h5>
         <ul>
@@ -34,7 +34,6 @@ const Footer = () => {
           <li>718-486-7489</li>
         </ul>
       </div>
-
       <div className="col">
         <h5>HOURS</h5>
         <h6>Adoption Hours</h6>
@@ -46,7 +45,6 @@ const Footer = () => {
           <li>Sunday & Monday </li>
         </ul>
       </div>
-
       <div className="col">
         <h2>ADOPT</h2>
         <SocialMediaIconsReact
@@ -70,10 +68,14 @@ const Footer = () => {
         />
         <p>"Life is great, animals make it better."</p>
       </div>
-
       <div className="col">
         <h3>CONTACT US</h3>
         {/* Donate button */}
+      </div>
+      <div className="footer">
+        <p className="footer-copyright">
+          &copy; BARC Shelter {new Date().getFullYear()}
+        </p>
       </div>
     </footer>
   );
