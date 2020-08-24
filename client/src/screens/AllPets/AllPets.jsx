@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './AllPets.css'
 
-import AnimalCard from '../../components/AnimalCard/AnimcalCard'
+import AnimalCard from '../../components/AnimalCard/AnimalCard'
 
 import { YO, OY, shelterLongest, shelterYoungest } from '../../utils/sort'
 import Sort from '../../components/Sort/Sort'

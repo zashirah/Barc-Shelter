@@ -13,5 +13,5 @@ export const YO = arr => arr.sort(compareKey('age'))
 export const OY = arr => arr.sort(compareKey('age')).reverse()
 
 //need to add shelter in schema
-export const shelterYoungest= arr => arr.sort((a, b) => parseInt(a.price) - parseInt(b.price))
-export const shelterLongest = arr => arr.sort((a, b) => parseInt(b.price) - parseInt(a.price))
+export const shelterYoungest= arr => arr.sort((a, b) => parseInt(a.date) - parseInt(b.date))
+export const shelterLongest = arr => arr.sort((a, b) => parseInt(b.date) - parseInt(a.date))
