@@ -4,6 +4,8 @@ footer {
   align-items: center;
   flex: 1;
   padding: 20px;
+  background-color: rgb(91, 91, 91);
+  color: white;
 }
 
 ul {
@@ -12,4 +14,8 @@ ul {
 .col {
   padding-left: 10px;
   padding-right: 10px;
+}
+.footer-copyright {
+  font-size: 0.8rem;
+  opacity: 0.7;
 }

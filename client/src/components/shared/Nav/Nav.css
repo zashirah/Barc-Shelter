@@ -55,3 +55,7 @@ a {
     padding: 3px;
   }
 }
+.dropdown {
+  display: flex;
+  justify-content: center;
+}
