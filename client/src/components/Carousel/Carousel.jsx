@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { wrap } from "@popmotion/popcorn";
+import leftChevron from './chevron-left.png'
+import rightChevron from './chevron-right.png'
 
 const COLORS = [
   'red',
@@ -28,62 +30,89 @@ const Carousel = () => {
     <div
       style={{
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'row',
+        alignItems: 'center'
       }}
     >
-      <div
+      <button
+        onClick={() => paginate(-1)}
         style={{
-          height: 400,
-          width: 400,
-          backgroundColor: COLORS[index],
-          marginBottom: 2.5
-        }}
-      />
-      <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        width: 400,
-        justifyContent: 'space-between'
+          backgroundColor: 'white',
+          border: 'none',
+          color: 'none',
+          height: 100,
+          display: 'flex',
+          alignItems: 'center'
         }}
       >
+        <img src={leftChevron} alt="left button click"/>
+      </button> 
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column'
+        }}
+      >
+        <div
+          style={{
+            height: 400,
+            width: 400,
+            backgroundColor: COLORS[index],
+            marginBottom: 2.5
+          }}
+        />
+        <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          width: 400,
+          justifyContent: 'space-between'
+          }}
+        >
 
-      <div
-        style={{
-          height: 97.5,
-          width: 97.5,
-          backgroundColor: COLORS[index1]
-        }}
-      />
-      <div
-        style={{
-          height: 97.5,
-          width: 97.5,
-          backgroundColor: COLORS[index2]
-        }}
-      />
-      <div
-        style={{
-          height: 97.5,
-          width: 97.5,
-          backgroundColor: COLORS[index3]
-        }}
-      />
-      <div
-        style={{
-          height: 97.5,
-          width: 97.5,
-          backgroundColor: COLORS[index4]
-        }}
-      />
-
+        <div
+          style={{
+            height: 97.5,
+            width: 97.5,
+            backgroundColor: COLORS[index1]
+          }}
+        />
+        <div
+          style={{
+            height: 97.5,
+            width: 97.5,
+            backgroundColor: COLORS[index2]
+          }}
+        />
+        <div
+          style={{
+            height: 97.5,
+            width: 97.5,
+            backgroundColor: COLORS[index3]
+          }}
+        />
+        <div
+          style={{
+            height: 97.5,
+            width: 97.5,
+            backgroundColor: COLORS[index4]
+          }}
+        />
+        </div>
       </div>
-      <div>
-        <button onClick={() => paginate(-1)}>Left</button>  
-        <button onClick={() => paginate(1)}>Right</button>  
-      </div>
-
-
+      <button
+        onClick={() => paginate(1)}
+        style={{
+          backgroundColor: 'white',
+          border: 'none',
+          color: 'none',
+          height: 100,
+          display: 'flex',
+          alignItems: 'center'
+        }}
+      >
+        <img src={rightChevron} alt="right button click"/>
+      </button>  
     </div>
   )
 }
