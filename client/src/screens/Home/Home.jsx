@@ -1,3 +1,4 @@
+
 import React from "react"
 import "./Home.css"
 import HomePageCards from "../../components/HomePageCards/HomePageCards"
@@ -14,4 +15,6 @@ const Home = () => {
   )
 }
 
-export default Home
+
+
+export default Home;

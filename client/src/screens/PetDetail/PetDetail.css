@@ -1,0 +1,4 @@
+.pet-detail-top-section {
+  display: flex;
+  flex-direction: row;
+}

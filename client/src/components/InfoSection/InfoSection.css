@@ -1,0 +1,14 @@
+.pet-detail-info-section {
+  width: 50vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pet-detail-left {
+  text-align: left;
+} 
