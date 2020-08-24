@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import Carousel from '../../components/Carousel/Carousel'
 import InfoSection from '../../components/InfoSection/InfoSection'
 import SecondaryHeaderImage from '../../components/SecondaryHeaderImage/SecondaryHeaderImage'
+import EligibilityInformationSection from '../../components/EligibilityInformationSection/EligibilityInformationSection'
 
 import './PetDetail.css'
 
@@ -39,6 +40,7 @@ const PetDetail = () => {
       </div>
       <button>Edit</button>
       <button onClick={() => deletePet(pet._id)}>Delete</button>
+      <EligibilityInformationSection />
     </div>
   )
   } else {
