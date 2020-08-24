@@ -1,0 +1,116 @@
+.Cat {
+  float: left;
+  margin-top: -13px;
+}
+
+.Dog {
+  float: right;
+  margin-top: -290px;
+}
+
+.welcome {
+  width: 724px;
+  height: 57px;
+  font-family: Lato;
+  font-size: 50px;
+  font-weight: 500;
+  margin-left: 550px;
+}
+
+.animals {
+  width: 735px;
+  height: 44px;
+  font-family: Lato;
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+  margin-left: 550px;
+}
+
+.image {
+  background-image: url("./dogSleeping.jpg");
+  /* margin-top: -30px; */
+  height: 670px;
+  margin-top: 140px;
+  background-size: 1840px 670px;
+  background-repeat: no-repeat;
+}
+
+.volunteer {
+  width: 656px;
+  height: 171px;
+  font-family: Lato;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  left: 1050px;
+  top: 1200px;
+}
+
+.volunteer-info {
+  width: 300px;
+  height: 101px;
+  font-family: Avenir;
+  font-size: 36px;
+  font-weight: 800;
+  border-radius: 10px;
+  color: white;
+  position: absolute;
+  left: 1250px;
+  top: 1450px;
+  background-color: #d65f06;
+}
+
+.orangeCat {
+  float: right;
+  margin-top: -220px;
+}
+
+.whiteDog {
+  float: left;
+  margin-top: -80px;
+}
+
+.animal-saying {
+  width: 634px;
+  height: 200px;
+  font-family: Lato;
+  font-size: 42px;
+  margin-left: 550px;
+  margin-top: 120px;
+}
+
+.tiger-cat {
+  background-image: url("./tigerCat.jpg");
+  height: 670px;
+  margin-top: 140px;
+  background-size: 1840px 670px;
+  background-repeat: no-repeat;
+}
+
+.purchase-items {
+  width: 550px;
+  height: 171px;
+  font-family: Lato;
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+  margin-left: 100px;
+  position: relative;
+  left: 50px;
+  top: 200px;
+}
+
+.donate {
+  width: 300px;
+  height: 101px;
+  font-family: Avenir;
+  font-size: 36px;
+  font-weight: 800;
+  border-radius: 10px;
+  color: white;
+  margin-right: 950px;
+  margin-top: 250px;
+  background-color: #d65f06;
+}
