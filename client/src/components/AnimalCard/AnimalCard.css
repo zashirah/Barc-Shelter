@@ -1,0 +1,25 @@
+.outer-box{
+  border-style:solid;
+  width:285px;
+}
+.cat-info-box{
+  /* border-style:solid; */
+  height:61px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+}
+.cat-name{
+  /* border-style:solid; */
+  height:61px;
+  border-right: 2px solid black;
+}
+.cat-age{
+  /* border-style:solid; */
+
+}
+.pet-card-image{
+width:285px;
+height: 285px;
+}
