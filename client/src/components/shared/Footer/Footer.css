@@ -4,6 +4,8 @@ footer {
   align-items: center;
   flex: 1;
   padding: 20px;
+  background-color: rgb(91, 91, 91);
+  color: white;
 }
 
 ul {
