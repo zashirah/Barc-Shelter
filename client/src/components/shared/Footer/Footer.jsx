@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import MapFunction from "../Map/MapFunction";
 
 import ReactDOM from "react-dom";
 import { SocialMediaIconsReact } from "social-media-icons-react";
@@ -10,7 +11,9 @@ const Footer = () => {
       <div className="col">
         <h5>LOCATION</h5>
         <ul>
-          <li></li>
+          <li>
+            <MapFunction />
+          </li>
           <li>
             <h6>
               Brooklyn Animal Resource Coalition (BARC) is a 501(c)(3)
