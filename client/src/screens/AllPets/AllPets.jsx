@@ -1,5 +1,16 @@
-import React, { useEffect, useState } from "react";
-import "./AllPets.css";
+
+import React, { useEffect, useState } from 'react'
+import './AllPets.css'
+
+import AnimalCard from '../../components/AnimalCard/AnimalCard'
+
+import { YO, OY, shelterLongest, shelterYoungest } from '../../utils/sort'
+import Sort from '../../components/Sort/Sort'
+import Layout from '../../components/shared/Layout/Layout'
+import { getPets } from '../../services/pets'
+// import PageNavigation from '../../components/PageNavigation/PageNavigation'
+import ReactPaginate from 'react-paginate'
+
 
 import AnimalCard from "../../components/AnimalCard/AnimalCard";
 
@@ -9,18 +20,27 @@ import Layout from "../../components/shared/Layout/Layout";
 import { getPets } from "../../services/pets";
 
 const AllPets = () => {
-  const [allPets, setAllPets] = useState([]);
-  const [queriedPets, setQueriedPets] = useState([]);
-  const [sortType, setSortType] = useState([]);
+
+  const [allPets, setAllPets] = useState([])
+  const [queriedPets, setQueriedPets] = useState([])
+  const [sortType, setSortType] = useState([])
+  const [offset, updateOffset] = useState(0)
+  const [tableData, updateTableData] = useState([])
+  const [orgtableData, updateOrgTableData] = useState([])
+  const [perPage, updatePerPage] = useState(6)
+  const [currentpage, updateCurrentPage] = useState(0)
+  const [pageCount, updatePageCount] = useState()
 
   useEffect(() => {
     const fetchPets = async () => {
-      const pets = await getPets();
-      setAllPets(pets);
-      setQueriedPets(pets);
-    };
-    fetchPets();
-  }, []);
+      const pets = await getPets()
+      setAllPets(pets)
+      setQueriedPets(pets)
+
+    }
+    fetchPets()
+  }, [])
+
 
   const handleSort = (type) => {
     setSortType(type);
@@ -42,22 +62,80 @@ const AllPets = () => {
     }
   };
 
-  const petCardsJSX = queriedPets.map((pet, index) => (
+
+  useEffect(() => {
+    const slice = queriedPets.slice(offset, offset + perPage)
+    const petCardsJSX = slice.map((pet, index) =>
+
     <AnimalCard
       name={pet.name}
       age={pet.age}
       images={pet.images[0]}
       key={index}
     />
-  ));
+
+    )
+    updateTableData(petCardsJSX)
+    updatePageCount(Math.ceil(queriedPets.length/perPage))
+  }, [queriedPets,offset,sortType])
+
+
+
+
+
+  // const petCardsJSX = queriedPets.map((pet, index) =>
+  //   <AnimalCard
+  //     name={pet.name}
+  //     age={pet.age}
+  //     images={pet.images[0]}
+  //     key={index}
+  //   />
+  // )
+  const handlePageClick = (e) => {
+    const selectedPage = e.selected
+    const offset = selectedPage * perPage
+    updateCurrentPage(selectedPage)
+    updateOffset(offset)
+  }
+
+
+
 
   //add layout component
   return (
-    <Layout>
-      <div className="big-box">
-        <div className="sort">
-          <Sort onChange={handleSort} />
-        </div>
+
+    <div className="big-box">
+      <div className="sort">
+      <Sort onChange={handleSort} />
+      </div>
+      
+      <div className='pets'>
+        {tableData}
+      </div>
+      <div className="pagination">
+      {/* <div>
+        {tableData}
+      </div> */}
+    <ReactPaginate
+      previousLabel={"prev"}
+      nextLabel={"next"}
+      breakLabel={"..."}
+      breakClassName={"break-me"}
+      pageCount={pageCount}
+      marginPagesDisplayed={2}
+      pageRangeDisplayed={6}
+      onPageChange={handlePageClick}
+      containerClassName={"pagination"}
+      subContainerClassName={"pages pagination"}
+      activeClassName={"active"}    
+    />
+      {/* <PageNavigation
+      pets={queriedPets}
+    /> */}
+      </div>
+        
+    </div>
+
 
         <div className="pets">{petCardsJSX}</div>
       </div>
