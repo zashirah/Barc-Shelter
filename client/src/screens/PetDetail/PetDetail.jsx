@@ -6,6 +6,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import InfoSection from "../../components/InfoSection/InfoSection";
 import SecondaryHeaderImage from "../../components/SecondaryHeaderImage/SecondaryHeaderImage";
 import EligibilityInformationSection from "../../components/EligibilityInformationSection/EligibilityInformationSection";
+import Layout from "../../components/shared/Layout/Layout";
 
 import "./PetDetail.css";
 
@@ -26,22 +27,24 @@ const PetDetail = () => {
 
   if (pet) {
     return (
-      <div>
-        <SecondaryHeaderImage image={headerImage} />
-        <div className="pet-detail-top-section">
-          <Carousel />
-          <InfoSection
-            name={pet.name}
-            age={pet.age}
-            sex={pet.sex}
-            breed={pet.breed}
-            bioPersonality={pet.bioPersonality}
-          />
+      <Layout>
+        <div>
+          <SecondaryHeaderImage image={headerImage} />
+          <div className="pet-detail-top-section">
+            <Carousel />
+            <InfoSection
+              name={pet.name}
+              age={pet.age}
+              sex={pet.sex}
+              breed={pet.breed}
+              bioPersonality={pet.bioPersonality}
+            />
+          </div>
+          <button>Edit</button>
+          <button onClick={() => deletePet(pet._id)}>Delete</button>
+          <EligibilityInformationSection />
         </div>
-        <button>Edit</button>
-        <button onClick={() => deletePet(pet._id)}>Delete</button>
-        <EligibilityInformationSection />
-      </div>
+      </Layout>
     );
   } else {
     return (
