@@ -11,14 +11,6 @@ import { getPets } from '../../services/pets'
 // import PageNavigation from '../../components/PageNavigation/PageNavigation'
 import ReactPaginate from 'react-paginate'
 
-
-import AnimalCard from "../../components/AnimalCard/AnimalCard";
-
-import { YO, OY, shelterLongest, shelterYoungest } from "../../utils/sort";
-import Sort from "../../components/Sort/Sort";
-import Layout from "../../components/shared/Layout/Layout";
-import { getPets } from "../../services/pets";
-
 const AllPets = () => {
 
   const [allPets, setAllPets] = useState([])
