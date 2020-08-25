@@ -1,0 +1,4 @@
+.day-column-container {
+  display: flex;
+  flex-direction: column;
+}

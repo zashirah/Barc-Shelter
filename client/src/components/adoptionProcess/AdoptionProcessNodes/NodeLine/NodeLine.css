@@ -1,0 +1,12 @@
+.node-line {
+  width: 150px;
+  height: 10px;
+}
+
+.previous-node-line {
+  background-color: rgb(171, 219, 236);
+}
+
+.upcoming-node-line {
+  background-color: rgb(241, 241, 241)
+}
