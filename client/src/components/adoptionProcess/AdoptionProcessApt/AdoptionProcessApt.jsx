@@ -5,14 +5,15 @@ import { getNext5Days } from "../../../utils/getNext5Days";
 
 import "./AdoptionProcessApt.css";
 
-const AdoptionProcessApt = () => {
+const AdoptionProcessApt = ({ applicants }) => {
   const dateArray = getNext5Days();
+  console.log(applicants)
   return (
     <div className="book-appointment-container">
       <h1>Book an Appointment</h1>
       <div className="date-columns-container">
         {dateArray.map((date) => (
-          <DayColumn date={date} key={date}/>
+          <DayColumn date={date} key={date} />
         ))}
       </div>
     </div>

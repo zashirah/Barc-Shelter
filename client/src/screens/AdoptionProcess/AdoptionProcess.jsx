@@ -11,7 +11,10 @@ import headerImage from "./adoptionProcessImage.png";
 
 import "./AdoptionProcess.css";
 
+import { getApplicants, getApplicant } from "../../services/applicant"
+
 const AdoptionProcess = () => {
+  const [applicants, updateApplicants] = useState([])
   const [applicant, updateApplicant] = useState({
     applicantName: '',
     dateOfBirth: '',
@@ -37,6 +40,15 @@ const AdoptionProcess = () => {
     appointment: '',
   });
 
+  useEffect(() => {
+    const fetchApplicants = async () => {
+      const applicants = await getApplicants()
+      updateApplicants(applicants)
+    }
+    fetchApplicants()
+  }, [])
+
+
   return (
     <div>
       <SecondaryHeaderImage image={headerImage} />
@@ -49,7 +61,7 @@ const AdoptionProcess = () => {
           applicant={applicant}
           updateApplicant={updateApplicant}
         /> */}
-        <AdoptionProcessApt />
+        <AdoptionProcessApt applicants={applicants}/>
       </div>
       <div className="adoption-process-buttons">
         {/* MainButton buttonText will change based on stage */}
