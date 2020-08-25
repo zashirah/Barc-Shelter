@@ -1,3 +1,10 @@
 .previous-button {
-  background-color: rgb(174,174,174)
+  background-color: rgb(174,174,174);
+  height: 70px;
+  width: 210px;
+  color: rgb(255,255,255);
+  font-size: 36px;
+  border: none;
+  border-radius: 20px;
+  margin-right: 50px;
 }
