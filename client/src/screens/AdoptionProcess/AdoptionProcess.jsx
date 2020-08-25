@@ -14,17 +14,20 @@ const AdoptionProcess = () => {
   return (
     <div>
       <SecondaryHeaderImage image={headerImage} />
-      <AdoptionProcessNodes />
+      {/* Node color will change based on stage - pass through as props */}
+      <AdoptionProcessNodes /> 
       <div className="adoption-process-children">
+        {/* only 1 of the four below will be shown - based on stage */}
         {/* <AdoptionProcessStart /> */}
         <AdoptionProcessApplication />
       </div>
       <div className="adoption-process-buttons">
-        <MainButton
+        {/* MainButton buttonText will change based on stage */}
+        <MainButton 
           buttonText={"View & Print an Offline Application"}
           buttonColor={"gray"}
         />
-        <MainButton
+        <MainButton 
           buttonText={"Start Application Online"}
           buttonColor={"orange"}
         />
