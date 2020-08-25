@@ -1,12 +1,15 @@
-import React from "react"
-import DonatePage from "../../components/DonatePage/DonatePage"
+import React from "react";
+import DonatePage from "../../components/DonatePage/DonatePage";
+import Layout from "../../components/shared/Layout/Layout";
 
 const Donate = () => {
   return (
-    <div>
-      <DonatePage />
-    </div>
-  )
-}
+    <Layout>
+      <div>
+        <DonatePage />
+      </div>
+    </Layout>
+  );
+};
 
-export default Donate
+export default Donate;

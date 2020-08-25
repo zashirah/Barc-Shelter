@@ -1,11 +1,17 @@
 h2,
 h3 {
+  text-align: center;
   color: #ffcea9;
 }
-
+h2 {
+  font-size: 35px;
+}
+h3 {
+  font-size: 25px;
+}
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 20px;
   background-color: #666666;
   color: white;
@@ -13,12 +19,20 @@ footer {
   height: 357px;
   border: solid 1px #979797;
 }
-.col,
-h5 {
+h4 {
   font-weight: bold;
   font-size: 20px;
   align-items: flex-start;
   text-align: left;
+}
+h5 {
+  font-weight: bold;
+  font-size: 20px;
+  align-items: flex-start;
+  text-align: center;
+}
+h6 {
+  font-size: 20px;
 }
 
 ul {
@@ -26,7 +40,6 @@ ul {
 }
 li {
   font-size: 15px;
-  font-weight: lighter;
 }
 p {
   text-align: left;
@@ -40,9 +53,4 @@ p {
 .row {
   display: flex;
   justify-content: space-evenly;
-  align-content: center;
-}
-.footer-copyright {
-  font-size: 0.8rem;
-  opacity: 0.7;
 }

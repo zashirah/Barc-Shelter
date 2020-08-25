@@ -10,7 +10,7 @@ const Footer = () => {
     <footer>
       <div className="col">
         <ul>
-          <h5>LOCATION</h5>
+          <h4>LOCATION</h4>
           <li>
             <MapFunction />
           </li>

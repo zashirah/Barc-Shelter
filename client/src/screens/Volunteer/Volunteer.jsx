@@ -1,12 +1,15 @@
-import React from "react"
-import VolunteerPage from "../../components/VolunteerPage/VolunteerPage"
+import React from "react";
+import VolunteerPage from "../../components/VolunteerPage/VolunteerPage";
+import Layout from "../../components/shared/Layout/Layout";
 
 const Volunteer = () => {
   return (
-    <div>
-      <VolunteerPage />
-    </div>
-  )
-}
+    <Layout>
+      <div>
+        <VolunteerPage />
+      </div>
+    </Layout>
+  );
+};
 
-export default Volunteer
+export default Volunteer;
