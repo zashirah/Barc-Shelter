@@ -4,7 +4,6 @@ import catCage from "./catCage.jpg"
 import dailyKibble from "./dailyKibble.jpg"
 import lostDog from "./lostDog.jpg"
 import aboutUs from "./about-us.jpg"
-import animals from "./many-animals.jpg"
 
 const HomePageCards = () => {
   return (
@@ -25,7 +24,6 @@ const HomePageCards = () => {
       <div className="about-us">
         <img src={aboutUs} alt="Bio" />
       </div>
-      <img src={animals} alt="animals" className="many-animals" />
     </div>
   )
 }

@@ -6,3 +6,18 @@
   grid-row-gap: 50px;
   grid-column-gap: 50px;
 }
+
+.sort{
+max-width:1040px;
+display:grid;
+justify-content: flex-end;
+border-style:solid;
+
+
+}
+
+.big-box{
+  display:grid;
+  flex-direction:column;
+  justify-content: center;
+}

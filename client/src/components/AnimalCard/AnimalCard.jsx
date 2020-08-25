@@ -5,7 +5,7 @@ import "./AnimalCard.css"
 const AnimalCard = ({ name, age, images }) => {
   return (
     <div className="outer-box"> 
-      <img className="pet-card-image" src={images} alt={name} />
+      <img className="pet-card-image"src={images} alt={name}/>
       <div className="cat-info-box">
         <div className="cat-name">
           <h1>{name}</h1>
