@@ -88,8 +88,8 @@ const VolunteerPage = () => {
                 • Do not try to “train” the dogs, as it will only confuse them.
               </li>
               <li>
-                • Never tie up the BARC dog you are walking or leave them
-                unattended for ANY reason.
+                • Never tie up the BARC dog you are walking or leave them
+                unattended for ANY reason.
               </li>
               <li>
                 • If your dog is ever in a fight, never put your hands in to
@@ -101,7 +101,7 @@ const VolunteerPage = () => {
                 Picking up the poop makes us good neighbors and it is the law.
               </li>
               <li>
-                • If a dog gets away from you, do not chase it! Squat or lie
+                • If a dog gets away from you, do not chase it! Squat or lie
                 down and call the dog’s name and it should come back to you. If
                 you chase them, they think it’s a game and will keep running
                 away.
@@ -118,6 +118,7 @@ const VolunteerPage = () => {
               <li>
                 • If no one is in the kennel, ring the bell and someone will
                 come to assist you.
+
               </li>
               <li>
                 • Don't assume because the dog is small that it likes to be
@@ -176,3 +177,6 @@ const VolunteerPage = () => {
 }
 
 export default VolunteerPage
+
+
+
