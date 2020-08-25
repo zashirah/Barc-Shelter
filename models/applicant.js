@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 var Applicant = new Schema({
-  name: String,
+  applicantName: String,
   dateOfBirth: Date,
   address: String,
   aptNum: String,

@@ -2,139 +2,180 @@ import React from "react";
 
 import "./AdoptionProcessApplication.css"
 
-const AdoptionProcessApplication = () => {
+const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    updateApplicant({
+      ...applicant,
+      [name]: value,
+    })
+  }
+
+
+
   return (
     <div className="application-form-container">
       <h2 className="application-form-title">Application Form</h2>
       <form className="application-form">
         <h3 className="subscetion-title">Personal Information</h3>
         <div className="form-personal-info form-subsection">
-          <label className="input-label" htmlFor="form-name">
+          <label className="input-label" htmlFor="applicantName">
             Name:
           </label>
           <input
             className="form-input"
             type="text"
-            name="form-name"
-            id="form-name"
+            value={applicant.applicantName}
+            name="applicantName"
+            id="applicantName"
+            onChange={handleChange}
           />
-          <label className="input-label" htmlFor="form-dob">
+          <label className="input-label" htmlFor="dateOfBirth">
             Date of Birth:
           </label>
           <input
             className="form-input"
             type="date"
-            name="form-dob"
-            id="form-dob"
+            value={applicant.dateOfBirth}
+            name="dateOfBirth"
+            id="dateOfBirth"
+            onChange={handleChange}
           />
           <br />
-          <label className="input-label" htmlFor="form-address">
+          <label className="input-label" htmlFor="address">
             Address:
           </label>
           <input
             className="form-input"
             type="text"
-            name="form-address"
-            id="form-address"
+            value={applicant.address}
+            name="address"
+            id="address"
+            onChange={handleChange}
           />
-          <label className="input-label" htmlFor="form-apt-num">
+          <label className="input-label" htmlFor="aptNum">
             Apt #:
           </label>
           <input
             className="form-input"
             type="text"
-            name="form-apt-num"
-            id="form-apt-num"
+            value={applicant.aptNum}
+            name="aptNum"
+            id="aptNum"
+            onChange={handleChange}
           />
-          <label className="input-label" htmlFor="form-city-state">
+          <label className="input-label" htmlFor="cityState">
             City/State:
           </label>
           <input
             className="form-input"
             type="text"
-            name="form-city-state"
-            id="form-city-state"
+            value={applicant.cityState}
+            name="cityState"
+            id="cityState"
+            onChange={handleChange}
           />
           <br />
-          <label className="input-label" htmlFor="form-phone">
+          <label className="input-label" htmlFor="phone">
             Phone:
           </label>
           <input
             className="form-input"
             type="tel"
-            name="form-phone"
-            id="form-phone"
+            value={applicant.phone}
+            name="phone"
+            id="phone"
+            onChange={handleChange}
           />
-          <label className="input-label" htmlFor="form-mobile">
+          <label className="input-label" htmlFor="mobile">
             Mobile:
           </label>
           <input
             className="form-input"
             type="tel"
-            name="form-mobile"
-            id="form-mobile"
+            value={applicant.mobile}
+            name="mobile"
+            id="mobile"
+            onChange={handleChange}
           />
           <br />
-          <label className="input-label hear-about" htmlFor="form-mobile">
+          <label
+            className="
+            onChange={handleChange}input-label hear-about"
+            htmlFor="hearAboutUs"
+          >
             How did you hear about BARC Shelter? (Please be specific)
           </label>
-          <br/>
+          <br />
           <textarea
             className="form-input"
-            name="form-mobile"
-            id="form-mobile"
+            value={applicant.hearAboutUs}
+            name="hearAboutUs"
+            id="hearAboutUs"
             rows="6"
             cols="100"
+            onChange={handleChange}
           ></textarea>
         </div>
         <h3 className="subscetion-title">Work Information</h3>
         <div className="form-work-info form-subsection">
-          <label className="input-label" htmlFor="form-employer">
+          <label className="input-label" htmlFor="employer">
             Employer:
           </label>
           <input
             className="form-input"
             type="text"
-            name="form-employer"
-            id="form-employer"
+            value={applicant.employer}
+            name="employer"
+            id="employer"
+            onChange={handleChange}
           />
-          <label className="input-label" htmlFor="form-position">
+          <label className="input-label" htmlFor="position">
             Your Position:
           </label>
           <input
             className="form-input"
             type="text"
-            name="form-position"
-            id="form-position"
+            value={applicant.position}
+            name="position"
+            id="position"
+            onChange={handleChange}
           />
-          <br/>
-          <label className="input-label" htmlFor="form-work-schedule">
+          <br />
+          <label className="input-label" htmlFor="workSchedule">
             Work Schedule:
           </label>
           <input
             className="form-input"
             type="text"
-            name="form-work-schedule"
-            id="form-work-schedule"
+            value={applicant.workSchedule}
+            name="workSchedule"
+            id="workSchedule"
+            onChange={handleChange}
           />
-          <label className="input-label" htmlFor="form-employment-length">
+          <label className="input-label" htmlFor="employmentLength">
             Length of Employment:
           </label>
           <input
             className="form-input"
             type="text"
-            name="form-employment-length"
-            id="form-employment-length"
+            value={applicant.employmentLength}
+            name="employmentLength"
+            id="employmentLength"
+            onChange={handleChange}
           />
-          <br/>
-          <label className="input-label" htmlFor="form-salary">
+          <br />
+          <label className="input-label" htmlFor="yearlyIncome">
             Please enter your yearly income:
           </label>
           <input
             className="form-input"
             type="text"
-            name="form-salary"
-            id="form-salary"
+            value={applicant.yearlyIncome}
+            name="yearlyIncome"
+            id="yearlyIncome"
+            onChange={handleChange}
           />
         </div>
         <h3 className="subscetion-title">About Your Home</h3>
@@ -145,80 +186,80 @@ const AdoptionProcessApplication = () => {
           <input
             className="form-input-button"
             type="button"
-            name="form-home-type"
-            id="form-home-type-home"
+            name="houseIndicator"
+            id="houseIndicator"
             defaultValue="Home"
           />
           <input
             className="form-input-button"
             type="button"
-            name="form-home-type"
-            id="form-home-type-apt"
+            name="apartmentIndicator"
+            id="apartmentIndicator"
             defaultValue="Apartment"
           />
           <span className="input-label other-house-text">Other:</span>
           <input
             className="form-input"
             type="text"
-            name="form-home-type"
-            id="form-home-type-other"
+            name="homeTypeOther"
+            id="homeTypeOther"
           />
           <br />
           <label
             className="input-label"
             className="input-label"
-            htmlFor="form-home-type"
+            htmlFor="yardIndicator"
           >
             Do you have a yard?
           </label>
           <input
             className="form-input-button"
             type="button"
-            name="form-home-type"
-            id="form-home-type-yes"
+            name="yardIndicatorYes"
+            id="yardIndicatorYes"
             defaultValue="Yes"
           />
           <input
             className="form-input-button"
             type="button"
-            name="form-home-type"
-            id="form-home-type-no"
+            name="yardIndicatorNo"
+            id="yardIndicatorNo"
             defaultValue="No"
           />
           <br />
-          <label className="input-label" htmlFor="form-fence">
+          <label className="input-label" htmlFor="fenceIndicator">
             If yes, do you have a fence around the yard?
           </label>
           <input
             className="form-input-button"
             type="button"
-            name="form-fence"
-            id="form-fence-yes"
+            name="fenceIndicatorYes"
+            id="fenceIndicatorYes"
             defaultValue="Yes"
           />
           <input
             className="form-input-button"
             type="button"
-            name="form-fence"
-            id="form-fence-no"
+            name="fenceIndicatorNo"
+            id="fenceIndicatorNo"
             defaultValue="No"
           />
           <br />
-          <label className="input-label" htmlFor="form-window-screens">
+          <label className="input-label" htmlFor="windowScreenIndicator">
             Do you have a screen over your windows?
           </label>
           <input
             className="form-input-button"
             type="button"
-            name="form-window-screens"
-            id="form-window-screens-yes"
+            name="windowScreenIndicatorYes"
+            id="windowScreenIndicatorYes"
             defaultValue="Yes"
           />
           <input
             className="form-input-button"
             type="button"
-            name="form-window-screens"
-            id="form-window-screens-no"
+            name="windowScreenIndicatorNo"
+            id="windowScreenIndicatorNo"
             defaultValue="No"
           />
         </div>

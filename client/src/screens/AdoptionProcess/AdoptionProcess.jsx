@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import SecondaryHeaderImage from "../../components/SecondaryHeaderImage/SecondaryHeaderImage";
 import AdoptionProcessNodes from "../../components/adoptionProcess/AdoptionProcessNodes/AdoptionProcessNodes";
@@ -11,23 +11,51 @@ import headerImage from "./adoptionProcessImage.png";
 import "./AdoptionProcess.css";
 
 const AdoptionProcess = () => {
+  const [applicant, updateApplicant] = useState({
+    applicantName: '',
+    dateOfBirth: '',
+    address: '',
+    aptNum: '',
+    cityState: '',
+    phone: '',
+    mobile: '',
+    hearAboutUs: '',
+    employer: '',
+    position: '',
+    workSchedule: '',
+    employmentLength: '',
+    yearlyIncome: '',
+    apartmentIndicator: '',
+    houseIndicator: '',
+    homeTypeOther: '',
+    yardIndicator: '',
+    fenceIndicator: '',
+    windowScreenIndicator: '',
+    currentlyOwnPetIndicator: '',
+    email: '',
+    appointment: '',
+  });
+
   return (
     <div>
       <SecondaryHeaderImage image={headerImage} />
       {/* Node color will change based on stage - pass through as props */}
-      <AdoptionProcessNodes /> 
+      <AdoptionProcessNodes />
       <div className="adoption-process-children">
         {/* only 1 of the four below will be shown - based on stage */}
         {/* <AdoptionProcessStart /> */}
-        <AdoptionProcessApplication />
+        <AdoptionProcessApplication
+          applicant={applicant}
+          updateApplicant={updateApplicant}
+        />
       </div>
       <div className="adoption-process-buttons">
         {/* MainButton buttonText will change based on stage */}
-        <MainButton 
+        <MainButton
           buttonText={"View & Print an Offline Application"}
           buttonColor={"gray"}
         />
-        <MainButton 
+        <MainButton
           buttonText={"Start Application Online"}
           buttonColor={"orange"}
         />

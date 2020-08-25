@@ -6,7 +6,7 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 const main = async () => {
   const applicants = [
     {
-      name: "Zach",
+      applicantName: "Zach",
       dateOfBirth: "1994-08-21",
       address: "1372 Hartford Ave SW",
       // aptNum: String,
