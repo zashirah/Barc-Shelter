@@ -27,8 +27,10 @@ const AllPets = () => {
       setAllPets(pets);
       setQueriedPets(pets);
       if (pets) {
+        console.log(pets)
         const slice = pets.slice(offset, offset + perPage);
         if (slice) {
+          console.log(slice)
           const petCardsJSX = slice.map((pet, index) => (
             <AnimalCard
               name={pet.name}
