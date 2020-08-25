@@ -1,0 +1,27 @@
+.ap-eligibility-info-unorder-list {
+  list-style-type: cicle;
+}
+
+.ap-eligibility-info-container {
+  padding: 10px 0px 50px 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.ap-eligibility-info-title {
+  font-size: 28px;
+  letter-spacing: 0.58px;
+  text-decoration: underline;
+}
+
+.ap-eligibility-info-list > li {
+  text-align: left;
+  margin-top: 20px;
+  font-size: 20px;
+  letter-spacing: 0.45px;
+}
+
