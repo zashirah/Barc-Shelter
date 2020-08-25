@@ -28,16 +28,18 @@ const AllPets = () => {
       setQueriedPets(pets);
       if (pets) {
         const slice = pets.slice(offset, offset + perPage);
-        const petCardsJSX = slice.map((pet, index) => (
-          <AnimalCard
-            name={pet.name}
-            age={pet.age}
-            images={pet.images[0]}
-            key={index}
-          />
-        ));
-        updateTableData(petCardsJSX);
-        updatePageCount(Math.ceil(queriedPets.length / perPage));
+        if (slice) {
+          const petCardsJSX = slice.map((pet, index) => (
+            <AnimalCard
+              name={pet.name}
+              age={pet.age}
+              images={pet.images[0]}
+              key={index}
+            />
+          ));
+          updateTableData(petCardsJSX);
+          updatePageCount(Math.ceil(queriedPets.length / perPage));
+        }
       }
     };
     fetchPets();
