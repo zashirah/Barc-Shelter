@@ -8,6 +8,7 @@ import AllPets from "./screens/AllPets/AllPets";
 import CreatePet from "./screens/CreatePet/CreatePet";
 import EditPet from "./screens/EditPet/EditPet";
 import PetDetail from "./screens/PetDetail/PetDetail";
+import AdoptionProcess from "./screens/AdoptionProcess/AdoptionProcess"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/add-pet" component={CreatePet} />
         <Route exact path="/pets/:id/edit" component={EditPet} />
         <Route exact path="/pets/:id" component={PetDetail} />
+        <Route exact path="/pets/:id/adopt" component={AdoptionProcess} />
       </Switch>
     </div>
   );

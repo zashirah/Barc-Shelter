@@ -1,0 +1,5 @@
+.adoption-process-nodes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
