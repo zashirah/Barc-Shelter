@@ -1,0 +1,17 @@
+.cta-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(242, 242, 242);
+  width: 100vw;
+  margin-top: 50px;
+}
+
+.cta-see-our-pets, 
+.cta-sponsor-a-pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
