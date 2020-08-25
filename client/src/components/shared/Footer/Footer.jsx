@@ -1,9 +1,9 @@
 import React from "react";
 import "./Footer.css";
-import MapFunction from "../Map/MapFunction";
 
 import ReactDOM from "react-dom";
 import { SocialMediaIconsReact } from "social-media-icons-react";
+import MapFunction from "../Map/MapFunction";
 
 const Footer = () => {
   return (
