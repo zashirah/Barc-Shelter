@@ -1,0 +1,76 @@
+.happy-trails {
+  width: 300px;
+  height: 33px;
+  font-family: Avenir;
+  font-size: 36px;
+  font-weight: 900;
+  margin-left: 430px;
+  color: #d65f06;
+  text-decoration: underline;
+}
+.cat-in-cage {
+  border: 1px solid black;
+  padding: 10px 28px 10px 12px;
+  width: 300px;
+  margin-left: 400px;
+  background-color: #d8d8d8;
+}
+
+.lost {
+  width: 300px;
+  height: 33px;
+  font-family: Avenir;
+  font-size: 36px;
+  font-weight: 900;
+  margin-left: 1000px;
+  margin-top: -390px;
+  color: #d65f06;
+  text-decoration: underline;
+}
+.lost-dog {
+  border: 1px solid black;
+  padding: 10px 28px 10px 12px;
+  width: 300px;
+  margin-left: 990px;
+  background-color: #d8d8d8;
+}
+
+.news-paper {
+  width: 300px;
+  height: 33px;
+  font-family: Avenir;
+  font-size: 36px;
+  font-weight: 900;
+  margin-left: 400px;
+  margin-top: 40px;
+  color: #d65f06;
+  text-decoration: underline;
+}
+
+.daily-kibble {
+  border: 1px solid black;
+  padding: 10px 28px 10px 12px;
+  width: 300px;
+  margin-left: 400px;
+  background-color: #d8d8d8;
+}
+
+.about {
+  width: 300px;
+  height: 33px;
+  font-family: Avenir;
+  font-size: 36px;
+  font-weight: 900;
+  margin-left: 1000px;
+  margin-top: -390px;
+  color: #d65f06;
+  text-decoration: underline;
+}
+
+.about-us {
+  border: 1px solid black;
+  padding: 10px 28px 10px 12px;
+  width: 300px;
+  margin-left: 1000px;
+  background-color: #d8d8d8;
+}

@@ -58,8 +58,11 @@ const AllPets = () => {
 
 //add layout component
   return (
-    <div>
+    <div className="big-box">
+      <div className="sort">
       <Sort onChange={handleSort} />
+      </div>
+      
       <div className='pets'>
         {petCardsJSX}
       </div>

@@ -1,0 +1,97 @@
+.huging-dog {
+  width: 100%;
+}
+
+.donate-header-text {
+  margin-top: -140px;
+  margin-left: -1200px;
+  color: #2a2a2a;
+  font-family: CrimsonText;
+  font-size: 44px;
+  font-weight: bold;
+}
+
+.donation-header {
+  text-decoration: underline;
+  font-family: Avenir;
+  font-size: 36px;
+}
+
+.text-container {
+  margin-top: 80px;
+  box-sizing: content-box;
+  width: 100%;
+  padding: 5px;
+}
+
+.tax-deductible {
+  text-align: left;
+  margin-left: 200px;
+  font-family: Avenir;
+  font-size: 28px;
+}
+
+.donation-pays {
+  text-align: left;
+  margin-left: 200px;
+  font-family: Avenir;
+  font-size: 28px;
+}
+
+ul {
+  text-align: left;
+  margin-left: 170px;
+  font-family: Avenir;
+  font-size: 28px;
+}
+
+.donation-method {
+  margin-top: 80px;
+  box-sizing: content-box;
+  width: 100%;
+  padding: 5px;
+}
+
+.donation-method-header {
+  text-decoration: underline;
+  font-family: Avenir;
+  font-size: 36px;
+}
+
+.amazon-wishlist {
+  text-align: left;
+  margin-left: 200px;
+  font-family: Avenir;
+  font-size: 28px;
+}
+
+.amazon-wishlist-image {
+  float: right;
+  margin-right: 200px;
+}
+
+.mail-info {
+  width: 1138px;
+  height: 254px;
+  font-family: Avenir;
+  font-size: 28px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.45px;
+  margin-left: 270px;
+}
+
+.hungry-cat {
+  width: 422px;
+  height: 563px;
+  object-fit: contain;
+  margin-left: 70px;
+}
+
+.chair-dog {
+  width: 608px;
+  height: 563px;
+  object-fit: contain;
+}

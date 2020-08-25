@@ -1,12 +1,19 @@
-import React from "react";
-import Layout from "../../components/shared/Layout/Layout";
+import React from "react"
+import "./Home.css"
+import HomePageCards from "../../components/HomePageCards/HomePageCards"
+import HeaderImage from "../../components/HeaderImage/HeaderImage"
+import HomePageLargeSection from "../../components/HomePageLargeSection/HomePageLargeSection"
+import HorizaontalAnimalPictureSection from "../../components/HorizontalAnimcalPictureSection/HorizontalAnimcalPictureSection"
 
 const Home = () => {
   return (
-    <Layout>
-      <div>hi</div>
-    </Layout>
-  );
-};
+    <div>
+      <HeaderImage />
+      <HomePageLargeSection />
+      <HomePageCards />
+      <HorizaontalAnimalPictureSection />
+    </div>
+  )
+}
 
-export default Home;
+export default Home
