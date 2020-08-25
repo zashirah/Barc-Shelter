@@ -11,3 +11,44 @@
   font-size: 44px;
   font-weight: bold;
 }
+
+.volunteer-heading {
+  text-decoration: underline;
+  font-family: Avenir;
+  font-size: 36px;
+}
+
+.volunteer-container {
+  margin-top: 80px;
+  box-sizing: content-box;
+  width: 100%;
+  padding: 5px;
+}
+
+.volunteer-with-animals {
+  text-align: left;
+  margin-left: 200px;
+  font-family: Avenir;
+  font-size: 28px;
+}
+
+.volunteer-list {
+  text-align: left;
+  margin-left: 160px;
+  font-family: Avenir;
+  font-size: 28px;
+}
+
+.warning-message {
+  color: #ff0000;
+  font-size: 30px;
+  text-align: center;
+}
+
+.keep-in-mind {
+  font-size: 20px;
+  letter-spacing: 0.32px;
+  text-align: center;
+  margin-left: 180px;
+  width: 90%;
+}
