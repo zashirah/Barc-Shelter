@@ -50,35 +50,52 @@ const Footer = () => {
       </div>
       <div className="col">
         <h2>ADOPT</h2>
-        <SocialMediaIconsReact
-          icon="facebook"
-          url="https://facebook.com/your-facebook-handle"
-        />
-        ,
-        <SocialMediaIconsReact
-          icon="mail"
-          url="https://mail.com/your-mail-handle"
-        />
-        ,
-        <SocialMediaIconsReact
-          icon="twitter"
-          url="https://twitter.com/your-twitter-handle"
-        />
-        ,
-        <SocialMediaIconsReact
-          icon="instagram"
-          url="https://instagram.com/your-twitter-handle"
-        />
+        <div className="row">
+          <SocialMediaIconsReact
+            icon="facebook"
+            borderWidth="0"
+            iconSize="5"
+            iconColor="rgba(255,255,255,1)"
+            backgroundColor="rgba(214,95,6,1)"
+            roundness="50%"
+            url="https://facebook.com/your-facebook-handle"
+          />
+
+          <SocialMediaIconsReact
+            icon="mail"
+            borderWidth="0"
+            iconSize="5"
+            iconColor="rgba(255,255,255,1)"
+            backgroundColor="rgba(214,95,6,1)"
+            roundness="50%"
+            url="https://mail.com/your-mail-handle"
+          />
+
+          <SocialMediaIconsReact
+            icon="twitter"
+            borderWidth="0"
+            iconSize="5"
+            iconColor="rgba(255,255,255,1)"
+            backgroundColor="rgba(214,95,6,1)"
+            roundness="50%"
+            url="https://twitter.com/your-twitter-handle"
+          />
+
+          <SocialMediaIconsReact
+            icon="instagram"
+            borderWidth="0"
+            iconSize="5"
+            iconColor="rgba(255,255,255,1)"
+            backgroundColor="rgba(214,95,6,1)"
+            roundness="50%"
+            url="https://instagram.com/your-twitter-handle"
+          />
+        </div>
         <p>"Life is great, animals make it better."</p>
       </div>
       <div className="col">
         <h3>CONTACT US</h3>
         {/* Donate button */}
-      </div>
-      <div className="footer">
-        <p className="footer-copyright">
-          &copy; BARC Shelter {new Date().getFullYear()}
-        </p>
       </div>
     </footer>
   );

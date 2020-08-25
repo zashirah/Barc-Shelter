@@ -1,19 +1,38 @@
+h2,
+h3 {
+  color: #ffcea9;
+}
+
 footer {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex: 1;
   padding: 20px;
-  background-color: rgb(91, 91, 91);
+  background-color: #666666;
   color: white;
+  width: 1439px;
+  height: 357px;
+  border: solid 1px #979797;
+}
+.col,
+h5 {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 ul {
   list-style-type: none;
 }
+li {
+  font-size: 10px;
+}
 .col {
   padding-left: 10px;
   padding-right: 10px;
+}
+.row {
+  display: flex;
+  justify-content: space-evenly;
 }
 .footer-copyright {
   font-size: 0.8rem;
