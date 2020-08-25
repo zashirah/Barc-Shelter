@@ -1,18 +1,92 @@
 import React from "react";
 
-import "./AdoptionProcessApplication.css"
+import "./AdoptionProcessApplication.css";
 
 const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
-
   const handleChange = (event) => {
-    const { name, value } = event.target
+    const { name, value } = event.target;
+    if (name === "homeTypeOther") {
+      updateApplicant({
+        ...applicant,
+        houseIndicator: false,
+        apartmentIndicator: false,
+        [name]: value,
+      });
+    } else {
+      updateApplicant({
+        ...applicant,
+        [name]: value,
+      });
+    }
+  };
+
+  const handleWindowNoClick = (event) => {
+    event.preventDefault();
     updateApplicant({
       ...applicant,
-      [name]: value,
-    })
-  }
+      windowScreenIndicator: false,
+    });
+  };
 
+  const handleWindowYesClick = (event) => {
+    event.preventDefault();
+    updateApplicant({
+      ...applicant,
+      windowScreenIndicator: true,
+    });
+  };
 
+  const handleFenceNoClick = (event) => {
+    event.preventDefault();
+    updateApplicant({
+      ...applicant,
+      fenceIndicator: false,
+    });
+  };
+
+  const handleFenceYesClick = (event) => {
+    event.preventDefault();
+    updateApplicant({
+      ...applicant,
+      fenceIndicator: true,
+    });
+  };
+
+  const handleYardNoClick = (event) => {
+    event.preventDefault();
+    updateApplicant({
+      ...applicant,
+      yardIndicator: false,
+    });
+  };
+
+  const handleYardYesClick = (event) => {
+    event.preventDefault();
+    updateApplicant({
+      ...applicant,
+      yardIndicator: true,
+    });
+  };
+
+  const handleHouseClick = (event) => {
+    event.preventDefault();
+    updateApplicant({
+      ...applicant,
+      houseIndicator: true,
+      apartmentIndicator: false,
+      homeTypeOther: '',
+    });
+  };
+
+  const handleApartmentClick = (event) => {
+    event.preventDefault();
+    updateApplicant({
+      ...applicant,
+      houseIndicator: false,
+      apartmentIndicator: true,
+      homeTypeOther: '',
+    });
+  };
 
   return (
     <div className="application-form-container">
@@ -184,18 +258,24 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
             Do you have a home or apartment?
           </label>
           <input
-            className="form-input-button"
+            className={`form-input-button ${
+              applicant.houseIndicator ? "button-shade" : "none"
+            }`}
             type="button"
             name="houseIndicator"
             id="houseIndicator"
             defaultValue="Home"
+            onClick={handleHouseClick}
           />
           <input
-            className="form-input-button"
+            className={`form-input-button ${
+              applicant.apartmentIndicator ? "button-shade" : "none"
+            }`}
             type="button"
             name="apartmentIndicator"
             id="apartmentIndicator"
             defaultValue="Apartment"
+            onClick={handleApartmentClick}
           />
           <span className="input-label other-house-text">Other:</span>
           <input
@@ -203,6 +283,8 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
             type="text"
             name="homeTypeOther"
             id="homeTypeOther"
+            value={applicant.homeTypeOther}
+            onChange={handleChange}
           />
           <br />
           <label
@@ -213,54 +295,72 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
             Do you have a yard?
           </label>
           <input
-            className="form-input-button"
+            className={`form-input-button ${
+              applicant.yardIndicator ? "button-shade" : "none"
+            }`}
             type="button"
             name="yardIndicatorYes"
             id="yardIndicatorYes"
             defaultValue="Yes"
+            onClick={handleYardYesClick}
           />
           <input
-            className="form-input-button"
+            className={`form-input-button ${
+              !applicant.yardIndicator ? "button-shade" : "none"
+            }`}
             type="button"
             name="yardIndicatorNo"
             id="yardIndicatorNo"
             defaultValue="No"
+            onClick={handleYardNoClick}
           />
           <br />
           <label className="input-label" htmlFor="fenceIndicator">
             If yes, do you have a fence around the yard?
           </label>
           <input
-            className="form-input-button"
+            className={`form-input-button ${
+              applicant.fenceIndicator ? "button-shade" : "none"
+            }`}
             type="button"
             name="fenceIndicatorYes"
             id="fenceIndicatorYes"
             defaultValue="Yes"
+            onClick={handleFenceYesClick}
           />
           <input
-            className="form-input-button"
+            className={`form-input-button ${
+              !applicant.fenceIndicator ? "button-shade" : "none"
+            }`}
             type="button"
             name="fenceIndicatorNo"
             id="fenceIndicatorNo"
             defaultValue="No"
+            onClick={handleFenceNoClick}
           />
           <br />
           <label className="input-label" htmlFor="windowScreenIndicator">
             Do you have a screen over your windows?
           </label>
           <input
-            className="form-input-button"
+            className={`form-input-button ${
+              applicant.windowScreenIndicator ? "button-shade" : "none"
+            }`}
             type="button"
             name="windowScreenIndicatorYes"
             id="windowScreenIndicatorYes"
             defaultValue="Yes"
+            onClick={handleWindowYesClick}
           />
           <input
-            className="form-input-button"
+            className={`form-input-button ${
+              !applicant.windowScreenIndicator ? "button-shade" : "none"
+            }`}
             type="button"
             name="windowScreenIndicatorNo"
             id="windowScreenIndicatorNo"
             defaultValue="No"
+            onClick={handleWindowNoClick}
           />
         </div>
       </form>

@@ -100,3 +100,7 @@
 #form-city-state {
   width: 150px;
 }
+
+.button-shade {
+  background-color: rgb(151,151,151);
+}

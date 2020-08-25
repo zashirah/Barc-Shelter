@@ -5,6 +5,7 @@ import AdoptionProcessNodes from "../../components/adoptionProcess/AdoptionProce
 import AdoptionProcessStart from "../../components/adoptionProcess/AdoptionProcessStart/AdoptionProcessStart";
 import MainButton from "../../components/MainButton/MainButton";
 import AdoptionProcessApplication from "../../components/adoptionProcess/AdoptionProcessApplication/AdoptionProcessApplication";
+import AdoptionProcessApt from "../../components/adoptionProcess/AdoptionProcessApt/AdoptionProcessApt";
 
 import headerImage from "./adoptionProcessImage.png";
 
@@ -44,10 +45,11 @@ const AdoptionProcess = () => {
       <div className="adoption-process-children">
         {/* only 1 of the four below will be shown - based on stage */}
         {/* <AdoptionProcessStart /> */}
-        <AdoptionProcessApplication
+        {/* <AdoptionProcessApplication
           applicant={applicant}
           updateApplicant={updateApplicant}
-        />
+        /> */}
+        <AdoptionProcessApt />
       </div>
       <div className="adoption-process-buttons">
         {/* MainButton buttonText will change based on stage */}
