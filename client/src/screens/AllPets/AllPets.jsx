@@ -10,6 +10,7 @@ import { getPets } from "../../services/pets";
 // import PageNavigation from '../../components/PageNavigation/PageNavigation'
 import ReactPaginate from "react-paginate";
 
+
 const AllPets = () => {
   const [allPets, setAllPets] = useState([]);
   const [queriedPets, setQueriedPets] = useState([]);
