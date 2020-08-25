@@ -3,13 +3,14 @@ import { Switch, Route } from "react-router-dom"
 
 import "./App.css"
 
-import Home from "./screens/Home/Home"
+import Home from "./screens/Home/Home";
+import AllPets from "./screens/AllPets/AllPets";
+import CreatePet from "./screens/CreatePet/CreatePet";
+import EditPet from "./screens/EditPet/EditPet";
+import PetDetail from "./screens/PetDetail/PetDetail";
+import AdoptionProcess from "./screens/AdoptionProcess/AdoptionProcess"
 import Donate from "./screens/Donation/Donate"
 import Volunteer from "./screens/Volunteer/Volunteer"
-import AllPets from "./screens/AllPets/AllPets"
-import CreatePet from "./screens/CreatePet/CreatePet"
-import EditPet from "./screens/EditPet/EditPet"
-import PetDetail from "./screens/PetDetail/PetDetail"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/add-pet" component={CreatePet} />
         <Route exact path="/pets/:id/edit" component={EditPet} />
         <Route exact path="/pets/:id" component={PetDetail} />
+        <Route exact path="/adopt" component={AdoptionProcess} />
       </Switch>
     </div>
   )

@@ -1,0 +1,22 @@
+.node-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  border: solid 1px rgb(0, 60, 81);
+}
+
+.previous-node {
+  background-color: rgb(171, 219, 236);
+}
+
+.current-node {
+  background-color: rgb(109, 206, 240);
+}
+
+.upcoming-node {
+  background-color: rgb(241, 241, 241)
+}

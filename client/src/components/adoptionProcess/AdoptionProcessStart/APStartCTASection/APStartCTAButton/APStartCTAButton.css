@@ -1,0 +1,10 @@
+.cta-button {
+  background-color: rgb(255, 206, 169);
+  margin-left: 25px;
+  height: 80px;
+  width: 240px;
+  font-size: 33px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 2.5px 5px .25px gray;
+}
