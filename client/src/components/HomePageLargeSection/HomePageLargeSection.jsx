@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./HomePageLargeSection.css"
 import cat from "./cat.jpg"
 import dog from "./bitmap.jpg"
@@ -18,7 +19,9 @@ const HomePageLargeSection = () => {
         <h1 className="volunteer">
           VOLUNTEER TO ASSIST TAKING CARE OF HOMELESS ANIMALS
         </h1>
-        <button className="volunteer-info">Volunteer Info</button>
+        <Link className="volunteer-link" to="volunteer">
+          <button className="volunteer-info">Volunteer Info</button>
+        </Link>
       </div>
       <div className="animal-container">
         <img src={whiteDog} alt="Dog" className="whiteDog" />
@@ -34,7 +37,9 @@ const HomePageLargeSection = () => {
         <h1 className="purchase-items">
           PURCHASE ITEMS TO SUPPORT HOMELESS ANIMALS!
         </h1>
-        <button className="donate">Donate Now</button>
+        <Link className="donate-link" to="/donate">
+          <button className="donate">Donate Now</button>
+        </Link>
       </div>
     </>
   )

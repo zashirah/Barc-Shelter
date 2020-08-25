@@ -14,7 +14,7 @@ const InfoSection = ({ name, age, sex, bioPersonality }) => {
         <h3 className='pet-detail-left'>Sex: {sex}</h3>
         <h3 className='pet-detail-left'>Bio/Personality:<span> {bioPersonality} </span> </h3>
       </div>
-      <MainButton buttonText={'Adopt me!'}/>
+      <MainButton buttonText={'Adopt me!'} buttonColor={'orange'}/>
     </div>
   )
 }

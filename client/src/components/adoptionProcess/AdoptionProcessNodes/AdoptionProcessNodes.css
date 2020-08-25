@@ -1,0 +1,8 @@
+.adoption-process-nodes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
