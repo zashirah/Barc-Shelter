@@ -18,6 +18,9 @@ const Nav = () => {
               </button>
             </NavLink>
             <div class="dropdown-content">
+              <NavLink to="/ADOPT">
+                <div>ADOPT</div>
+              </NavLink>
               <NavLink to="/pets/cat">
                 <div>CAT</div>
               </NavLink>
@@ -26,7 +29,7 @@ const Nav = () => {
               </NavLink>
             </div>
           </div>
-          <NavLink className="link" to="/">
+          <NavLink className="link" to="/volunteer">
             VOLUNTEER
           </NavLink>
           <NavLink className="link" to="/">
@@ -44,11 +47,14 @@ const Nav = () => {
           <div class="dropdown">
             <NavLink to="/adopt">
               <button class="dropbtn">
-                MORE..
+                MORE...
                 <i class="fa fa-caret-down"></i>
               </button>
             </NavLink>
             <div class="dropdown-content">
+              <NavLink to="/pets/cat">
+                <div>MORE...</div>
+              </NavLink>
               <NavLink to="/pets/cat">
                 <div>LOST DOGS/CATS</div>
               </NavLink>
