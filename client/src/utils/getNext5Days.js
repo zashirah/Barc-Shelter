@@ -6,7 +6,7 @@ export const getNext5Days = () => {
     let date = new Date(new Date().getTime() + 24 * number * 60 * 60 * 1000);
     if (date.getDay() !== 0 && date.getDay() !== 1) {
       let dd = date.getDate();
-      let mm = date.getMonth();
+      let mm = date.getMonth() + 1;
       let yyyy = date.getFullYear();
 
       if (dd < 10) {

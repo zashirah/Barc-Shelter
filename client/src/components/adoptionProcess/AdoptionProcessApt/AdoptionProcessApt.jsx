@@ -8,7 +8,6 @@ import "./AdoptionProcessApt.css";
 const AdoptionProcessApt = ({ applicants, applicant, updateApplicant }) => {
   const [timesClicked, updateTimesClicked] = useState(1);
   const dateArray = getNext5Days();
-  // console.log(applicants)
 
   const handleHavePetNoClick = (event) => {
     event.preventDefault();

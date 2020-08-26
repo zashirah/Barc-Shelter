@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 import SecondaryHeaderImage from "../../components/SecondaryHeaderImage/SecondaryHeaderImage";
 import AdoptionProcessNodes from "../../components/adoptionProcess/AdoptionProcessNodes/AdoptionProcessNodes";
@@ -46,32 +46,27 @@ const AdoptionProcess = () => {
 
   const [stage, updateStage] = useState(1);
 
-  const handleChange = (event) => {
+  const handleEmailChange = (event) => {
+    event.preventDefault();
     const { name, value } = event.target;
-    if (name === "homeTypeOther") {
-      updateApplicant({
-        ...applicant,
-        houseIndicator: false,
-        apartmentIndicator: false,
-        [name]: value,
-      });
-    } else {
-      updateApplicant({
-        ...applicant,
-        [name]: value,
-      });
-    }
+    updateApplicant({
+      ...applicant,
+      [name]: value,
+    });
   };
 
   useEffect(() => {
     let today = new Date();
-    today = Date.parse(today)
+    today = Date.parse(today);
     let todayP7 = new Date(new Date().getTime() + 24 * 7 * 60 * 60 * 1000);
     todayP7 = Date.parse(todayP7);
     const fetchApplicants = async () => {
       const applicants = await getApplicants();
       const applicantsWithinDays = applicants.filter((app) => {
-        return Date.parse(app.appointment) >= today && Date.parse(app.appointment) <= todayP7
+        return (
+          Date.parse(app.appointment) >= today &&
+          Date.parse(app.appointment) <= todayP7
+        );
       });
       console.log("log", applicantsWithinDays);
       updateApplicants(applicantsWithinDays);
@@ -143,7 +138,7 @@ const AdoptionProcess = () => {
                   id="email"
                   placeholder="myemail@email.com"
                   value={applicant.email}
-                  onChange={handleChange}
+                  onChange={handleEmailChange}
                 />
               </form>
               <div className="required">* Required</div>
@@ -157,11 +152,13 @@ const AdoptionProcess = () => {
               {stage === 4 && "Complete App"}
             </button>
           )}
-          {stage === 6 && 
+          {stage === 5 && (
             <Link to="/">
-              Click here to exit back to home
+              <button className="gray main-button">
+                Click here to exit back to home
+              </button>
             </Link>
-          }
+          )}
         </div>
       </div>
     </Layout>
