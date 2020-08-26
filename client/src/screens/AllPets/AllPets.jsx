@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom'
 import "./AllPets.css";
 
 import AnimalCard from "../../components/AnimalCard/AnimalCard";
@@ -21,16 +22,19 @@ const AllPets = () => {
   const [currentpage, updateCurrentPage] = useState(0);
   const [pageCount, updatePageCount] = useState();
 
+  const params = useParams()
+
   useEffect(() => {
     const fetchPets = async () => {
       const pets = await getPets();
-      setAllPets(pets);
-      setQueriedPets(pets);
-      if (pets) {
-        console.log(pets)
-        const slice = pets.slice(offset, offset + perPage);
+      const petType = pets.filter((pet) => pet.type === params.type);
+      setAllPets(petType);
+      setQueriedPets(petType);
+      if (petType) {
+        console.log(petType);
+        const slice = petType.slice(offset, offset + perPage);
         if (slice) {
-          console.log(slice)
+          console.log(slice);
           const petCardsJSX = slice.map((pet, index) => (
             <AnimalCard
               name={pet.name}
