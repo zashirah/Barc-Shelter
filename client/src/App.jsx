@@ -26,7 +26,7 @@ function App() {
         <Route exact path="/adopt" component={AdoptionProcess} />
       </Switch>
     </div>
-  )
+  );
 }
 
 export default App
