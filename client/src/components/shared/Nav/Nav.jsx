@@ -33,10 +33,10 @@ const Nav = () => {
             </div>
 
           </div>
-          <NavLink className="link" to="/volunteer">
+          <NavLink className="link" to="/donate">
             Donate
           </NavLink>
-          <NavLink className="link" to="/donate">
+          <NavLink className="link" to="/">
             Events
           </NavLink>
           <NavLink className="link" to="/">
