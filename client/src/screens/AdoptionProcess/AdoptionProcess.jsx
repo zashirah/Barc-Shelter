@@ -7,6 +7,7 @@ import MainButton from "../../components/MainButton/MainButton";
 import AdoptionProcessApplication from "../../components/adoptionProcess/AdoptionProcessApplication/AdoptionProcessApplication";
 import AdoptionProcessApt from "../../components/adoptionProcess/AdoptionProcessApt/AdoptionProcessApt";
 import Layout from "../../components/shared/Layout/Layout";
+import AdoptionProcessFinalize from "../../components/adoptionProcess/AdoptionProcessFinalize/AdoptionProcessFinalize";
 
 import headerImage from "./adoptionProcessImage.png";
 
@@ -43,6 +44,23 @@ const AdoptionProcess = () => {
 
   const [stage, updateStage] = useState(1);
 
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    if (name === "homeTypeOther") {
+      updateApplicant({
+        ...applicant,
+        houseIndicator: false,
+        apartmentIndicator: false,
+        [name]: value,
+      });
+    } else {
+      updateApplicant({
+        ...applicant,
+        [name]: value,
+      });
+    }
+  };
+
   useEffect(() => {
     let today = new Date();
     today = Date.parse(today)
@@ -66,24 +84,26 @@ const AdoptionProcess = () => {
 
   return (
     <Layout>
-      <div>
+      <div className="adoption-page-div">
         <SecondaryHeaderImage image={headerImage} />
         <AdoptionProcessNodes updateStage={updateStage} stage={stage} />
         <div className="adoption-process-children">
           {/* only 1 of the four below will be shown - based on stage */}
-          {/* {stage === 1 && <AdoptionProcessStart />}
+          {stage === 1 && <AdoptionProcessStart />}
           {stage === 2 && (
             <AdoptionProcessApplication
               applicant={applicant}
               updateApplicant={updateApplicant}
             />
           )}
-          {stage === 3 && <AdoptionProcessApt applicants={applicants} />} */}
-          <AdoptionProcessApt
+          {stage === 3 && <AdoptionProcessApt 
             applicants={applicants}
             applicant={applicant}
+            updateApplicant={updateApplicant} />}
+          {stage === 4 && <AdoptionProcessFinalize
+            applicant={applicant}
             updateApplicant={updateApplicant}
-          />
+          />}
         </div>
         <div className="adoption-process-buttons">
           {stage === 1 && (
@@ -100,6 +120,25 @@ const AdoptionProcess = () => {
               {stage === 3 && "Skip, I'll book it later"}
             </button>
           )}
+
+          {stage === 4 && <div className="email-subform-container">
+            <form>
+              <label className="form-email-label" htmlFor="email">
+                <span className="required">*</span>Enter your email here to
+                receice a receipt/reminder:
+              </label>
+              <input
+                className="form-input form-email"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="myemail@email.com"
+                value={applicant.email}
+                onChange={handleChange}
+              />
+            </form>
+            <div className="required">* Required</div>
+          </div>}
           <button className="start-app-button" onClick={handleStageChange}>
             {stage === 1 && "Start Application Online"}
             {stage === 2 && "Save & Continue"}
