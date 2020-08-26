@@ -71,14 +71,15 @@ const AdoptionProcess = () => {
         <AdoptionProcessNodes updateStage={updateStage} stage={stage} />
         <div className="adoption-process-children">
           {/* only 1 of the four below will be shown - based on stage */}
-          {stage === 1 && <AdoptionProcessStart />}
+          {/* {stage === 1 && <AdoptionProcessStart />}
           {stage === 2 && (
             <AdoptionProcessApplication
               applicant={applicant}
               updateApplicant={updateApplicant}
             />
           )}
-          {stage === 3 && <AdoptionProcessApt applicants={applicants} />}
+          {stage === 3 && <AdoptionProcessApt applicants={applicants} />} */}
+          <AdoptionProcessApt applicants={applicants} />
         </div>
         <div className="adoption-process-buttons">
           {stage === 1 && (

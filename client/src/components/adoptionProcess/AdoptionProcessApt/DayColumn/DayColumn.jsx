@@ -10,26 +10,34 @@ const DayColumn = ({ date, applicants }) => {
 
   return (
     <div className="day-column-container" key={date[1]}>
-      <div> {date[2]} </div>
-      <div> {date[0]} </div>
-      {timeArray.map((time) => (
-        <TimeButton
-          key={`${date[1]}T${time}:00:00`}
-          date={date[1]}
-          time={time - 12}
-          datetime={`${date[1]}T${time}:00:00`}
-          buttonStatus={applicants.find(
-              (applicant) => Date.parse(applicant.appointment) === Date.parse(
-                new Date(
-                  date[3].getFullYear(),
-                  date[3].getMonth(),
-                  date[3].getDate(),
-                  time
-                )
+      <div className="day-column-title"> {date[2]} </div>
+      <div className="day-column-title"> {date[0]} </div>
+      <div className="time-container">
+        {timeArray.map((time) => (
+          <TimeButton
+            key={`${date[1]}T${time}:00:00`}
+            date={date[1]}
+            time={time - 12}
+            datetime={`${date[1]}T${time}:00:00`}
+            buttonStatus={
+              applicants.find(
+                (applicant) =>
+                  Date.parse(applicant.appointment) ===
+                  Date.parse(
+                    new Date(
+                      date[3].getFullYear(),
+                      date[3].getMonth(),
+                      date[3].getDate(),
+                      time
+                    )
+                  )
               )
-            ) ? 'apt-time-booked' : 'apt-time-not-booked'}
-        />
-      ))}
+                ? "apt-time-booked"
+                : "apt-time-not-booked"
+            }
+          />
+        ))}
+      </div>
     </div>
   );
 };
