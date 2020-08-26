@@ -61,7 +61,7 @@ const AdoptionProcess = () => {
       <div>
         <SecondaryHeaderImage image={headerImage} />
         {/* Node color will change based on stage - pass through as props */}
-        <AdoptionProcessNodes updateStage={updateStage} stage={stage}/>
+        <AdoptionProcessNodes updateStage={updateStage} stage={stage} />
         <div className="adoption-process-children">
           {/* only 1 of the four below will be shown - based on stage */}
           {stage === 1 && <AdoptionProcessStart />}
@@ -82,12 +82,13 @@ const AdoptionProcess = () => {
           {/* <MainButton
             buttonText={"Start Application Online"}
             buttonColor={"orange"}
+            // clickFunction={handleStageChange}
           /> */}
-          <button
-            className="start-app-button"
-            onClick={handleStageChange}
-          >
-            Start Application Online
+          <button className="start-app-button" onClick={handleStageChange}>
+            {stage === 1 && "Start Application Online"}
+            {stage === 2 && "Save & Continue"}
+            {stage === 3 && "Review App"}
+            {stage === 4 && "Complete App"}
           </button>
         </div>
       </div>
