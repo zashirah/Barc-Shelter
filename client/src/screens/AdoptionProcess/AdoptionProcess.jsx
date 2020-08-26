@@ -41,6 +41,8 @@ const AdoptionProcess = () => {
     appointment: "",
   });
 
+  const [stage, updateStage] = useState(1)
+
   useEffect(() => {
     const fetchApplicants = async () => {
       const applicants = await getApplicants();
@@ -49,20 +51,27 @@ const AdoptionProcess = () => {
     fetchApplicants();
   }, []);
 
+  const handleStageChange = event => {
+    event.preventDefault()
+    updateStage(prevState => prevState + 1)
+  }
+
   return (
     <Layout>
       <div>
         <SecondaryHeaderImage image={headerImage} />
         {/* Node color will change based on stage - pass through as props */}
-        <AdoptionProcessNodes />
+        <AdoptionProcessNodes updateStage={updateStage} stage={stage}/>
         <div className="adoption-process-children">
           {/* only 1 of the four below will be shown - based on stage */}
-          <AdoptionProcessStart />
-          {/* <AdoptionProcessApplication
-          applicant={applicant}
-          updateApplicant={updateApplicant}
-        /> */}
-          {/* <AdoptionProcessApt applicants={applicants} /> */}
+          {stage === 1 && <AdoptionProcessStart />}
+          {stage === 2 && (
+            <AdoptionProcessApplication
+              applicant={applicant}
+              updateApplicant={updateApplicant}
+            />
+          )}
+          {stage === 3 && <AdoptionProcessApt applicants={applicants} />}
         </div>
         <div className="adoption-process-buttons">
           {/* MainButton buttonText will change based on stage */}
@@ -70,10 +79,16 @@ const AdoptionProcess = () => {
             buttonText={"View & Print an Offline Application"}
             buttonColor={"gray"}
           />
-          <MainButton
+          {/* <MainButton
             buttonText={"Start Application Online"}
             buttonColor={"orange"}
-          />
+          /> */}
+          <button
+            className="start-app-button"
+            onClick={handleStageChange}
+          >
+            Start Application Online
+          </button>
         </div>
       </div>
     </Layout>

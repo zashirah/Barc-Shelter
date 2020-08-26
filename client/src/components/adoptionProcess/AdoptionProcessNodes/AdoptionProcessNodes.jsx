@@ -6,10 +6,10 @@ import PreviousButton from "../PreviousButton/PreviousButton"
 
 import "./AdoptionProcessNodes.css"
 
-const AdoptionProcessNodes = () => {
+const AdoptionProcessNodes = ({ updateStage, stage }) => {
   return (
     <div className="adoption-process-nodes">
-      <PreviousButton />
+      {stage !== 1 && <PreviousButton updateStage={updateStage} />}
       <NodeCircle number={1} nodeCircleStage={"previous-node"} />
       <NodeLine nodeLineStage={"previous-node-line"} />
       <NodeCircle number={2} nodeCircleStage={"current-node"} />
@@ -19,6 +19,6 @@ const AdoptionProcessNodes = () => {
       <NodeCircle number={4} nodeCircleStage={"upcoming-node"} />
     </div>
   );
-}
+};
 
 export default AdoptionProcessNodes
