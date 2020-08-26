@@ -8,44 +8,44 @@ import Sort from "../../components/Sort/Sort";
 import Layout from "../../components/shared/Layout/Layout";
 import { getPets } from "../../services/pets";
 // import PageNavigation from '../../components/PageNavigation/PageNavigation'
-// import ReactPaginate from "react-paginate";
+import ReactPaginate from "react-paginate";
 
 const AllPets = () => {
   const [allPets, setAllPets] = useState([]);
   const [queriedPets, setQueriedPets] = useState([]);
   const [sortType, setSortType] = useState([]);
-  // const [offset, updateOffset] = useState(0);
-  // const [tableData, updateTableData] = useState([]);
-  // const [orgtableData, updateOrgTableData] = useState([]);
-  // const [perPage, updatePerPage] = useState(6);
-  // const [currentpage, updateCurrentPage] = useState(0);
-  // const [pageCount, updatePageCount] = useState();
+  const [offset, updateOffset] = useState(0);
+  const [tableData, updateTableData] = useState([]);
+  const [orgtableData, updateOrgTableData] = useState([]);
+  const [perPage, updatePerPage] = useState(6);
+  const [currentpage, updateCurrentPage] = useState(0);
+  const [pageCount, updatePageCount] = useState();
 
   useEffect(() => {
     const fetchPets = async () => {
       const pets = await getPets();
       setAllPets(pets);
       setQueriedPets(pets);
-      // if (pets) {
-      //   console.log(pets)
-      //   const slice = pets.slice(offset, offset + perPage);
-      //   if (slice) {
-      //     console.log(slice)
-      //     const petCardsJSX = slice.map((pet, index) => (
-      //       <AnimalCard
-      //         name={pet.name}
-      //         age={pet.age}
-      //         images={pet.images[0]}
-      //         key={index}
-      //       />
-      //     ));
-      //     updateTableData(petCardsJSX);
-      //     updatePageCount(Math.ceil(queriedPets.length / perPage));
-      //   }
-      // }
+      if (pets) {
+        console.log(pets)
+        const slice = pets.slice(offset, offset + perPage);
+        if (slice) {
+          console.log(slice)
+          const petCardsJSX = slice.map((pet, index) => (
+            <AnimalCard
+              name={pet.name}
+              age={pet.age}
+              images={pet.images[0]}
+              key={index}
+            />
+          ));
+          updateTableData(petCardsJSX);
+          updatePageCount(Math.ceil(queriedPets.length / perPage));
+        }
+      }
     };
     fetchPets();
-  }, [sortType]);
+  }, [offset, sortType]);
 
   const handleSort = (type) => {
     setSortType(type);
@@ -81,21 +81,20 @@ const AllPets = () => {
   //   updatePageCount(Math.ceil(queriedPets.length / perPage));
   // }, [queriedPets, offset, sortType]);
 
-  const petCardsJSX = queriedPets.map((pet, index) =>
-    <AnimalCard
-      name={pet.name}
-      age={pet.age}
-      images={pet.images[0]}
-      key={index}
-    />
-  )
-
-  // const handlePageClick = (e) => {
-  //   const selectedPage = e.selected;
-  //   const offset = selectedPage * perPage;
-  //   updateCurrentPage(selectedPage);
-  //   updateOffset(offset);
-  // };
+  // const petCardsJSX = queriedPets.map((pet, index) =>
+  //   <AnimalCard
+  //     name={pet.name}
+  //     age={pet.age}
+  //     images={pet.images[0]}
+  //     key={index}
+  //   />
+  // )
+  const handlePageClick = (e) => {
+    const selectedPage = e.selected;
+    const offset = selectedPage * perPage;
+    updateCurrentPage(selectedPage);
+    updateOffset(offset);
+  };
 
   //add layout component
   return (
@@ -105,12 +104,12 @@ const AllPets = () => {
           <Sort onChange={handleSort} />
         </div>
 
-        {/* <div className="pets">{tableData}</div>
-        <div className="pagination"> */}
+        <div className="pets">{tableData}</div>
+        <div className="pagination">
           {/* <div>
         {tableData}
       </div> */}
-          {/* <ReactPaginate
+          <ReactPaginate
             previousLabel={"prev"}
             nextLabel={"next"}
             breakLabel={"..."}
@@ -122,14 +121,14 @@ const AllPets = () => {
             containerClassName={"pagination"}
             subContainerClassName={"pages pagination"}
             activeClassName={"active"}
-          /> */}
+          />
           {/* <PageNavigation
       pets={queriedPets}
     /> */}
         </div>
-      {/* </div> */}
+      </div>
 
-      <div className="pets">{petCardsJSX}</div>
+      {/* <div className="pets">{petCardsJSX}</div> */}
     </Layout>
   );
 };
