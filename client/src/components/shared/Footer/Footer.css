@@ -1,12 +1,12 @@
-h2,
-h3 {
+.h2-layout,
+.h3-layout {
   text-align: center;
   color: #ffcea9;
 }
-h2 {
+.h2-layout {
   font-size: 35px;
 }
-h3 {
+.h3-layout {
   font-size: 25px;
 }
 footer {
@@ -15,42 +15,43 @@ footer {
   padding: 20px;
   background-color: #666666;
   color: white;
-  width: 100vw;
+  /* width: 100vw; */
   height: 357px;
   border: solid 1px #979797;
 }
-h4 {
+.h4-layout {
   font-weight: bold;
   font-size: 20px;
   align-items: flex-start;
   text-align: left;
 }
-h5 {
+.h5-layout {
   font-weight: bold;
   font-size: 20px;
   align-items: flex-start;
   text-align: center;
 }
-h6 {
+.h6-layout {
   font-size: 20px;
 }
 
-ul {
+.ul-layout {
   list-style-type: none;
+  margin: 0;
 }
-li {
+.li-layout {
   font-size: 15px;
 }
-p {
+.p-layout {
   text-align: left;
   font-size: 14px;
 }
-.col {
+.col-layout {
   display: flex;
   justify-content: space-evenly;
   padding-right: 10px;
 }
-.row {
+.row-layout {
   display: flex;
   justify-content: space-evenly;
 }
