@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/volunteer" component={Volunteer} />
         {/* <Route path="/add-pet" component={CreatePet} /> */}
         {/* <Route exact path="/pets/:id/edit" component={EditPet} /> */}
-        <Route exact path="/pets/:id" component={PetDetail} />
+        <Route exact path="/pet/:id" component={PetDetail} />
         <Route exact path="/adopt" component={AdoptionProcess} />
       </Switch>
     </div>
