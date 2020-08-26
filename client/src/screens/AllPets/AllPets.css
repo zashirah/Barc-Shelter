@@ -1,4 +1,6 @@
 .pets{
+  max-width:1040px;
+  height:780px;
   display:grid;
   grid-template-columns: auto auto auto;
   justify-content: center;
@@ -11,15 +13,13 @@
 max-width:1040px;
 display:grid;
 justify-content: flex-end;
-border-style:solid;
-
-
 }
 
 .big-box{
   display:grid;
   flex-direction:column;
   justify-content: center;
+  
 }
 
 .pagination {
@@ -29,23 +29,23 @@ border-style:solid;
   outline: none;
 }
 .pagination > .active > a{
-  background-color: #47ccde ;
+  background-color: #2a2a2a ;
   border-color: #47ccde ;
   color: #fff;
 }
 .pagination > li > a{
-  border: 1px solid #47ccde ;
+  border: 1px solid #696969;
   padding: 5px 10px;
   outline: none;
   cursor: pointer;
 }
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
-  background-color: #47ccde ;
-  border-color: #47ccde;
+  background-color: #2a2a2a ;
+  border-color: #2a2a2a;
   outline: none ;
 }
 .pagination > li > a, .pagination > li > span{
-  color: #47ccde
+  color: #696969;
 }
 .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
   border-radius: unset

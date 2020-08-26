@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./AnimalCard.css"
 
-const AnimalCard = ({ name, age, images }) => {
+const AnimalCard = ({ name, age, images, id }) => {
   return (
+    <Link ClassName="link" to={`/pet/${id}`} >
     <div className="outer-box"> 
       <img className="pet-card-image"src={images} alt={name}/>
       <div className="cat-info-box">
@@ -14,7 +15,8 @@ const AnimalCard = ({ name, age, images }) => {
         <h1>{age}</h1>
         </div>
       </div>
-     </div>
+    </div>
+    </Link>
   )
 }
 
