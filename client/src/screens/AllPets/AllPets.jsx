@@ -28,7 +28,7 @@ const AllPets = () => {
 
   const params = useParams();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const fetchPets = async () => {
       const pets = await getPets();
       const type = pets.filter((pet) => pet.type === params.type);

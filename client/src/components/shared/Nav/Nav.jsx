@@ -5,21 +5,22 @@ import { NavLink } from "react-router-dom";
 const Nav = () => {
   return (
     <nav>
-
       <div className="nav">
         <div className="links">
           <NavLink className="link" to="/">
             HOME
           </NavLink>
-          <div class="dropdown">
+          <div className="dropdown">
             <NavLink to="/adopt">
-              <button class="dropbtn">
+              <button className="dropbtn">
                 ADOPT
-                <i class="fa fa-caret-down"></i>
+                <i className="fa fa-caret-down"></i>
               </button>
-
             </NavLink>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
+              <NavLink to="/ADOPT">
+                <div>ADOPT</div>
+              </NavLink>
               <NavLink to="/pets/cat">
                 <div>CAT</div>
               </NavLink>
@@ -27,15 +28,12 @@ const Nav = () => {
                 <div>DOG</div>
               </NavLink>
             </div>
-
           </div>
-
-          <NavLink className="link" to="/">
+          <NavLink className="link" to="/volunteer">
             VOLUNTEER
           </NavLink>
           <NavLink className="link" to="/donate">
             Donate
-
           </NavLink>
           <NavLink className="link" to="/">
             EVENTS
@@ -46,15 +44,17 @@ const Nav = () => {
           <NavLink className="link" to="/">
             ABOUT
           </NavLink>
-          <div class="dropdown">
+          <div className="dropdown">
             <NavLink to="/adopt">
-              <button class="dropbtn">
-                MORE..
-                <i class="fa fa-caret-down"></i>
+              <button className="dropbtn">
+                MORE...
+                <i className="fa fa-caret-down"></i>
               </button>
-
             </NavLink>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
+              <NavLink to="/pets/cat">
+                <div>MORE...</div>
+              </NavLink>
               <NavLink to="/pets/cat">
                 <div>LOST DOGS/CATS</div>
               </NavLink>
