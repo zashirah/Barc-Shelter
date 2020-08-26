@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 const Nav = () => {
   return (
     <nav>
+
       <div className="nav">
         <div className="links">
           <NavLink className="link" to="/">
@@ -16,6 +17,7 @@ const Nav = () => {
                 ADOPT
                 <i class="fa fa-caret-down"></i>
               </button>
+
             </NavLink>
             <div class="dropdown-content">
               <NavLink to="/pets/cat">
@@ -25,12 +27,15 @@ const Nav = () => {
                 <div>DOG</div>
               </NavLink>
             </div>
+
           </div>
+
           <NavLink className="link" to="/">
             VOLUNTEER
           </NavLink>
-          <NavLink className="link" to="/">
-            DONATE
+          <NavLink className="link" to="/donate">
+            Donate
+
           </NavLink>
           <NavLink className="link" to="/">
             EVENTS
@@ -47,6 +52,7 @@ const Nav = () => {
                 MORE..
                 <i class="fa fa-caret-down"></i>
               </button>
+
             </NavLink>
             <div class="dropdown-content">
               <NavLink to="/pets/cat">

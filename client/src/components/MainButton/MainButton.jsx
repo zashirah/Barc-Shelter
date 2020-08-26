@@ -2,7 +2,7 @@ import React from 'react'
 
 import './MainButton.css'
 
-const MainButton = ({ buttonText, buttonColor }) => {
+const MainButton = ({ buttonText, buttonColor, clickFunction }) => {
   return (
     <button className={`main-button ${buttonColor}`}>
       {buttonText}
