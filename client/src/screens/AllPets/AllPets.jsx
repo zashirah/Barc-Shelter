@@ -81,14 +81,14 @@ const AllPets = () => {
   //   updatePageCount(Math.ceil(queriedPets.length / perPage));
   // }, [queriedPets, offset, sortType]);
 
-  const petCardsJSX = queriedPets.map((pet, index) =>
+  const petCardsJSX = queriedPets.map((pet, index) => (
     <AnimalCard
       name={pet.name}
       age={pet.age}
       images={pet.images[0]}
       key={index}
     />
-  )
+  ));
 
   // const handlePageClick = (e) => {
   //   const selectedPage = e.selected;
@@ -107,10 +107,10 @@ const AllPets = () => {
 
         {/* <div className="pets">{tableData}</div>
         <div className="pagination"> */}
-          {/* <div>
+        {/* <div>
         {tableData}
       </div> */}
-          {/* <ReactPaginate
+        {/* <ReactPaginate
             previousLabel={"prev"}
             nextLabel={"next"}
             breakLabel={"..."}
@@ -123,10 +123,10 @@ const AllPets = () => {
             subContainerClassName={"pages pagination"}
             activeClassName={"active"}
           /> */}
-          {/* <PageNavigation
+        {/* <PageNavigation
       pets={queriedPets}
     /> */}
-        </div>
+      </div>
       {/* </div> */}
 
       <div className="pets">{petCardsJSX}</div>
