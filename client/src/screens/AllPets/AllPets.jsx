@@ -33,14 +33,15 @@ const AllPets = () => {
   useEffect(() => {
     const fetchPets = async () => {
       const pets = await getPets();
-      const type = pets.filter((pet) => pet.type === params.type);
-      setAllPets(type);
-      setQueriedPets(type);
-      if (type) {
-        console.log(type)
-        const slice = type.slice(offset, offset + perPage);
+
+      const petType = pets.filter((pet) => pet.type === params.type);
+      setAllPets(petType);
+      setQueriedPets(petType);
+      if (petType) {
+        console.log(petType);
+        const slice = petType.slice(offset, offset + perPage);
         if (slice) {
-          console.log(slice)
+          console.log(slice);
           const petCardsJSX = slice.map((pet, index) => (
             <AnimalCard
               name={pet.name}

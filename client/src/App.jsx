@@ -18,7 +18,6 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/pets/:type" component={AllPets} />
-        {/* <Route exact path="/pets/dogs" component={AllPets} /> */}
         <Route exact path="/donate" component={Donate} />
         <Route exact path="/volunteer" component={Volunteer} />
         {/* <Route path="/add-pet" component={CreatePet} /> */}
