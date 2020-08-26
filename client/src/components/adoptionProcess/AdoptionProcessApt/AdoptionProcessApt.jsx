@@ -7,13 +7,13 @@ import "./AdoptionProcessApt.css";
 
 const AdoptionProcessApt = ({ applicants }) => {
   const dateArray = getNext5Days();
-  console.log(applicants)
+  // console.log(applicants)
   return (
     <div className="book-appointment-container">
       <h1>Book an Appointment</h1>
       <div className="date-columns-container">
-        {dateArray.map((date) => (
-          <DayColumn date={date} key={date} />
+        {dateArray.map((date) => ( 
+          <DayColumn date={date} key={date} applicants={applicants}/>
         ))}
       </div>
     </div>

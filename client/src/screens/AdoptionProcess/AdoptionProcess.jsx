@@ -41,26 +41,33 @@ const AdoptionProcess = () => {
     appointment: "",
   });
 
-  const [stage, updateStage] = useState(1)
+  const [stage, updateStage] = useState(1);
 
   useEffect(() => {
+    let today = new Date();
+    today = Date.parse(today)
+    let todayP7 = new Date(new Date().getTime() + 24 * 7 * 60 * 60 * 1000);
+    todayP7 = Date.parse(todayP7);
     const fetchApplicants = async () => {
       const applicants = await getApplicants();
-      updateApplicants(applicants);
+      const applicantsWithinDays = applicants.filter((app) => {
+        return Date.parse(app.appointment) >= today && Date.parse(app.appointment) <= todayP7
+      });
+      console.log("log", applicantsWithinDays);
+      updateApplicants(applicantsWithinDays);
     };
     fetchApplicants();
   }, []);
 
-  const handleStageChange = event => {
-    event.preventDefault()
-    updateStage(prevState => prevState + 1)
-  }
+  const handleStageChange = (event) => {
+    event.preventDefault();
+    updateStage((prevState) => prevState + 1);
+  };
 
   return (
     <Layout>
       <div>
         <SecondaryHeaderImage image={headerImage} />
-        {/* Node color will change based on stage - pass through as props */}
         <AdoptionProcessNodes updateStage={updateStage} stage={stage} />
         <div className="adoption-process-children">
           {/* only 1 of the four below will be shown - based on stage */}
@@ -74,23 +81,20 @@ const AdoptionProcess = () => {
           {stage === 3 && <AdoptionProcessApt applicants={applicants} />}
         </div>
         <div className="adoption-process-buttons">
-          {/* MainButton buttonText will change based on stage */}
-          {/* <MainButton
-            buttonText={"View & Print an Offline Application"}
-            buttonColor={"gray"}
-          /> */}
-          {stage === 1 && <button className="start-app-button-gray">
-            View & Print an Offline Application
-          </button>}
-          {stage !== 1 && stage !== 4 && <button className="start-app-button-gray" onClick={handleStageChange}>
-            {stage === 2 && "Skip, I'll complete it later"}
-            {stage === 3 && "Skip, I'll book it later"}
-          </button>}
-          {/* <MainButton
-            buttonText={"Start Application Online"}
-            buttonColor={"orange"}
-            // clickFunction={handleStageChange}
-          /> */}
+          {stage === 1 && (
+            <button className="start-app-button-gray">
+              View & Print an Offline Application
+            </button>
+          )}
+          {stage !== 1 && stage !== 4 && (
+            <button
+              className="start-app-button-gray"
+              onClick={handleStageChange}
+            >
+              {stage === 2 && "Skip, I'll complete it later"}
+              {stage === 3 && "Skip, I'll book it later"}
+            </button>
+          )}
           <button className="start-app-button" onClick={handleStageChange}>
             {stage === 1 && "Start Application Online"}
             {stage === 2 && "Save & Continue"}

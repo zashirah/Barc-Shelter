@@ -2,10 +2,10 @@ import React from "react";
 
 import TimeButton from "../TimeButton/TimeButton";
 
-import "./DayColumn.css"
+import "./DayColumn.css";
 
-const DayColumn = ({ date }) => {
-  const timeArray = ['12', '13', '14', '15', '16']
+const DayColumn = ({ date, applicants }) => {
+  const timeArray = ["12", "13", "14", "15", "16"];
   // const TimeButtonJSX = timeArray.map()
 
   return (
@@ -18,6 +18,16 @@ const DayColumn = ({ date }) => {
           date={date[1]}
           time={time - 12}
           datetime={`${date[1]}T${time}:00:00`}
+          buttonStatus={applicants.find(
+              (applicant) => Date.parse(applicant.appointment) === Date.parse(
+                new Date(
+                  date[3].getFullYear(),
+                  date[3].getMonth(),
+                  date[3].getDate(),
+                  time
+                )
+              )
+            ) ? 'apt-time-booked' : 'apt-time-not-booked'}
         />
       ))}
     </div>

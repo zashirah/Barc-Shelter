@@ -1,0 +1,7 @@
+.apt-time-booked {
+  background-color: rgb(102,102,102);
+}
+
+.apt-time-not-booked {
+  background-color: rgb(151,151,151);
+}
