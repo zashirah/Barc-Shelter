@@ -1,7 +1,7 @@
 import React from "react";
 import Location from "../Images/Location.png";
 
-console.log(Location);
+// console.log(Location);
 
 const MapFunction = () => {
   // Import result is the URL of your image
