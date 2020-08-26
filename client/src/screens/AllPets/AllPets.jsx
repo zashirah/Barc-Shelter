@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom'
 import "./AllPets.css";
 
 import AnimalCard from "../../components/AnimalCard/AnimalCard";
@@ -22,11 +23,14 @@ const AllPets = () => {
   const [currentpage, updateCurrentPage] = useState(0);
   const [pageCount, updatePageCount] = useState();
 
+  const params = useParams()
+
   useEffect(() => {
     const fetchPets = async () => {
       const pets = await getPets();
-      setAllPets(pets);
-      setQueriedPets(pets);
+      const type = pets.filter((pet) => pet.type === params.type);
+      setAllPets(type);
+      setQueriedPets(type);
     };
     fetchPets();
   }, []);

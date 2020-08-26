@@ -17,7 +17,8 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/pets" component={AllPets} />
+        <Route exact path="/pets/:type" component={AllPets} />
+        {/* <Route exact path="/pets/dogs" component={AllPets} /> */}
         <Route exact path="/donate" component={Donate} />
         <Route exact path="/volunteer" component={Volunteer} />
         {/* <Route path="/add-pet" component={CreatePet} /> */}
@@ -26,7 +27,7 @@ function App() {
         <Route exact path="/adopt" component={AdoptionProcess} />
       </Switch>
     </div>
-  )
+  );
 }
 
 export default App
