@@ -13,11 +13,11 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
-  background-color: #666666;
   color: white;
-  width: 100vw;
+  width: 1439px;
   height: 357px;
-  border: solid 1px #979797;
+  border: solid 1px var(--brown-grey);
+  background-color: var(--brownish-grey);
 }
 h4 {
   font-weight: bold;
