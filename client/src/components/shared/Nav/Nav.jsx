@@ -2,17 +2,13 @@ import React from "react";
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
 
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
-
 const Nav = () => {
   return (
     <nav>
       <div className="nav">
         <div className="links">
           <NavLink className="link" to="/">
-            Home
+            HOME
           </NavLink>
           <div class="dropdown">
             <NavLink to="/adopt">
@@ -31,16 +27,19 @@ const Nav = () => {
             </div>
           </div>
           <NavLink className="link" to="/">
-            Donate
+            VOLUNTEER
           </NavLink>
           <NavLink className="link" to="/">
-            Events
+            DONATE
           </NavLink>
           <NavLink className="link" to="/">
-            Contact
+            EVENTS
           </NavLink>
           <NavLink className="link" to="/">
-            About
+            CONTACT
+          </NavLink>
+          <NavLink className="link" to="/">
+            ABOUT
           </NavLink>
           <div class="dropdown">
             <NavLink to="/adopt">
