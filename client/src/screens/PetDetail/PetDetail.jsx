@@ -50,7 +50,7 @@ const PetDetail = () => {
     return (
       <Layout>
         <div>
-          <h1>{pet.name}</h1>
+          {/* <h1>{pet.name}</h1> */}
           <button>Edit</button>
           <button onClick={() => deletePet(pet._id)}>Delete</button>
         </div>

@@ -9,6 +9,7 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 const Nav = () => {
   return (
     <nav>
+
       <div className="nav">
         <div className="links">
           <NavLink className="link" to="/">
@@ -20,6 +21,7 @@ const Nav = () => {
                 ADOPT
                 <i class="fa fa-caret-down"></i>
               </button>
+
             </NavLink>
             <div class="dropdown-content">
               <NavLink to="/pets/cat">
@@ -29,11 +31,12 @@ const Nav = () => {
                 <div>DOG</div>
               </NavLink>
             </div>
+
           </div>
-          <NavLink className="link" to="/">
+          <NavLink className="link" to="/volunteer">
             Donate
           </NavLink>
-          <NavLink className="link" to="/">
+          <NavLink className="link" to="/donate">
             Events
           </NavLink>
           <NavLink className="link" to="/">
@@ -48,6 +51,7 @@ const Nav = () => {
                 MORE..
                 <i class="fa fa-caret-down"></i>
               </button>
+
             </NavLink>
             <div class="dropdown-content">
               <NavLink to="/pets/cat">

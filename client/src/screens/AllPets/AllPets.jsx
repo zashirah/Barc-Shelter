@@ -11,6 +11,12 @@ import { getPets } from "../../services/pets";
 // import PageNavigation from '../../components/PageNavigation/PageNavigation'
 import ReactPaginate from "react-paginate";
 
+
+import SecondaryHeaderImage from "../../components/SecondaryHeaderImage/SecondaryHeaderImage"
+
+import headerImage from "./cat-picture.png"
+
+
 const AllPets = () => {
   const [allPets, setAllPets] = useState([]);
   const [queriedPets, setQueriedPets] = useState([]);
@@ -27,6 +33,7 @@ const AllPets = () => {
   useEffect(() => {
     const fetchPets = async () => {
       const pets = await getPets();
+
       const petType = pets.filter((pet) => pet.type === params.type);
       setAllPets(petType);
       setQueriedPets(petType);
@@ -103,6 +110,7 @@ const AllPets = () => {
   //add layout component
   return (
     <Layout>
+      <SecondaryHeaderImage image={headerImage} />
       <div className="big-box">
         <div className="sort">
           <Sort onChange={handleSort} />
