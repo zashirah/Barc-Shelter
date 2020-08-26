@@ -79,7 +79,11 @@ const AdoptionProcess = () => {
             />
           )}
           {stage === 3 && <AdoptionProcessApt applicants={applicants} />} */}
-          <AdoptionProcessApt applicants={applicants} />
+          <AdoptionProcessApt
+            applicants={applicants}
+            applicant={applicant}
+            updateApplicant={updateApplicant}
+          />
         </div>
         <div className="adoption-process-buttons">
           {stage === 1 && (

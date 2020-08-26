@@ -16,3 +16,7 @@
 .apt-time-not-booked {
   background-color: rgb(151,151,151);
 } 
+
+.apt-time-clicked {
+  background-color: rgb(244,244,244);
+}

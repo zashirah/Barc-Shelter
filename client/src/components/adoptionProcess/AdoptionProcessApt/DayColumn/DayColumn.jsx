@@ -4,9 +4,8 @@ import TimeButton from "../TimeButton/TimeButton";
 
 import "./DayColumn.css";
 
-const DayColumn = ({ date, applicants }) => {
+const DayColumn = ({ date, applicants, timesClicked, updateTimesClicked, updateApplicant, applicant }) => {
   const timeArray = ["12", "13", "14", "15", "16"];
-  // const TimeButtonJSX = timeArray.map()
 
   return (
     <div className="day-column-container" key={date[1]}>
@@ -16,6 +15,10 @@ const DayColumn = ({ date, applicants }) => {
         {timeArray.map((time) => (
           <TimeButton
             key={`${date[1]}T${time}:00:00`}
+            timesClicked={timesClicked}
+            updateTimesClicked={updateTimesClicked}
+            applicant={applicant}
+            updateApplicant={updateApplicant}
             date={date[1]}
             time={time - 12}
             datetime={`${date[1]}T${time}:00:00`}
