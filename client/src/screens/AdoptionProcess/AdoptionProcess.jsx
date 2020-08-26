@@ -75,10 +75,17 @@ const AdoptionProcess = () => {
         </div>
         <div className="adoption-process-buttons">
           {/* MainButton buttonText will change based on stage */}
-          <MainButton
+          {/* <MainButton
             buttonText={"View & Print an Offline Application"}
             buttonColor={"gray"}
-          />
+          /> */}
+          {stage === 1 && <button className="start-app-button-gray">
+            View & Print an Offline Application
+          </button>}
+          {stage !== 1 && stage !== 4 && <button className="start-app-button-gray" onClick={handleStageChange}>
+            {stage === 2 && "Skip, I'll complete it later"}
+            {stage === 3 && "Skip, I'll book it later"}
+          </button>}
           {/* <MainButton
             buttonText={"Start Application Online"}
             buttonColor={"orange"}
