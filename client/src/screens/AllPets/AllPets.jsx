@@ -11,9 +11,11 @@ import { getPets } from "../../services/pets";
 // import PageNavigation from '../../components/PageNavigation/PageNavigation'
 import ReactPaginate from "react-paginate";
 
+
 import SecondaryHeaderImage from "../../components/SecondaryHeaderImage/SecondaryHeaderImage"
 
 import headerImage from "./cat-picture.png"
+
 
 const AllPets = () => {
   const [allPets, setAllPets] = useState([]);
@@ -34,9 +36,26 @@ const AllPets = () => {
       const type = pets.filter((pet) => pet.type === params.type);
       setAllPets(type);
       setQueriedPets(type);
+      if (type) {
+        console.log(type)
+        const slice = type.slice(offset, offset + perPage);
+        if (slice) {
+          console.log(slice)
+          const petCardsJSX = slice.map((pet, index) => (
+            <AnimalCard
+              name={pet.name}
+              age={pet.age}
+              images={pet.images[0]}
+              key={index}
+            />
+          ));
+          updateTableData(petCardsJSX);
+          updatePageCount(Math.ceil(queriedPets.length / perPage));
+        }
+      }
     };
     fetchPets();
-  }, []);
+  }, [offset, sortType]);
 
   const handleSort = (type) => {
     setSortType(type);
@@ -58,19 +77,19 @@ const AllPets = () => {
     }
   };
 
-  useEffect(() => {
-    const slice = queriedPets.slice(offset, offset + perPage);
-    const petCardsJSX = slice.map((pet, index) => (
-      <AnimalCard
-        name={pet.name}
-        age={pet.age}
-        images={pet.images[0]}
-        key={index}
-      />
-    ));
-    updateTableData(petCardsJSX);
-    updatePageCount(Math.ceil(queriedPets.length / perPage));
-  }, [queriedPets, offset, sortType]);
+  // useEffect(() => {
+  //   const slice = queriedPets.slice(offset, offset + perPage);
+  //   const petCardsJSX = slice.map((pet, index) => (
+  //     <AnimalCard
+  //       name={pet.name}
+  //       age={pet.age}
+  //       images={pet.images[0]}
+  //       key={index}
+  //     />
+  //   ));
+  //   updateTableData(petCardsJSX);
+  //   updatePageCount(Math.ceil(queriedPets.length / perPage));
+  // }, [queriedPets, offset, sortType]);
 
   // const petCardsJSX = queriedPets.map((pet, index) =>
   //   <AnimalCard
