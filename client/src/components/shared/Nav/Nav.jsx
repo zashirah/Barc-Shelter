@@ -33,7 +33,7 @@ const Nav = () => {
             VOLUNTEER
           </NavLink>
           <NavLink className="link" to="/donate">
-            Donate
+            DONATE
           </NavLink>
           <NavLink className="link" to="/">
             EVENTS
