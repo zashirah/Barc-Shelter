@@ -146,7 +146,7 @@ const main = async () => {
       age: 10, // in years or months
       sex: "female",
       breed: "Chartreux",
-      bioPersonality: "cat that thinks it's a lab",
+      bioPersonality: "Allison is painfully sweet. She's an earth angel who was sent to us to make us smile during these difficult times. Allison has had some medical challenges during her time here, but has always been a gracious and loving girl.",
       images: [
         "https://i.ytimg.com/vi/-4Dk8-rVAk0/maxresdefault.jpg",
         "https://i.ytimg.com/vi/ZakV2xtqqMM/maxresdefault.jpg",
@@ -161,7 +161,7 @@ const main = async () => {
       age: 11, // in years or months
       sex: "female",
       breed: "Burmilla",
-      bioPersonality: "cat that thinks it's a lab",
+      bioPersonality: " Her light is bright, and we hope she gets the chance to bestow it upon a deserving human! Naomi is one of those very special souls, and as much as we adore her, we know her dream is to be able to curl up on the lap of someone who loves her whenever she wants!",
       images: [
         "https://i.ytimg.com/vi/3I_FVVvmZcg/maxresdefault.jpg",
         "https://i.ytimg.com/vi/ZakV2xtqqMM/maxresdefault.jpg",
@@ -176,7 +176,7 @@ const main = async () => {
       age: 12, // in years or months
       sex: "female",
       breed: "Cymric",
-      bioPersonality: "cat that thinks it's a lab",
+      bioPersonality: "Cymric loves to be around his person, very affectionate and he loves to sleep with you. He does best with teens and up as younger children may overload him with hugs and kisses that can cause him to lash out.",
       images: [
         "https://i.ytimg.com/vi/Wrds7uujoAo/maxresdefault.jpg",
         "https://i.ytimg.com/vi/ZakV2xtqqMM/maxresdefault.jpg",
@@ -190,7 +190,7 @@ const main = async () => {
       age: 13, // in years or months
       sex: "female",
       breed: "Cornish Rex",
-      bioPersonality: "cat that thinks it's a lab",
+      bioPersonality: "Sweet orange Bella girl! Bella has required medical care and treatment and is staying at our friends at Kitty Charm School in Mill Valley.  She is going to have some dental work but would love a home!!",
       images: [
         "https://i.ytimg.com/vi/-_IRKV5JIWU/maxresdefault.jpg",
         "https://i.ytimg.com/vi/ZakV2xtqqMM/maxresdefault.jpg",
@@ -204,7 +204,7 @@ const main = async () => {
       age: 14, // in years or months
       sex: "female",
       breed: "Chausie",
-      bioPersonality: "cat that thinks it's a lab",
+      bioPersonality: "Ava is a sweet independent cat looking for a chill home, preferably without kids as she likes to be pet on her own terms. She is very beautiful and loving once she bonds to you. Ava will thrive with experienced cat folk who will give her lots of playtime, pets, and space when she wants. ",
       images: [
         "https://i.ytimg.com/vi/TfIHb1V3464/maxresdefault.jpg",
         "https://i.ytimg.com/vi/ZakV2xtqqMM/maxresdefault.jpg",
@@ -218,7 +218,7 @@ const main = async () => {
       age: 15, // in years or months
       sex: "female",
       breed: "Cymric",
-      bioPersonality: "cat that thinks it's a lab",
+      bioPersonality: "Claire is the sweetest little kitty. She is a sucker for head and belly rubs and loves her good morning cuddles. She is chatty, but with the softest meow. ",
       images: [
         "https://i.ytimg.com/vi/byMKOWsEIjo/maxresdefault.jpg",
         "https://i.ytimg.com/vi/ZakV2xtqqMM/maxresdefault.jpg",
@@ -294,7 +294,7 @@ const main = async () => {
       breed: "Foxhound",
       bioPersonality: "One of the coolest new things in my life is a Kong that is filled with treats and peanut butter!! Oh my gosh! Unbelievable! And my current foster mom gives me one every single day. I like almost all chew toys–soft furry ones and hard Nylabone types, and I especially like chewing on and playing with them when my person is nearby.",
       images: [
-        "https://images.unsplash.com/photo-1573521193826-58c7dc2e13e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+        "https://i.ytimg.com/vi/tTguSY-pKBQ/maxresdefault.jpg",
         "https://i.ytimg.com/vi/HhLEIjw4N-4/maxresdefault.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/2.CAO_in_Hungary.jpg/1200px-2.CAO_in_Hungary.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tetsuro.jpg/1200px-Tetsuro.jpg",
@@ -309,7 +309,7 @@ const main = async () => {
       breed: "Eskimo Dog",
       bioPersonality: "I love attention and affection, it is THE BEST. When I want some, I’ll go over to one of my people and look up at them with my best puppy-dog eyes, which I am told are sweet and soulful and like little pools of love.",
       images: [
-        "https://images.unsplash.com/photo-1573521193826-58c7dc2e13e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+        "https://i.ytimg.com/vi/viLq5y3YnkA/maxresdefault.jpg",
         "https://i.ytimg.com/vi/HhLEIjw4N-4/maxresdefault.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/2.CAO_in_Hungary.jpg/1200px-2.CAO_in_Hungary.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tetsuro.jpg/1200px-Tetsuro.jpg",
@@ -324,7 +324,7 @@ const main = async () => {
       breed: "Cocker Spaniel",
       bioPersonality: "One of the coolest new things in my life is a Kong that is filled with treats and peanut butter!! Oh my gosh! Unbelievable! And my current foster mom gives me one every single day. I like almost all chew toys–soft furry ones and hard Nylabone types, and I especially like chewing on and playing with them when my person is nearby.",
       images: [
-        "https://images.unsplash.com/photo-1573521193826-58c7dc2e13e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d8/Chinese_Chongqing_Dog_H%C3%BCndin.jpg",
         "https://i.ytimg.com/vi/HhLEIjw4N-4/maxresdefault.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/2.CAO_in_Hungary.jpg/1200px-2.CAO_in_Hungary.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tetsuro.jpg/1200px-Tetsuro.jpg",
@@ -339,7 +339,7 @@ const main = async () => {
       breed: "Hairless Terrier",
       bioPersonality: "I love attention and affection, it is THE BEST. When I want some, I’ll go over to one of my people and look up at them with my best puppy-dog eyes, which I am told are sweet and soulful and like little pools of love.",
       images: [
-        "https://images.unsplash.com/photo-1573521193826-58c7dc2e13e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+        "https://i.pinimg.com/736x/32/db/c5/32dbc51eab4202d62d4733328d12aee9--catahoula-leopard-dog-catahoula-cur.jpg",
         "https://i.ytimg.com/vi/HhLEIjw4N-4/maxresdefault.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/2.CAO_in_Hungary.jpg/1200px-2.CAO_in_Hungary.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tetsuro.jpg/1200px-Tetsuro.jpg",
