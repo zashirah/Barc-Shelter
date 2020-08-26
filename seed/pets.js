@@ -441,7 +441,7 @@ const main = async () => {
       breed: "Bearded Collie",
       bioPersonality: "I love attention and affection, it is THE BEST. When I want some, I’ll go over to one of my people and look up at them with my best puppy-dog eyes, which I am told are sweet and soulful and like little pools of love.",
       images: [
-        "https://images.unsplash.com/photo-1573521193826-58c7dc2e13e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+        "https://i.pinimg.com/736x/a1/02/52/a1025292d37697540238c318cf88c4c6.jpg",
         "https://i.ytimg.com/vi/HhLEIjw4N-4/maxresdefault.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/2.CAO_in_Hungary.jpg/1200px-2.CAO_in_Hungary.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tetsuro.jpg/1200px-Tetsuro.jpg",
