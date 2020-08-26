@@ -57,12 +57,12 @@ const AdoptionProcess = () => {
         <AdoptionProcessNodes />
         <div className="adoption-process-children">
           {/* only 1 of the four below will be shown - based on stage */}
-          {/* <AdoptionProcessStart /> */}
+          <AdoptionProcessStart />
           {/* <AdoptionProcessApplication
           applicant={applicant}
           updateApplicant={updateApplicant}
         /> */}
-          <AdoptionProcessApt applicants={applicants} />
+          {/* <AdoptionProcessApt applicants={applicants} /> */}
         </div>
         <div className="adoption-process-buttons">
           {/* MainButton buttonText will change based on stage */}

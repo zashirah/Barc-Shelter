@@ -12,7 +12,7 @@ const Nav = () => {
       <>
         <div className="nav">
           <div className="links">
-            <NavLink className="link" to="/Home">
+            <NavLink className="link" to="/">
               Home
             </NavLink>
             <div className="dropdown">
@@ -35,10 +35,10 @@ const Nav = () => {
               ))}{" "}
             </div>
 
-            <NavLink className="link" to="/">
+            <NavLink className="link" to="/volunteer">
               Volunteer
             </NavLink>
-            <NavLink className="link" to="/">
+            <NavLink className="link" to="/donate">
               Donate
             </NavLink>
             <NavLink className="link" to="/">
