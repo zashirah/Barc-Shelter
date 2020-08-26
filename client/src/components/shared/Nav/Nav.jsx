@@ -10,14 +10,14 @@ const Nav = () => {
           <NavLink className="link" to="/">
             HOME
           </NavLink>
-          <div class="dropdown">
+          <div className="dropdown">
             <NavLink to="/adopt">
-              <button class="dropbtn">
+              <button className="dropbtn">
                 ADOPT
-                <i class="fa fa-caret-down"></i>
+                <i className="fa fa-caret-down"></i>
               </button>
             </NavLink>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <NavLink to="/ADOPT">
                 <div>ADOPT</div>
               </NavLink>
@@ -32,8 +32,8 @@ const Nav = () => {
           <NavLink className="link" to="/volunteer">
             VOLUNTEER
           </NavLink>
-          <NavLink className="link" to="/">
-            DONATE
+          <NavLink className="link" to="/donate">
+            Donate
           </NavLink>
           <NavLink className="link" to="/">
             EVENTS
@@ -44,14 +44,14 @@ const Nav = () => {
           <NavLink className="link" to="/">
             ABOUT
           </NavLink>
-          <div class="dropdown">
+          <div className="dropdown">
             <NavLink to="/adopt">
-              <button class="dropbtn">
+              <button className="dropbtn">
                 MORE...
-                <i class="fa fa-caret-down"></i>
+                <i className="fa fa-caret-down"></i>
               </button>
             </NavLink>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <NavLink to="/pets/cat">
                 <div>MORE...</div>
               </NavLink>
