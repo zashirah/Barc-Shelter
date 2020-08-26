@@ -1,0 +1,22 @@
+.confirmation-container {
+  border: solid 1px gray;
+  border-radius: 10px;
+  margin: 50px 50px 50px 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  width: 1200px;
+  height: 800px;
+  font-size: 34px;
+}
+
+.confirmation-title{
+  text-decoration: underline;
+}
+
+.confirmation-paragraphs {
+  margin: 0px 100px 0px 100px;
+  text-align: left;
+}

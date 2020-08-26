@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"
 
 import SecondaryHeaderImage from "../../components/SecondaryHeaderImage/SecondaryHeaderImage";
 import AdoptionProcessNodes from "../../components/adoptionProcess/AdoptionProcessNodes/AdoptionProcessNodes";
@@ -8,6 +9,7 @@ import AdoptionProcessApplication from "../../components/adoptionProcess/Adoptio
 import AdoptionProcessApt from "../../components/adoptionProcess/AdoptionProcessApt/AdoptionProcessApt";
 import Layout from "../../components/shared/Layout/Layout";
 import AdoptionProcessFinalize from "../../components/adoptionProcess/AdoptionProcessFinalize/AdoptionProcessFinalize";
+import Confirmation from "../../components/adoptionProcess/Confirmation/Confirmation";
 
 import headerImage from "./adoptionProcessImage.png";
 
@@ -96,14 +98,20 @@ const AdoptionProcess = () => {
               updateApplicant={updateApplicant}
             />
           )}
-          {stage === 3 && <AdoptionProcessApt 
-            applicants={applicants}
-            applicant={applicant}
-            updateApplicant={updateApplicant} />}
-          {stage === 4 && <AdoptionProcessFinalize
-            applicant={applicant}
-            updateApplicant={updateApplicant}
-          />}
+          {stage === 3 && (
+            <AdoptionProcessApt
+              applicants={applicants}
+              applicant={applicant}
+              updateApplicant={updateApplicant}
+            />
+          )}
+          {stage === 4 && (
+            <AdoptionProcessFinalize
+              applicant={applicant}
+              updateApplicant={updateApplicant}
+            />
+          )}
+          {stage === 5 && <Confirmation />}
         </div>
         <div className="adoption-process-buttons">
           {stage === 1 && (
@@ -111,7 +119,7 @@ const AdoptionProcess = () => {
               View & Print an Offline Application
             </button>
           )}
-          {stage !== 1 && stage !== 4 && (
+          {stage !== 1 && stage !== 4 && stage !== 5 && (
             <button
               className="start-app-button-gray"
               onClick={handleStageChange}
@@ -121,30 +129,39 @@ const AdoptionProcess = () => {
             </button>
           )}
 
-          {stage === 4 && <div className="email-subform-container">
-            <form>
-              <label className="form-email-label" htmlFor="email">
-                <span className="required">*</span>Enter your email here to
-                receice a receipt/reminder:
-              </label>
-              <input
-                className="form-input form-email"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="myemail@email.com"
-                value={applicant.email}
-                onChange={handleChange}
-              />
-            </form>
-            <div className="required">* Required</div>
-          </div>}
-          <button className="start-app-button" onClick={handleStageChange}>
-            {stage === 1 && "Start Application Online"}
-            {stage === 2 && "Save & Continue"}
-            {stage === 3 && "Review App"}
-            {stage === 4 && "Complete App"}
-          </button>
+          {stage === 4 && (
+            <div className="email-subform-container">
+              <form>
+                <label className="form-email-label" htmlFor="email">
+                  <span className="required">*</span>Enter your email here to
+                  receice a receipt/reminder:
+                </label>
+                <input
+                  className="form-input form-email"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="myemail@email.com"
+                  value={applicant.email}
+                  onChange={handleChange}
+                />
+              </form>
+              <div className="required">* Required</div>
+            </div>
+          )}
+          {stage <= 4 && (
+            <button className="start-app-button" onClick={handleStageChange}>
+              {stage === 1 && "Start Application Online"}
+              {stage === 2 && "Save & Continue"}
+              {stage === 3 && "Review App"}
+              {stage === 4 && "Complete App"}
+            </button>
+          )}
+          {stage === 6 && 
+            <Link to="/">
+              Click here to exit back to home
+            </Link>
+          }
         </div>
       </div>
     </Layout>

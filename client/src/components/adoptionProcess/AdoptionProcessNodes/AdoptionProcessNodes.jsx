@@ -45,7 +45,7 @@ const AdoptionProcessNodes = ({ updateStage, stage }) => {
       />
       <NodeCircle
         number={4}
-        nodeCircleStage={stage >= 4 ? "upcoming-node" : "current-node"}
+        nodeCircleStage={stage > 3 ? "upcoming-node" : "current-node"}
       />
     </div>
   );

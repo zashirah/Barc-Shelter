@@ -5,8 +5,8 @@ import "./App.css"
 
 import Home from "./screens/Home/Home";
 import AllPets from "./screens/AllPets/AllPets";
-import CreatePet from "./screens/CreatePet/CreatePet";
-import EditPet from "./screens/EditPet/EditPet";
+// import CreatePet from "./screens/CreatePet/CreatePet";
+// import EditPet from "./screens/EditPet/EditPet";
 import PetDetail from "./screens/PetDetail/PetDetail";
 import AdoptionProcess from "./screens/AdoptionProcess/AdoptionProcess"
 import Donate from "./screens/Donation/Donate"
