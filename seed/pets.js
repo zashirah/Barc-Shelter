@@ -7,7 +7,7 @@ const main = async () => {
   const pets = [
     {
       type: "cat",
-      name: "Cat 005",
+      name: "Sam",
       age: 23, // in years or months
       sex: "female",
       breed: "lab",
@@ -19,7 +19,7 @@ const main = async () => {
     },
     {
       type: "cat",
-      name: "Cat 002",
+      name: "Jam",
       age: 3, // in years or months
       sex: "female",
       breed: "lab",
@@ -31,7 +31,7 @@ const main = async () => {
     },
     {
       type: "cat",
-      name: "Cat 003",
+      name: "Pam",
       age: 4, // in years or months
       sex: "female",
       breed: "lab",
@@ -43,7 +43,7 @@ const main = async () => {
     },
     {
       type: "cat",
-      name: "Cat 004",
+      name: "Cam",
       age: 12, // in years or months
       sex: "female",
       breed: "lab",

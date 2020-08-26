@@ -11,6 +11,9 @@ import { getPets } from "../../services/pets";
 // import PageNavigation from '../../components/PageNavigation/PageNavigation'
 import ReactPaginate from "react-paginate";
 
+import SecondaryHeaderImage from "../../components/SecondaryHeaderImage/SecondaryHeaderImage"
+
+import headerImage from "./cat-picture.png"
 
 const AllPets = () => {
   const [allPets, setAllPets] = useState([]);
@@ -87,6 +90,7 @@ const AllPets = () => {
   //add layout component
   return (
     <Layout>
+      <SecondaryHeaderImage image={headerImage} />
       <div className="big-box">
         <div className="sort">
           <Sort onChange={handleSort} />
