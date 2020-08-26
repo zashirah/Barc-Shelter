@@ -7,14 +7,14 @@ import MapFunction from "../Map/MapFunction";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer clasName="footer-layout">
       <div className="col">
-        <ul>
-          <h4>LOCATION</h4>
-          <li>
+        <ul className="ul-layout">
+          <h4 className="h4-layout">LOCATION</h4>
+          <li className="li-layout">
             <MapFunction />
           </li>
-          <li>
+          <li className="li-layout">
             {/* <p>
               Brooklyn Animal Resource Coalition (BARC) is a 501(c)(3)
               nonprofit, no-kill, privately run animal shelter located in
@@ -27,29 +27,29 @@ const Footer = () => {
         </ul>
       </div>
       <div className="col">
-        <ul>
-          <h5>MAILING ADRESS</h5>
-          <li>697 Grand St #921</li>
-          <li>Brooklyn, NY 11211</li>
-          <h5>GIVE US A CALL</h5>
-          <li>718-486-7489</li>
+        <ul className="ul-layout">
+          <h5 className="h5-layout">MAILING ADRESS</h5>
+          <li className="li-layout">697 Grand St #921</li>
+          <li className="li-layout">Brooklyn, NY 11211</li>
+          <h5 className="h5-layout">GIVE US A CALL</h5>
+          <li className="li-layout">718-486-7489</li>
         </ul>
       </div>
       <div className="col">
-        <ul>
-          <h5>HOURS</h5>
-          <h6>Adoption Hours:</h6>
-          <li>Tues - Sat: </li>
-          <li>12 PM - 4PM </li>
+        <ul className="ul-layout">
+          <h5 className="h5-layout">HOURS</h5>
+          <h6 className="h6-layout">Adoption Hours:</h6>
+          <li className="li-layout">Tues - Sat: </li>
+          <li className="li-layout">12 PM - 4PM </li>
 
-          <li>BARC Shelter is closed</li>
-          <li>Sunday & Monday </li>
+          <li className="li-layout">BARC Shelter is closed</li>
+          <li className="li-layout">Sunday & Monday </li>
         </ul>
       </div>
 
       <div className="col">
-        <ul>
-          <h2>ADOPT</h2>
+        <ul className="ul-layout">
+          <h2 className="h2-layout">ADOPT</h2>
           <div className="row">
             <SocialMediaIconsReact
               icon="facebook"
@@ -91,12 +91,14 @@ const Footer = () => {
               url="https://instagram.com/your-twitter-handle"
             />
           </div>
-          <h6>"Life is great, animals make it better."</h6>
+          <h6 className="h6-layout">
+            "Life is great, animals make it better."
+          </h6>
         </ul>
       </div>
       <div className="col">
-        <ul>
-          <h3>CONTACT US</h3>
+        <ul className="ul-layout">
+          <h3 className="h3-layout">CONTACT US</h3>
           {/* Donate button */}
         </ul>
       </div>
