@@ -4,7 +4,14 @@ import TimeButton from "../TimeButton/TimeButton";
 
 import "./DayColumn.css";
 
-const DayColumn = ({ date, applicants, timesClicked, updateTimesClicked, updateApplicant, applicant }) => {
+const DayColumn = ({
+  date,
+  applicants,
+  timesClicked,
+  updateTimesClicked,
+  updateApplicant,
+  applicant,
+}) => {
   const timeArray = ["12", "13", "14", "15", "16"];
 
   return (
