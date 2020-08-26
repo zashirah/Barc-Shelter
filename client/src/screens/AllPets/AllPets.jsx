@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import "./AllPets.css";
 
 import AnimalCard from "../../components/AnimalCard/AnimalCard";
@@ -9,6 +10,10 @@ import Layout from "../../components/shared/Layout/Layout";
 import { getPets } from "../../services/pets";
 // import PageNavigation from '../../components/PageNavigation/PageNavigation'
 import ReactPaginate from "react-paginate";
+
+import SecondaryHeaderImage from "../../components/SecondaryHeaderImage/SecondaryHeaderImage";
+
+import headerImage from "./cat-picture.png";
 
 const AllPets = () => {
   const [allPets, setAllPets] = useState([]);
@@ -21,31 +26,17 @@ const AllPets = () => {
   const [currentpage, updateCurrentPage] = useState(0);
   const [pageCount, updatePageCount] = useState();
 
+  const params = useParams();
+
   useEffect(() => {
     const fetchPets = async () => {
       const pets = await getPets();
-      setAllPets(pets);
-      setQueriedPets(pets);
-      if (pets) {
-        console.log(pets)
-        const slice = pets.slice(offset, offset + perPage);
-        if (slice) {
-          console.log(slice)
-          const petCardsJSX = slice.map((pet, index) => (
-            <AnimalCard
-              name={pet.name}
-              age={pet.age}
-              images={pet.images[0]}
-              key={index}
-            />
-          ));
-          updateTableData(petCardsJSX);
-          updatePageCount(Math.ceil(queriedPets.length / perPage));
-        }
-      }
+      const type = pets.filter((pet) => pet.type === params.type);
+      setAllPets(type);
+      setQueriedPets(type);
     };
     fetchPets();
-  }, [offset, sortType]);
+  }, []);
 
   const handleSort = (type) => {
     setSortType(type);
@@ -67,19 +58,19 @@ const AllPets = () => {
     }
   };
 
-  // useEffect(() => {
-  //   const slice = queriedPets.slice(offset, offset + perPage);
-  //   const petCardsJSX = slice.map((pet, index) => (
-  //     <AnimalCard
-  //       name={pet.name}
-  //       age={pet.age}
-  //       images={pet.images[0]}
-  //       key={index}
-  //     />
-  //   ));
-  //   updateTableData(petCardsJSX);
-  //   updatePageCount(Math.ceil(queriedPets.length / perPage));
-  // }, [queriedPets, offset, sortType]);
+  useEffect(() => {
+    const slice = queriedPets.slice(offset, offset + perPage);
+    const petCardsJSX = slice.map((pet, index) => (
+      <AnimalCard
+        name={pet.name}
+        age={pet.age}
+        images={pet.images[0]}
+        key={index}
+      />
+    ));
+    updateTableData(petCardsJSX);
+    updatePageCount(Math.ceil(queriedPets.length / perPage));
+  }, [queriedPets, offset, sortType]);
 
   // const petCardsJSX = queriedPets.map((pet, index) =>
   //   <AnimalCard
@@ -99,6 +90,7 @@ const AllPets = () => {
   //add layout component
   return (
     <Layout>
+      <SecondaryHeaderImage image={headerImage} />
       <div className="big-box">
         <div className="sort">
           <Sort onChange={handleSort} />
