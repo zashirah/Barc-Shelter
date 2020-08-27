@@ -18,11 +18,11 @@ const Footer = () => {
           <li className="p-layout">
             <p className="p-layout">
               Brooklyn Animal Resource Coalition (BARC) is a 501(c)(3)
-              nonprofit, no-kill,<br></br>
-              privately run animal shelter located in Williamsburg, Brooklyn.
-              Since opening <br></br> our doors in 1987,have been able to
-              provide care to animals through dedicated <br></br> volunteers,
-              our pet supply business,and private donations. EIN #: 11-3179166
+              nonprofit, no-kill, privately<br></br> run animal shelter located
+              in Williamsburg, Brooklyn. Since opening our <br></br>doors in
+              1987,have been able to provide care to animals through dedicated{" "}
+              <br></br> volunteers, our pet supply business,and private
+              donations. EIN #: 11-3179166
               <br></br>
               Registered Pet Rescue #: RR103
             </p>
