@@ -7,7 +7,6 @@
   font-size: 35px;
 }
 
-h2,
 .h2-layout {
   margin: 0px;
 }
@@ -68,17 +67,17 @@ footer {
   margin: 0px;
   padding: 0px;
 }
-li.li-layout {
+.li-layout {
   margin-top: 2px;
 }
 
-li.li-layout2 {
+.li-layout2 {
   padding-top: 50px;
   margin-top: 2px;
   font-size: 20px;
   text-align: center;
 }
-li.li-layout3 {
+.li-layout3 {
   font-size: 20px;
   text-align: center;
 }
@@ -88,9 +87,7 @@ li.li-layout3 {
   text-align: center;
 }
 
-li,
 .p-layout {
-  text-align: left;
   font-size: 14px;
 }
 
