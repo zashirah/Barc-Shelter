@@ -1,16 +1,32 @@
-.first-section{
-  margin:0 auto;
-  border-style:solid;
-}
+/* .first-section {
+  margin: 0 auto;
+  border-style: solid;
+} */
 
 .Cat {
   float: left;
-  margin-top: -13px;
+  margin-top: -11px;
 }
 
 .Dog {
   float: right;
   margin-top: -290px;
+}
+
+.ebay {
+  width: 170px;
+  height: 40px;
+  position: relative;
+  top: 79px;
+  right: 760px;
+}
+
+.amazon-wish-list {
+  width: 129px;
+  height: 40px;
+  position: relative;
+  top: 79px;
+  right: 1060px;
 }
 
 .welcome {
@@ -19,7 +35,7 @@
   font-family: Lato;
   font-size: 50px;
   font-weight: 500;
-  margin-left: 550px;
+  margin-left: 350px;
 }
 
 .animals {
@@ -29,7 +45,7 @@
   font-size: 36px;
   font-weight: 300;
   font-style: italic;
-  margin-left: 550px;
+  margin-left: 350px;
 }
 
 .image {
@@ -42,14 +58,14 @@
 }
 
 .volunteer {
-  width: 656px;
+  width: 636px;
   height: 171px;
   font-family: Lato;
   font-size: 48px;
   font-weight: bold;
   color: white;
   position: absolute;
-  left: 1050px;
+  left: 990px;
   top: 1200px;
 }
 
@@ -62,9 +78,10 @@
   border-radius: 10px;
   color: white;
   position: absolute;
-  left: 1250px;
+  left: 1150px;
   top: 1450px;
   background-color: #d65f06;
+  cursor: pointer;
 }
 
 .orangeCat {
@@ -82,7 +99,7 @@
   height: 200px;
   font-family: Lato;
   font-size: 42px;
-  margin-left: 550px;
+  margin-left: 410px;
   margin-top: 120px;
 }
 
@@ -115,7 +132,8 @@
   font-weight: 800;
   border-radius: 10px;
   color: white;
-  margin-right: 950px;
+  margin-right: 590px;
   margin-top: 250px;
   background-color: #d65f06;
+  cursor: pointer;
 }

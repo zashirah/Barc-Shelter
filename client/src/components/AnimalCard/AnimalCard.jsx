@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./AnimalCard.css"
 
-const AnimalCard = ({ name, age, images, id }) => {
+const AnimalCard = ({ name, age, images, id, type }) => {
   return (
-    <Link ClassName="link" to={`/pet/${id}`} >
+    <Link ClassName="link" to={`/pets/${type}/${id}`} >
     <div className="outer-box"> 
       <img className="pet-card-image"src={images} alt={name}/>
       <div className="cat-info-box">

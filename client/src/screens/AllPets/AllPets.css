@@ -10,6 +10,23 @@
   margin:10px;
 }
 
+.breadcrumbs-adoption-link {
+  color: #2a2a2a;
+  font-family: CrimsonText;
+  font-size: 44px;
+  font-weight: bold;
+}
+
+.breadcrumbs-div {
+  position: absolute;
+  top: 150px;
+  left: 30px;
+  color: #2a2a2a;
+  font-family: CrimsonText;
+  font-size: 44px;
+  font-weight: bold;
+}
+
 .sort{
 max-width:1040px;
 display:grid;

@@ -28,7 +28,7 @@ const DayColumn = ({
             updateApplicant={updateApplicant}
             date={date[1]}
             time={time - 12}
-            datetime={`${date[1]}T${time}:00:00`}
+            datetime={`${date[1]}T${time}:00:00Z`}
             buttonStatus={
               applicants.find(
                 (applicant) =>

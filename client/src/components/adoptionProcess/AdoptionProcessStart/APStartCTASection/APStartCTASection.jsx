@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from "react-router-dom"
+
 import APStartCTAImageCard from "./APStartCTAImageCard/APStartCTAImageCard";
 import APStartCTAButton from "./APStartCTAButton/APStartCTAButton";
 import APStartCTAButtonSmall from "./APStartCTAButtonSmall/APStartCTAButtonSmall";
@@ -15,8 +17,12 @@ const APStartCTASection = () => {
       <div className="cta-see-our-pets">
         <APStartCTAImageCard imageSrc={_2CatsAndADog} />
         <div>
-          <APStartCTAButtonSmall buttonText={"See our Pets!"} />
-          <APStartCTAButtonSmall buttonText={"See our Pets!"} />
+          <Link to="/pets/dog">
+            <APStartCTAButtonSmall buttonText={"See our Dogs!"} />
+          </Link>
+          <Link to="/pets/cat">
+            <APStartCTAButtonSmall buttonText={"See our Cats!"} />
+          </Link>
         </div>
       </div>
       <div className="cta-sponsor-a-pet">

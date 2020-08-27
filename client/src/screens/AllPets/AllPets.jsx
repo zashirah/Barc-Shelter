@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useLayoutEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "./AllPets.css";
 
 import AnimalCard from "../../components/AnimalCard/AnimalCard";
@@ -68,6 +68,7 @@ const AllPets = () => {
         // type={pet.type}
         id={pet._id}
         key={index}
+        type={pet.type}
       />
     ));
     updateTableData(petCardsJSX);
@@ -89,10 +90,20 @@ const AllPets = () => {
     updateOffset(offset);
   };
 
+  const BreadcrumbsJSX = (
+    <div className="breadcrumbs-div">
+      <Link to="/adopt" className="breadcrumbs-adoption-link">
+        Adoption
+      </Link>
+      <i className="fa fa-caret-right" aria-hidden="true"></i>{" "}
+      {params.type.charAt(0).toUpperCase() + params.type.slice(1)}s
+    </div>
+  );
+
   //add layout component
   return (
     <Layout>
-      <SecondaryHeaderImage image={headerImage} />
+      <SecondaryHeaderImage image={headerImage} breadcrumbs={BreadcrumbsJSX} />
       <div className="big-box">
         <div className="sort">
           <Sort onChange={handleSort} />

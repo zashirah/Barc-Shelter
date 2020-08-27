@@ -2,14 +2,25 @@
   box-sizing: border-box;
 }
 
-.group-of-dogs {
-  width: 100%;
-  margin-top: -15px;
+.first-div{
+margin:0 auto;
+background-image:url("./group.jpg");
+height:300px;
+display:flex;
+margin-top:-100px;
 }
+.group-of-dogs {
+  margin-top: -15px;
+  
+}
+/* .main-body{
+width: 1440px;
+margin:0 auto;
 
+} */
 .volunteer-header-text {
-  margin-top: -140px;
-  margin-left: -1200px;
+  margin-top:150px;
+  margin-left:40px;
   color: #2a2a2a;
   font-family: CrimsonText;
   font-size: 44px;
@@ -44,6 +55,8 @@
 }
 
 .warning-message {
+  width:1440px;
+  margin:0 auto;
   color: #ff0000;
   font-size: 30px;
   text-align: center;
@@ -53,7 +66,7 @@
   font-size: 20px;
   letter-spacing: 0.32px;
   text-align: center;
-  margin-left: 180px;
+  margin:0 auto;
   width: 90%;
 }
 

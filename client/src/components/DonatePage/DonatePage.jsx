@@ -11,28 +11,32 @@ import hungryCat from "./hungry-cat.jpg"
 const DonatePage = () => {
   return (
     <div>
-      <img src={hugingDog} alt="Dog" className="huging-dog" />
+      <div className="first-diva">
+      {/* <img src={hugingDog} alt="Dog" className="huging-dog" /> */}
+      <div className="title-div">
       <h1 className="donate-header-text">
         <i>BARC</i> Shelter
       </h1>
+      </div>
+      </div>
       <section className="text-container">
         <h1 className="donation-header">Donation</h1>
         <h2 className="tax-deductible">*All donations are tax-deductible</h2>
         <h2 className="donation-pays">Your donation pays for: </h2>
-        <ul>
-          <li>• Animal care - We keep the animals clean, healthy, and safe.</li>
-          <li>• Nutrition - We provide quality food.</li>
-          <li>• Health – We provide vaccinations and inoculations.</li>
+        <ul className="ul-text">
+          <li>Animal care - We keep the animals clean, healthy, and safe.</li>
+          <li> Nutrition - We provide quality food.</li>
+          <li> Health – We provide vaccinations and inoculations.</li>
           <li>
-            • Spay/Neuter – We spay and neuter all of the animals that come into
+             Spay/Neuter – We spay and neuter all of the animals that come into
             our shelter.
           </li>
           <li>
-            • Staff – We hire experienced, devoted staff to care for the
+             Staff – We hire experienced, devoted staff to care for the
             animals.
           </li>
           <li>
-            • Facilities maintenance – Your donation helps us to provide
+             Facilities maintenance – Your donation helps us to provide
             electricity, heat, and upkeep of our shelter.
           </li>
         </ul>
@@ -41,33 +45,33 @@ const DonatePage = () => {
         <h1 className="donation-method-header">Donation Methods</h1>
         <h2 className="amazon-wishlist">Amazon Wishlist</h2>
         <img src={amazonWishList} alt="Dog" className="amazon-wishlist-image" />
-        <ul>
-          <li>• All donations are tax-deductible</li>
-          <li>• Cleaning supplies, bedding material, pet beds </li>
-          <li>• Health – We provide vaccinations and inoculations.</li>
-          <li>• Toys for both Cats/Dogs</li>
-          <li>• Food for both Cats/Dogs</li>
+        <ul className="ul-text">
+          <li> All donations are tax-deductible</li>
+          <li> Cleaning supplies, bedding material, pet beds </li>
+          <li> Health – We provide vaccinations and inoculations.</li>
+          <li> Toys for both Cats/Dogs</li>
+          <li> Food for both Cats/Dogs</li>
         </ul>
         <h2 className="amazon-wishlist">Network for Good</h2>
         <img src={donateNow} alt="Dog" className="amazon-wishlist-image" />
-        <ul>
-          <li>• One-time Donation</li>
-          <li>• Monthly Sponsor </li>
-          <li>• $10 USD minimum</li>
+        <ul className="ul-text">
+          <li> One-time Donation</li>
+          <li> Monthly Sponsor </li>
+          <li> $10 USD minimum</li>
         </ul>
         <h2 className="amazon-wishlist">PayPal</h2>
         <img src={donateMethod} alt="Dog" className="amazon-wishlist-image" />
-        <ul>
-          <li>• One-time Donation</li>
-          <li>• No minimum amount of donatio</li>
+        <ul className="ul-text">
+          <li> One-time Donation</li>
+          <li> No minimum amount of donatio</li>
         </ul>
         <h2 className="amazon-wishlist">Walk Applications</h2>
         <img src={resWalk} alt="Dog" className="amazon-wishlist-image" />
-        <ul>
-          <li>• Download mobile apps to raise money</li>
-          <li>• Create your profile</li>
-          <li>• Find BARC Shelter Brooklyn,NY </li>
-          <li>• START WALKING!</li>
+        <ul className="ul-text">
+          <li> Download mobile apps to raise money</li>
+          <li> Create your profile</li>
+          <li> Find BARC Shelter Brooklyn,NY </li>
+          <li> START WALKING!</li>
         </ul>
       </section>
       <section className="mail-info">

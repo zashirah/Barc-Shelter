@@ -11,14 +11,20 @@ import human7 from "./human7.jpg"
 import human8 from "./human8.jpg"
 import human9 from "./human9.jpg"
 
+
+
 const VolunteerPage = () => {
   return (
-    <div className="">
-      <img src={group} alt="Dog" className="group-of-dogs" />
-      <h1 className="volunteer-header-text">
+      <div className="">
+        <div className="first-div">
+        {/* <img src={group} alt="Dog" className="group-of-dogs" /> */}
+        <div className="title-div">
+        <h1 className="volunteer-header-text">
         <i>BARC</i> Shelter
       </h1>
-      <main>
+        </div>
+        </div>
+      <main className="main-body">
         <section className="volunteer-container">
           <h1 className="volunteer-heading">Volunteer</h1>
           <section className="individual-volunteer">

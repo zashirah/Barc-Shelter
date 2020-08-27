@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getPet, deletePet } from "../../services/pets";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 import Carousel from "../../components/Carousel/Carousel";
 import InfoSection from "../../components/InfoSection/InfoSection";
@@ -12,9 +12,23 @@ import "./PetDetail.css";
 
 import headerImage from "./screen-shot-2020-07-30-at-2-40-59-pm.png";
 
-const PetDetail = () => {
+
+const PetDetail = () => {  
   const [pet, setPet] = useState(null);
-  const { id } = useParams();
+  const { id, type } = useParams();
+
+  const BreadcrumbsJSX = (
+    <div className="breadcrumbs-div">
+      <Link to="/adopt" className="breadcrumbs-adoption-link">
+        Adoption
+      </Link>
+
+      <i className="fa fa-caret-right" aria-hidden="true"></i>
+      <Link className="breadcrumbs-pettype-link" to={`/pets/${type}`}>
+        {type.charAt(0).toUpperCase() + type.slice(1)}s
+      </Link>
+    </div>
+  );
 
   useEffect(() => {
     const fetchPet = async () => {
@@ -29,9 +43,13 @@ const PetDetail = () => {
     return (
       <Layout>
         <div>
-          <SecondaryHeaderImage image={headerImage} />
+          <SecondaryHeaderImage
+            image={headerImage}
+            name={pet.name}
+            breadcrumbs={BreadcrumbsJSX}
+          />
           <div className="pet-detail-top-section">
-            <Carousel petImages={pet.images}/>
+            <Carousel petImages={pet.images} />
             <InfoSection
               name={pet.name}
               age={pet.age}
@@ -40,8 +58,6 @@ const PetDetail = () => {
               bioPersonality={pet.bioPersonality}
             />
           </div>
-          <button>Edit</button>
-          <button onClick={() => deletePet(pet._id)}>Delete</button>
           <EligibilityInformationSection />
         </div>
       </Layout>

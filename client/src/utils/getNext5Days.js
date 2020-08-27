@@ -36,7 +36,7 @@ export const getNext5Days = () => {
       }
 
       const showDate = mm + "/" + dd
-      const useDate = mm + "/" + dd + "/" + yyyy;
+      const useDate = yyyy + "-" + mm + "-" + dd;
 
       dateArray.push([showDate, useDate, dayOfWeek, date]);
     }

@@ -4,8 +4,9 @@
   justify-content: space-evenly;
   align-items: center;
   background-color: rgb(242, 242, 242);
-  width: 100vw;
+  width: 1440px;
   margin-top: 50px;
+  height: 250px;
 }
 
 .cta-see-our-pets, 

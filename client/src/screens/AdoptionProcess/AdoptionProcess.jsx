@@ -69,13 +69,11 @@ const AdoptionProcess = () => {
     todayP7 = Date.parse(todayP7);
     const fetchApplicants = async () => {
       const applicants = await getApplicants();
-      const applicantsWithinDays = applicants.filter((app) => {
-        return (
+      const applicantsWithinDays = applicants.filter((app) => 
+          // console.log(Date.parse(app.appointment))
           Date.parse(app.appointment) >= today &&
           Date.parse(app.appointment) <= todayP7
         );
-      });
-      console.log("log", applicantsWithinDays);
       updateApplicants(applicantsWithinDays);
     };
     fetchApplicants();
@@ -119,6 +117,8 @@ const AdoptionProcess = () => {
   const handleCompleteApplication = (event) => {
     event.preventDefault()
     if (applicant.email) {
+      console.log('applicant', applicant)
+      console.log("date", applicant.appointment);
       updateStage((prevState) => prevState + 1);
       createApplicant(applicant)
     }
@@ -238,7 +238,11 @@ const AdoptionProcess = () => {
                   Click here to exit back to home
                 </button>
               </Link>
-              
+              <Link to="/applicants">
+                <button className="gray main-button">
+                  Click here to edit or delete applicants
+                </button>
+              </Link>
             </div>
           )}
         </div>

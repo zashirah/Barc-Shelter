@@ -4,6 +4,7 @@ import "./Footer.css";
 import ReactDOM from "react-dom";
 import { SocialMediaIconsReact } from "social-media-icons-react";
 import MapFunction from "../Map/MapFunction";
+import SmallButton from "../SmallButton/SmallButton";
 
 const Footer = () => {
   return (
@@ -11,10 +12,21 @@ const Footer = () => {
       <div className="col">
         <ul className="ul-layout">
           <h4 className="h4-layout">LOCATION</h4>
-          <li className="li-layout">
+          <li className="li-layout10">
             <MapFunction />
           </li>
-          <li className="li-layout5"></li>
+          <li className="p-layout">
+            <p className="p-layout">
+              Brooklyn Animal Resource Coalition (BARC) is a 501(c)(3)
+              nonprofit, no-kill, privately<br></br> run animal shelter located
+              in Williamsburg, Brooklyn. Since opening our <br></br>doors in
+              1987,have been able to provide care to animals through dedicated{" "}
+              <br></br> volunteers, our pet supply business,and private
+              donations. EIN #: 11-3179166
+              <br></br>
+              Registered Pet Rescue #: RR103
+            </p>
+          </li>
         </ul>
       </div>
       <div className="col1">
@@ -90,7 +102,7 @@ const Footer = () => {
       <div className="col">
         <ul className="ul-layout">
           <h3 className="h3-layout">CONTACT US</h3>
-          {/* Donate button */}
+          <SmallButton buttonText={"Donate"} buttonColor={"gold"} />
         </ul>
       </div>
     </footer>

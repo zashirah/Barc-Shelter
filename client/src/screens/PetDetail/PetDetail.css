@@ -2,3 +2,10 @@
   display: flex;
   flex-direction: row;
 }
+
+.breadcrumbs-pettype-link {
+  color: rgb(214, 95, 6);
+  font-family: CrimsonText;
+  font-size: 44px;
+  font-weight: bold;
+}

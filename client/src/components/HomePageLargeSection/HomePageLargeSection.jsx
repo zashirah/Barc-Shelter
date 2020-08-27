@@ -5,20 +5,19 @@ import cat from "./cat.jpg"
 import dog from "./bitmap.jpg"
 import orangeCat from "./orangeCat.jpg"
 import whiteDog from "./whiteDog.jpg"
+import ebay from "./ebay.jpg"
+import amazonList from "./bitmap copy.jpg"
 
 const HomePageLargeSection = () => {
   return (
     <div className="main">
       <div className="first-section">
-      <img src={cat} alt="Cat" className="Cat" />
-      <h1 className="welcome">
-      WELCOME TO <b>BARC Shelter</b>
-      </h1>
+        <img src={cat} alt="Cat" className="Cat" />
+        <h1 className="welcome">
+          WELCOME TO <b>BARC Shelter</b>
+        </h1>
+        <h2 className="animals">"Life is great, animals make it better"</h2>
       </div>
-     
-     
-    
-      <h2 className="animals">"Life is great, animals make it better"</h2>
       <img src={dog} alt="Dog" className="Dog" />
       <div className="image">
         <h1 className="volunteer">
@@ -44,6 +43,8 @@ const HomePageLargeSection = () => {
         </h1>
         <Link className="donate-link" to="/donate">
           <button className="donate">Donate Now</button>
+          <img src={ebay} alt="Dog" className="ebay" />
+          <img src={amazonList} alt="Dog" className="amazon-wish-list" />
         </Link>
       </div>
     </div>
