@@ -238,7 +238,11 @@ const AdoptionProcess = () => {
                   Click here to exit back to home
                 </button>
               </Link>
-              
+              <Link to="/applicants">
+                <button className="gray main-button">
+                  Click here to edit or delete applicants
+                </button>
+              </Link>
             </div>
           )}
         </div>
