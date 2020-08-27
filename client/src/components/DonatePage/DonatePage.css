@@ -1,10 +1,16 @@
-.huging-dog {
-  width: 100%;
-}
+.first-diva{
+  margin:0 auto;
+  background-image: url("./huging-dog.jpg");
+  background-repeat: no-repeat;
+  height:300px;
+  display:flex;
+  margin-top:-100px;
+
+  }
 
 .donate-header-text {
-  margin-top: -140px;
-  margin-left: -1200px;
+  margin-top:150px;
+  margin-left:40px;
   color: #2a2a2a;
   font-family: CrimsonText;
   font-size: 44px;

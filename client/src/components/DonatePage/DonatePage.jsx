@@ -11,10 +11,14 @@ import hungryCat from "./hungry-cat.jpg"
 const DonatePage = () => {
   return (
     <div>
-      <img src={hugingDog} alt="Dog" className="huging-dog" />
+      <div className="first-diva">
+      {/* <img src={hugingDog} alt="Dog" className="huging-dog" /> */}
+      <div className="title-div">
       <h1 className="donate-header-text">
         <i>BARC</i> Shelter
       </h1>
+      </div>
+      </div>
       <section className="text-container">
         <h1 className="donation-header">Donation</h1>
         <h2 className="tax-deductible">*All donations are tax-deductible</h2>
