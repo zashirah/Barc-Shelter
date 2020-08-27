@@ -36,7 +36,7 @@ const AllPets = () => {
       setQueriedPets(type);
     };
     fetchPets();
-  }, []);
+  }, [params.type]);
 
   const handleSort = (type) => {
     setSortType(type);
