@@ -15,7 +15,11 @@ import headerImage from "./adoptionProcessImage.png";
 
 import "./AdoptionProcess.css";
 
-import { getApplicants, getApplicant } from "../../services/applicant";
+import {
+  getApplicants,
+  getApplicant,
+  createApplicant,
+} from "../../services/applicant";
 
 const AdoptionProcess = () => {
   const [applicants, updateApplicants] = useState([]);
@@ -116,6 +120,7 @@ const AdoptionProcess = () => {
     event.preventDefault()
     if (applicant.email) {
       updateStage((prevState) => prevState + 1);
+      createApplicant(applicant)
     }
   }
 
