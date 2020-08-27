@@ -3,7 +3,7 @@ import React from "react";
 
 import "./SecondaryHeaderImage.css";
 
-const SecondaryHeaderImage = ({ image }) => {
+const SecondaryHeaderImage = ({ image, breadcrumbs }) => {
   return (
     <div className="secondary-header-image-div">
       <img
@@ -12,6 +12,7 @@ const SecondaryHeaderImage = ({ image }) => {
         alt="Header Image of Pet(s)"
       />
       <h1 className="secondary-header-image-title"><i>Barc</i> Shelter</h1>
+      {breadcrumbs}
     </div>
     //    <div>
     //      <IndexLink to="/" activeClassName="active">Home</IndexLink>
