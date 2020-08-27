@@ -104,6 +104,8 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
             name="applicantName"
             id="applicantName"
             onChange={handleChange}
+            required
+            autoFocus
           />
           <label className="input-label" htmlFor="dateOfBirth">
             Date of Birth:

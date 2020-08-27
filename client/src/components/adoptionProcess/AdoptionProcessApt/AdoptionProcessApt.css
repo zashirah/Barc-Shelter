@@ -8,10 +8,14 @@
   align-items: left;
   justify-content: left;
   width: 1200px;
-  height: 800px;
+  height: 850px;
 }
 
 .date-columns-container {
   display: flex;
   justify-content: space-between;
+}
+
+.form-have-pet {
+  font-size: 24px;
 }

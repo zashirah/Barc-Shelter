@@ -21,7 +21,7 @@ var Applicant = new Schema({
   yardIndicator: Boolean,
   fenceIndicator: Boolean,
   windowScreenIndicator: Boolean,
-  currentlyOwnPetIndicator: Boolean,
+  currentlyOwnPetIndicator: String,
   email: String,
   appointment: Date,
 });

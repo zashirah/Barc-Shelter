@@ -46,6 +46,9 @@ const AdoptionProcess = () => {
 
   const [stage, updateStage] = useState(1);
 
+  const [applicationFinished, updateApplicationFinished] = useState(false);
+  const [appointmentBooked, updateAppointmentBooked] = useState(false);
+
   const handleEmailChange = (event) => {
     event.preventDefault();
     const { name, value } = event.target;
@@ -54,7 +57,7 @@ const AdoptionProcess = () => {
       [name]: value,
     });
   };
-
+ 
   useEffect(() => {
     let today = new Date();
     today = Date.parse(today);
@@ -78,6 +81,43 @@ const AdoptionProcess = () => {
     event.preventDefault();
     updateStage((prevState) => prevState + 1);
   };
+
+  const handleSubmitApplication = (event) => {
+    event.preventDefault();
+    updateStage((prevState) => prevState + 1);
+    updateApplicationFinished(true)
+  };
+
+  const handleSkipApplication = (event) => {
+    event.preventDefault();
+    updateStage((prevState) => prevState + 1);
+    updateApplicationFinished(false);
+  };
+
+  const handleSubmitAppointment = (event) => {
+    event.preventDefault();
+    if (applicant.currentlyOwnPetIndicator) {
+      updateStage((prevState) => prevState + 1);
+      updateAppointmentBooked(true);
+    }
+  };
+
+  const handleSkipAppointment = (event) => {
+    event.preventDefault();
+    updateStage((prevState) => prevState + 1);
+    updateAppointmentBooked(false)
+    updateApplicant({
+      ...applicant,
+      appointment: ''
+    })
+  };
+  
+  const handleCompleteApplication = (event) => {
+    event.preventDefault()
+    if (applicant.email) {
+      updateStage((prevState) => prevState + 1);
+    }
+  }
 
   return (
     <Layout>
@@ -104,6 +144,9 @@ const AdoptionProcess = () => {
             <AdoptionProcessFinalize
               applicant={applicant}
               updateApplicant={updateApplicant}
+              applicationFinished={applicationFinished}
+              appointmentBooked={appointmentBooked}
+              applicant={applicant}
             />
           )}
           {stage === 5 && <Confirmation />}
@@ -114,13 +157,20 @@ const AdoptionProcess = () => {
               View & Print an Offline Application
             </button>
           )}
-          {stage !== 1 && stage !== 4 && stage !== 5 && (
+          {stage === 2 && (
             <button
               className="start-app-button-gray"
-              onClick={handleStageChange}
+              onClick={handleSkipApplication}
             >
-              {stage === 2 && "Skip, I'll complete it later"}
-              {stage === 3 && "Skip, I'll book it later"}
+              Skip, I'll complete it later
+            </button>
+          )}
+          {stage === 3 && (
+            <button
+              className="start-app-button-gray"
+              onClick={handleSkipAppointment}
+            >
+              Skip, I'll book it later
             </button>
           )}
 
@@ -144,12 +194,39 @@ const AdoptionProcess = () => {
               <div className="required">* Required</div>
             </div>
           )}
-          {stage <= 4 && (
+          {stage === 2 && (
+            <button
+              className="start-app-button"
+              onClick={handleSubmitApplication}
+            >
+              Save & Continue
+            </button>
+          )}
+
+          {stage === 3 && (
+            <button
+              className="start-app-button"
+              onClick={handleSubmitAppointment}
+            >
+              Review App
+            </button>
+          )}
+
+          {stage === 4 && (
+            <button
+              className="start-app-button"
+              onClick={handleCompleteApplication}
+            >
+              Complete App
+            </button>
+          )}
+
+          {stage === 1 && (
             <button className="start-app-button" onClick={handleStageChange}>
-              {stage === 1 && "Start Application Online"}
-              {stage === 2 && "Save & Continue"}
-              {stage === 3 && "Review App"}
-              {stage === 4 && "Complete App"}
+              Start Application Online
+              {/* {stage === 2 && "Save & Continue"}
+              {stage === 3 && "Review App"} */}
+              {/* {stage === 4 && "Complete App"} */}
             </button>
           )}
           {stage === 5 && (
