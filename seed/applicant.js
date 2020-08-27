@@ -27,7 +27,7 @@ const main = async () => {
       windowScreenIndicator: false,
       currentlyOwnPetIndicator: true,
       email: "zachshirah01@gmail.com",
-      appointment: "2020-08-28T14:00:00",
+      appointment: "2020-07-29T14:00:00",
     },
     {
       applicantName: "Zach",
@@ -51,7 +51,7 @@ const main = async () => {
       windowScreenIndicator: false,
       currentlyOwnPetIndicator: true,
       email: "zachshirah01@gmail.com",
-      appointment: "2020-08-17T14:00:00",
+      appointment: "2020-09-16T14:00:00",
     },
     {
       applicantName: "Zach",
@@ -75,7 +75,7 @@ const main = async () => {
       windowScreenIndicator: false,
       currentlyOwnPetIndicator: true,
       email: "zachshirah01@gmail.com",
-      appointment: "2020-08-17T12:00:00",
+      appointment: "2020-08-27T12:00:00",
     },
   ];
 

@@ -1,4 +1,14 @@
 .day-column-container {
   display: flex;
   flex-direction: column;
+  /* justify-content: space-around; */
+  /* align-items: space-around; */
+}
+
+.day-column-title {
+  font-size: 32px;
+}
+
+.time-container {
+  padding-top: 25px;
 }

@@ -1,4 +1,4 @@
-.book-appointment-container {
+.confirmation-container {
   border: solid 1px gray;
   border-radius: 10px;
   margin: 50px 50px 50px 50px;
@@ -9,9 +9,14 @@
   justify-content: left;
   width: 1200px;
   height: 800px;
+  font-size: 34px;
 }
 
-.date-columns-container {
-  display: flex;
-  justify-content: space-between;
+.confirmation-title{
+  text-decoration: underline;
+}
+
+.confirmation-paragraphs {
+  margin: 0px 100px 0px 100px;
+  text-align: left;
 }
