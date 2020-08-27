@@ -55,11 +55,11 @@ footer {
 
 .h6-layout1 {
   padding-top: 80px;
-  padding-left: 70px;
+  padding-left: 40px;
+  /* margin-left: 70px; */
   font-size: 20px;
-  margin: 0px;
+  margin: 20px;
   text-align: center;
-  width: 75%;
 }
 
 .ul-layout {
@@ -86,9 +86,12 @@ footer {
   font-size: 20px;
   text-align: center;
 }
-
+.li-layout10 {
+  text-align: left;
+}
 .p-layout {
   font-size: 14px;
+  text-align: left;
 }
 
 .col-layout {
