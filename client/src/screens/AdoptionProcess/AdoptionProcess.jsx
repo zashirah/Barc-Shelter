@@ -229,17 +229,17 @@ const AdoptionProcess = () => {
           {stage === 1 && (
             <button className="start-app-button" onClick={handleStageChange}>
               Start Application Online
-              {/* {stage === 2 && "Save & Continue"}
-              {stage === 3 && "Review App"} */}
-              {/* {stage === 4 && "Complete App"} */}
             </button>
           )}
           {stage === 5 && (
-            <Link to="/">
-              <button className="gray main-button">
-                Click here to exit back to home
-              </button>
-            </Link>
+            <div>
+              <Link to="/">
+                <button className="gray main-button">
+                  Click here to exit back to home
+                </button>
+              </Link>
+              
+            </div>
           )}
         </div>
       </div>
