@@ -13,14 +13,13 @@ const Nav = () => {
           <div className="dropdown">
             <NavLink to="/adopt">
               <button className="dropbtn">
-                ADOPT
+                <NavLink to="/ADOPT">
+                  <div>ADOPT</div>
+                </NavLink>
                 <i className="fa fa-caret-down"></i>
               </button>
             </NavLink>
             <div className="dropdown-content">
-              <NavLink to="/ADOPT">
-                <div>ADOPT</div>
-              </NavLink>
               <NavLink to="/pets/cat">
                 <div>CAT</div>
               </NavLink>
@@ -47,14 +46,13 @@ const Nav = () => {
           <div className="dropdown">
             <NavLink to="/adopt">
               <button className="dropbtn">
-                MORE...
+                <NavLink to="/pets/cat">
+                  <div>MORE...</div>
+                </NavLink>
                 <i className="fa fa-caret-down"></i>
               </button>
             </NavLink>
             <div className="dropdown-content">
-              <NavLink to="/pets/cat">
-                <div>MORE...</div>
-              </NavLink>
               <NavLink to="/pets/cat">
                 <div>LOST DOGS/CATS</div>
               </NavLink>
