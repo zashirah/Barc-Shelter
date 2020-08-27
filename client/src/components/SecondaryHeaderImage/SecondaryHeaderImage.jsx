@@ -15,8 +15,17 @@ const SecondaryHeaderImage = ({ image, breadcrumbs, name }) => {
         <i>Barc</i> Shelter
       </h1>
       {breadcrumbs}
-      
-      {name && <h1 className="secondary-breadcrumb-name"> > {name}</h1>}
+
+      {name && (
+        <h1 className="secondary-breadcrumb-name">
+          {" "}
+          <i
+            className="fa fa-caret-right"
+            aria-hidden="true"
+          ></i>{" "}
+          {name}
+        </h1>
+      )}
     </div>
     //    <div>
     //      <IndexLink to="/" activeClassName="active">Home</IndexLink>
