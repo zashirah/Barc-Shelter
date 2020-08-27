@@ -22,7 +22,11 @@ const PetDetail = () => {
       <Link to="/adopt" className="breadcrumbs-adoption-link">
         Adoption
       </Link>
-      ><Link className="breadcrumbs-pettype-link" to={`/pets/${type}`}>{type.charAt(0).toUpperCase() + type.slice(1)}s</Link>
+
+      <i className="fa fa-caret-right" aria-hidden="true"></i>
+      <Link className="breadcrumbs-pettype-link" to={`/pets/${type}`}>
+        {type.charAt(0).toUpperCase() + type.slice(1)}s
+      </Link>
     </div>
   );
 
