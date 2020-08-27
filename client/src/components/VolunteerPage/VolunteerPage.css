@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .group-of-dogs {
   width: 100%;
   margin-top: -15px;
@@ -51,4 +55,18 @@
   text-align: center;
   margin-left: 180px;
   width: 90%;
+}
+
+.images-of-people {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 100px;
+  padding: 10px;
+  margin-left: 220px;
+}
+
+.court-school-style {
+  font-size: 45px;
+  text-align: left;
+  text-indent: 180px;
 }
