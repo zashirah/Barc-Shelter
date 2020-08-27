@@ -24,7 +24,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
     event.preventDefault();
     updateApplicant({
       ...applicant,
-      windowScreenIndicator: false,
+      windowScreenIndicator: "No",
     });
   };
 
@@ -32,7 +32,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
     event.preventDefault();
     updateApplicant({
       ...applicant,
-      windowScreenIndicator: true,
+      windowScreenIndicator: "Yes",
     });
   };
 
@@ -40,7 +40,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
     event.preventDefault();
     updateApplicant({
       ...applicant,
-      fenceIndicator: false,
+      fenceIndicator: "No",
     });
   };
 
@@ -48,7 +48,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
     event.preventDefault();
     updateApplicant({
       ...applicant,
-      fenceIndicator: true,
+      fenceIndicator: "Yes",
     });
   };
 
@@ -56,7 +56,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
     event.preventDefault();
     updateApplicant({
       ...applicant,
-      yardIndicator: false,
+      yardIndicator: "No",
     });
   };
 
@@ -64,7 +64,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
     event.preventDefault();
     updateApplicant({
       ...applicant,
-      yardIndicator: true,
+      yardIndicator: "Yes",
     });
   };
 
@@ -298,7 +298,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
           </label>
           <input
             className={`form-input-button ${
-              applicant.yardIndicator ? "button-shade" : "none"
+              applicant.yardIndicator === "Yes" ? "button-shade" : "none"
             }`}
             type="button"
             name="yardIndicatorYes"
@@ -308,7 +308,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
           />
           <input
             className={`form-input-button ${
-              !applicant.yardIndicator ? "button-shade" : "none"
+              applicant.yardIndicator === "No" ? "button-shade" : "none"
             }`}
             type="button"
             name="yardIndicatorNo"
@@ -322,7 +322,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
           </label>
           <input
             className={`form-input-button ${
-              applicant.fenceIndicator ? "button-shade" : "none"
+              applicant.fenceIndicator === "Yes" ? "button-shade" : "none"
             }`}
             type="button"
             name="fenceIndicatorYes"
@@ -332,7 +332,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
           />
           <input
             className={`form-input-button ${
-              !applicant.fenceIndicator ? "button-shade" : "none"
+              applicant.fenceIndicator === "No" ? "button-shade" : "none"
             }`}
             type="button"
             name="fenceIndicatorNo"
@@ -346,7 +346,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
           </label>
           <input
             className={`form-input-button ${
-              applicant.windowScreenIndicator ? "button-shade" : "none"
+              applicant.windowScreenIndicator === "Yes" ? "button-shade" : "none"
             }`}
             type="button"
             name="windowScreenIndicatorYes"
@@ -356,7 +356,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
           />
           <input
             className={`form-input-button ${
-              !applicant.windowScreenIndicator ? "button-shade" : "none"
+              applicant.windowScreenIndicator === "No" ? "button-shade" : "none"
             }`}
             type="button"
             name="windowScreenIndicatorNo"
