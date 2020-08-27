@@ -1,7 +1,6 @@
 .bg_image {
   background-image: url("./bitmap.jpg");
-  margin-top: -30px;
-  margin:0 auto;
+  margin-top: -113px;
   height: 750px;
   background-size: 1440px 650px;
   background-repeat: no-repeat;
@@ -31,6 +30,7 @@
   /* left: 250px;
   top: 440px; */
   background-color: #d65f06;
+  cursor: pointer;
 }
 
 .Barc {
