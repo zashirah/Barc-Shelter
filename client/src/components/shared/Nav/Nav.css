@@ -56,21 +56,14 @@ nav {
   }
 }
 /* how to grab dropdown from a tag below w/o changing all */
-.navbar,
+.navb,
 a {
   font-size: 24px;
   color: white;
-  text-align: center;
+  text-align: auto;
   padding: 14px 16px;
   text-decoration: none;
 }
-
-/* .dropdownb {
-  float: left;
-  overflow: hidden;
-  color: white;
-  text-align: center;
-} */
 
 .dropdown-contentb,
 a.linkb {
@@ -91,11 +84,10 @@ a.linkb {
   font-family: inherit;
 }
 
-.navbarb option:hover,
+/* .navbarb option:hover,
 .dropdownb:hover .dropbtnb {
   background-color: rgba(20, 20, 18, 0.876);
-  width: 150px;
-}
+} */
 
 .dropdown-contentb {
   color: white;
@@ -103,7 +95,6 @@ a.linkb {
   position: absolute;
   background-color: rgba(20, 20, 18, 0.876);
   min-width: 160px;
-  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
   z-index: 1;
   color: white;
 }
@@ -117,11 +108,12 @@ a.linkb {
   text-align: left;
 }
 a.linkb:hover {
+  width: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.dropdown-contentb option:hover {
+/* .dropdown-contentb option:hover {
   background-color: white;
-}
+} */
 
 .dropdownb:hover .dropdown-contentb {
   display: block;
