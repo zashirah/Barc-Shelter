@@ -1,9 +1,21 @@
 .bg_image {
   background-image: url("./bitmap.jpg");
-  margin-top: -30px;
+  margin-top: -113px;
   height: 750px;
-  background-size: 1840px 650px;
+  background-size: 1440px 650px;
   background-repeat: no-repeat;
+}
+.message-box{
+  display:flex;
+  height:750px;
+  flex-direction:column;
+  margin:0 auto;
+  /* margin-top:100px; */
+}
+.alignment-box{
+  max-width:440px;
+  margin-left:50px;
+  margin-top:150px;
 }
 
 .Adopt-me {
@@ -14,20 +26,24 @@
   font-weight: 800;
   border-radius: 10px;
   color: white;
-  position: absolute;
-  left: 250px;
-  top: 440px;
+  /* position: absolute; */
+  /* left: 250px;
+  top: 440px; */
   background-color: #d65f06;
+  cursor: pointer;
 }
 
 .Barc {
-  width: 547px;
+  
+  margin:0 auto;
+  margin-bottom: 40px;
+  width: 456px;
   height: 55px;
   font-family: Georgia;
   font-size: 50px;
-  position: absolute;
-  left: 150px;
-  top: 130px;
+  /* position: absolute; */
+  /* left: 150px;
+  top: 130px; */
   color: white;
 }
 
@@ -38,7 +54,7 @@
   font-size: 48px;
   font-weight: bold;
   color: white;
-  position: absolute;
-  left: 170px;
-  top: 220px;
+  /* position: absolute; */
+  /* left: 170px;
+  top: 220px; */
 }

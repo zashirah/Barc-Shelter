@@ -7,25 +7,35 @@ import aboutUs from "./about-us.jpg"
 
 const HomePageCards = () => {
   return (
-    <div>
+    <div className="cards-div">
+      <div>
       <h1 className="happy-trails">Happy Trails</h1>
       <div className="cat-in-cage">
-        <img src={catCage} alt="Cat" />
+        <img src={catCage} alt="cat" />
       </div>
+      </div>
+      <div>
       <h1 className="lost">Lost Dog/Cats</h1>
       <div className="lost-dog">
-        <img src={lostDog} alt="Lost Dog" />
+        <img src={lostDog} alt="lost" />
       </div>
+      </div>
+      <div>
       <h1 className="news-paper">Events</h1>
       <div className="daily-kibble">
-        <img src={dailyKibble} alt="News" />
+        <img src={dailyKibble} alt="news" />
       </div>
+      </div>
+      <div>
       <h1 className="about">About Us</h1>
       <div className="about-us">
-        <img src={aboutUs} alt="Bio" />
+        <img src={aboutUs} alt="bio" />
+      </div>
       </div>
     </div>
   )
 }
+
+
 
 export default HomePageCards

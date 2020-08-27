@@ -8,11 +8,16 @@ import whiteDog from "./whiteDog.jpg"
 
 const HomePageLargeSection = () => {
   return (
-    <>
+    <div className="main">
+      <div className="first-section">
       <img src={cat} alt="Cat" className="Cat" />
       <h1 className="welcome">
-        WELCOME TO <b>BARC Shelter</b>
+      WELCOME TO <b>BARC Shelter</b>
       </h1>
+      </div>
+     
+     
+    
       <h2 className="animals">"Life is great, animals make it better"</h2>
       <img src={dog} alt="Dog" className="Dog" />
       <div className="image">
@@ -41,7 +46,7 @@ const HomePageLargeSection = () => {
           <button className="donate">Donate Now</button>
         </Link>
       </div>
-    </>
+    </div>
   )
 }
 

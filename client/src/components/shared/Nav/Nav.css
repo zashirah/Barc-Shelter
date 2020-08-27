@@ -2,11 +2,10 @@
 
 nav {
   flex: 1;
-  position: fixed;
+  position: sticky;
   width: 1440px;
   height: 101px;
   z-index: 1;
-  top: 0;
   left: 0;
   width: 100%;
   margin: 0 auto;
