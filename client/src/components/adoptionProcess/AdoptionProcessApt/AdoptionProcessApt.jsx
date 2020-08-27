@@ -13,7 +13,7 @@ const AdoptionProcessApt = ({ applicants, applicant, updateApplicant }) => {
     event.preventDefault();
     updateApplicant({
       ...applicant,
-      currentlyOwnPetIndicator: false,
+      currentlyOwnPetIndicator: "No",
     });
   };
 
@@ -21,7 +21,7 @@ const AdoptionProcessApt = ({ applicants, applicant, updateApplicant }) => {
     event.preventDefault();
     updateApplicant({
       ...applicant,
-      currentlyOwnPetIndicator: true,
+      currentlyOwnPetIndicator: "Yes",
     });
   };
 
@@ -42,13 +42,13 @@ const AdoptionProcessApt = ({ applicants, applicant, updateApplicant }) => {
         ))}
       </div>
       <form>
-        <label htmlFor="currentlyOwnPetIndicator">
-          Do you have a pet to bring in at the appointment?
+        <label htmlFor="currentlyOwnPetIndicator" className="form-have-pet">
+          <span className="required">*</span>Do you have a pet to bring in at the appointment?
         </label>
 
         <input
           className={`form-input-button ${
-            applicant.currentlyOwnPetIndicator ? "button-shade" : "none"
+            applicant.currentlyOwnPetIndicator === "Yes" ? "button-shade" : "none"
           }`}
           type="button"
           name="currentlyOwnPetIndicatorYes"
@@ -58,7 +58,7 @@ const AdoptionProcessApt = ({ applicants, applicant, updateApplicant }) => {
         />
         <input
           className={`form-input-button ${
-            !applicant.currentlyOwnPetIndicator ? "button-shade" : "none"
+            applicant.currentlyOwnPetIndicator === 'No' ? "button-shade" : "none"
           }`}
           type="button"
           name="currentlyOwnPetIndicatorNo"
@@ -67,6 +67,7 @@ const AdoptionProcessApt = ({ applicants, applicant, updateApplicant }) => {
           onClick={handleHavePetNoClick}
         />
       </form>
+      <h3 className="required">* Required</h3>
     </div>
   );
 };

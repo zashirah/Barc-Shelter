@@ -1,0 +1,18 @@
+.applicant-card {
+  height: 100px;
+  width: 400px;
+  border: solid 1px gray;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.applicant-name-div {
+   color: black;
+   font-size: 18px;
+ }
+
+.applicant-appt-div {
+   color: black;
+   font-size: 18px;
+ }

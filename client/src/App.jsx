@@ -11,6 +11,9 @@ import PetDetail from "./screens/PetDetail/PetDetail";
 import AdoptionProcess from "./screens/AdoptionProcess/AdoptionProcess"
 import Donate from "./screens/Donation/Donate"
 import Volunteer from "./screens/Volunteer/Volunteer"
+// import Applicant from "./screens/Applicant/Applicant";
+import EditApplicant from "./screens/EditApplicant/EditApplicant";
+import Applicants from "./screens/Applicants/Applicants";
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
         {/* <Route exact path="/pets/:id/edit" component={EditPet} /> */}
         <Route exact path="/pet/:id" component={PetDetail} />
         <Route exact path="/adopt" component={AdoptionProcess} />
+        <Route exact path="/applicants" component={Applicants} />
+        {/* <Route path="/applicants/:applicantId" component={Applicant} /> */}
+        <Route path="/applicants/:applicantId/edit" component={EditApplicant} />
       </Switch>
     </div>
   );
