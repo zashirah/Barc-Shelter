@@ -13,6 +13,7 @@ const AdoptionProcessNodes = ({ updateStage, stage }) => {
       <NodeCircle
         number={1}
         nodeCircleStage={stage === 1 ? "current-node" : "previous-node"}
+        updateStage={updateStage}
       />
       <NodeLine
         nodeLineStage={stage > 1 ? "previous-node-line" : "upcoming-node-line"}
@@ -26,6 +27,7 @@ const AdoptionProcessNodes = ({ updateStage, stage }) => {
             ? "current-node"
             : "previous-node"
         }
+        updateStage={updateStage}
       />
       <NodeLine
         nodeLineStage={stage > 2 ? "previous-node-line" : "upcoming-node-line"}
@@ -39,13 +41,21 @@ const AdoptionProcessNodes = ({ updateStage, stage }) => {
             ? "current-node"
             : "upcoming-node"
         }
+        updateStage={updateStage}
       />
       <NodeLine
         nodeLineStage={stage > 3 ? "previous-node-line" : "upcoming-node-line"}
       />
       <NodeCircle
         number={4}
-        nodeCircleStage={stage === 4 ? "current-node" : stage === 5 ? "previous-node" : "upcoming-node"}
+        nodeCircleStage={
+          stage === 4
+            ? "current-node"
+            : stage === 5
+            ? "previous-node"
+            : "upcoming-node"
+        }
+        updateStage={updateStage}
       />
     </div>
   );
