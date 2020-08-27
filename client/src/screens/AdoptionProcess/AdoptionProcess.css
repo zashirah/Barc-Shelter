@@ -1,3 +1,7 @@
+.adoption-page-div {
+  padding-bottom: 50px;
+}
+
 .adoption-process-buttons {
   display: flex;
   flex-direction: row;
@@ -32,4 +36,26 @@
   border: none;
   border-radius: 10px;
   background-color: rgb(174, 174, 174);
+}
+
+.form-email {
+  width: 400px;
+  height: 45px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.form-email-label {
+  height: 85px;
+  font-size: 24px;
+}
+
+.required {
+  color: red;
+  font-size: 24px;
+}
+
+.email-subform-container {
+  text-align: left;
+  width: 375px;
 }

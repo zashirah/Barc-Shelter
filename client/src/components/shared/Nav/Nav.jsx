@@ -5,22 +5,21 @@ import { NavLink } from "react-router-dom";
 const Nav = () => {
   return (
     <nav>
-      <div className="nav">
-        <div className="links">
-          <NavLink className="link" to="/">
+      <div className="navb">
+        <div className="linksb">
+          <NavLink className="linkb" to="/">
             HOME
           </NavLink>
-          <div className="dropdown">
+          <div className="dropdownb">
             <NavLink to="/adopt">
-              <button className="dropbtn">
-                ADOPT
-                <i className="fa fa-caret-down"></i>
+              <button className="dropbtnb">
+                <NavLink to="/ADOPT">
+                  <div>ADOPT</div>
+                </NavLink>
+                {/* <i className="fa fa-caret-downb"></i> */}
               </button>
             </NavLink>
-            <div className="dropdown-content">
-              <NavLink to="/ADOPT">
-                <div>ADOPT</div>
-              </NavLink>
+            <div className="dropdown-contentb">
               <NavLink to="/pets/cat">
                 <div>CAT</div>
               </NavLink>
@@ -29,32 +28,31 @@ const Nav = () => {
               </NavLink>
             </div>
           </div>
-          <NavLink className="link" to="/volunteer">
+          <NavLink className="linkb" to="/volunteer">
             VOLUNTEER
           </NavLink>
-          <NavLink className="link" to="/donate">
-            Donate
+          <NavLink className="linkb" to="/donate">
+            DONATE
           </NavLink>
-          <NavLink className="link" to="/">
+          <NavLink className="linkb" to="/">
             EVENTS
           </NavLink>
-          <NavLink className="link" to="/">
+          <NavLink className="linkb" to="/">
             CONTACT
           </NavLink>
-          <NavLink className="link" to="/">
+          <NavLink className="linkb" to="/">
             ABOUT
           </NavLink>
-          <div className="dropdown">
+          <div className="dropdownb">
             <NavLink to="/adopt">
-              <button className="dropbtn">
-                MORE...
-                <i className="fa fa-caret-down"></i>
+              <button className="dropbtnb">
+                <NavLink to="/pets/cat">
+                  <div>MORE...</div>
+                </NavLink>
+                {/* <i className="fa fa-caret-downb"></i> */}
               </button>
             </NavLink>
-            <div className="dropdown-content">
-              <NavLink to="/pets/cat">
-                <div>MORE...</div>
-              </NavLink>
+            <div className="dropdown-contentb">
               <NavLink to="/pets/cat">
                 <div>LOST DOGS/CATS</div>
               </NavLink>

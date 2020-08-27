@@ -1,14 +1,11 @@
 .outer-box{
-  border-style:solid;
   width:285px;
-  height:365px;
+  height:368px;
   font-size:0;
   box-shadow:0 2px 4px 0 rgb(0, 0, 0, 0.5 )
   
 }
 .cat-info-box{
-  /* border-style:solid; */
-  /* height:61px; */
   display:grid;
   margin: auto;
   text-align:center;
@@ -18,10 +15,7 @@
   
 }
 .cat-name{
-  /* border-style:solid; */
-  /* height:61px;
-  display:grid;
-  margin: auto; */
+  color:black;
   text-align:center;
   
 
@@ -29,15 +23,11 @@
   
 }
 .cat-age{
-  /* border-style:solid; */
-  /* width:142px;
-  height:61px; */
-  /* display:grid;
-  margin: auto;
-  text-align:center; */
+  color:black;
 }
 .pet-card-image{
 width:285px;
 height: 285px;
+box-shadow:0 2px 4px 0 rgb(0, 0, 0, 0.5 )
 
 }
