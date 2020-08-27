@@ -27,7 +27,7 @@ export const createApplicant = async (applicant) => {
   }
 };
 
-export const updateApplicant = async (id, applicant) => {
+export const updateApplicantInfo = async (id, applicant) => {
   try {
     const response = await api.put(`/applicants/${id}`, applicant);
     return response.data;

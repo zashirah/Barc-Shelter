@@ -6,12 +6,20 @@ import { Link } from 'react-router-dom'
 
 const ApplicantCard = ({ applicant }) => {
   return (
-    <Link classaName="link" to={`/applicant/${applicant._id}`}>
+    // <Link to={`/applicants/${applicant._id}`}>
       <div className="applicant-card">
-        <div>Name: {applicant.applicantName} </div>
-        <div>Appointment Time: {applicant.appointment}</div>
+        <div className="applicant-name-div">
+          Name: {applicant.applicantName}{" "}
+        </div>
+        <div className="applicant-appt-div">
+          Appointment Time: {applicant.appointment}
+        </div>
+        <Link to={`/applicants/${applicant._id}/edit`}>
+          <button>Edit</button>
+        </Link>
+        <button>Delete</button>
       </div>
-    </Link>
+    // </Link>
   );
 }
 

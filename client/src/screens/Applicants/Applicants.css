@@ -5,11 +5,3 @@
   align-items: center;
 }
 
-.applicant-card {
-  height: 50px;
-  width: 400px;
-  border: solid 1px gray;
-  border-radius: 15px;
-  margin: 15px;
-  padding: 10px;
-}
