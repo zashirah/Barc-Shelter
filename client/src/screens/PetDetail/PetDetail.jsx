@@ -31,7 +31,7 @@ const PetDetail = () => {
         <div>
           <SecondaryHeaderImage image={headerImage} />
           <div className="pet-detail-top-section">
-            <Carousel />
+            <Carousel petImages={pet.images}/>
             <InfoSection
               name={pet.name}
               age={pet.age}
