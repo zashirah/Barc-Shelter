@@ -6,14 +6,11 @@ import Location from "../Images/Location.png";
 const MapFunction = () => {
   // Import result is the URL of your image
   return (
-    <img
-      className="img"
-      width={150}
-      height={120}
-      mode="fit"
-      src={Location}
-      alt="Location"
-    />
+    <iframe
+      width="250"
+      height="250"
+      src="https://www.google.com/maps?q=barc+shelter+new+york&amp;output=embed"
+    ></iframe>
   );
 };
 export default MapFunction;
