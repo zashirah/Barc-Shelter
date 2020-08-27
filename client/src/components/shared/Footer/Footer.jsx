@@ -4,6 +4,7 @@ import "./Footer.css";
 import ReactDOM from "react-dom";
 import { SocialMediaIconsReact } from "social-media-icons-react";
 import MapFunction from "../Map/MapFunction";
+import SmallButton from "../SmallButton/SmallButton";
 
 const Footer = () => {
   return (
@@ -101,7 +102,7 @@ const Footer = () => {
       <div className="col">
         <ul className="ul-layout">
           <h3 className="h3-layout">CONTACT US</h3>
-          {/* Donate button */}
+          <SmallButton buttonText={"Donate"} buttonColor={"gold"} />
         </ul>
       </div>
     </footer>
