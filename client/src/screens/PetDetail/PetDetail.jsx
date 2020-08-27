@@ -15,7 +15,16 @@ import headerImage from "./screen-shot-2020-07-30-at-2-40-59-pm.png";
 
 const PetDetail = () => {  
   const [pet, setPet] = useState(null);
-  const { id } = useParams();
+  const { id, type } = useParams();
+
+  const BreadcrumbsJSX = (
+    <div className="breadcrumbs-div">
+      <Link to="/adopt" className="breadcrumbs-adoption-link">
+        Adoption
+      </Link>
+      ><Link className="breadcrumbs-pettype-link" to={`/pets/${type}`}>{type.charAt(0).toUpperCase() + type.slice(1)}s</Link>
+    </div>
+  );
 
   useEffect(() => {
     const fetchPet = async () => {
@@ -30,7 +39,11 @@ const PetDetail = () => {
     return (
       <Layout>
         <div>
-          <SecondaryHeaderImage image={headerImage} />
+          <SecondaryHeaderImage
+            image={headerImage}
+            name={pet.name}
+            breadcrumbs={BreadcrumbsJSX}
+          />
           <div className="pet-detail-top-section">
             <Carousel petImages={pet.images} />
             <InfoSection

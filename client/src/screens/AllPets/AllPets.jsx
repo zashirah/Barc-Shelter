@@ -95,7 +95,7 @@ const AllPets = () => {
       <Link to="/adopt" className="breadcrumbs-adoption-link">
         Adoption
       </Link>
-      > {params.type.toUpperCase()}
+      > {params.type.charAt(0).toUpperCase() + params.type.slice(1)}s
     </div>
   );
 
