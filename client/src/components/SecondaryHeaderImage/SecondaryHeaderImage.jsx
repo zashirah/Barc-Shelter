@@ -11,7 +11,7 @@ const SecondaryHeaderImage = ({ image }) => {
         src={image}
         alt="Header Image of Pet(s)"
       />
-      <h1 className="secondary-header-image-title">Barc Shelter</h1>
+      <h1 className="secondary-header-image-title"><i>Barc</i> Shelter</h1>
     </div>
     //    <div>
     //      <IndexLink to="/" activeClassName="active">Home</IndexLink>
