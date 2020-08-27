@@ -12,7 +12,7 @@ const AnimalCard = ({ name, age, images, id }) => {
           <h1>{name}</h1>
         </div>
         <div className="cat-age">
-        <h1>{age}</h1>
+        <h1>Age: {age}</h1>
         </div>
       </div>
     </div>
