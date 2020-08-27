@@ -60,6 +60,7 @@
   left: 1250px;
   top: 1450px;
   background-color: #d65f06;
+  cursor: pointer;
 }
 
 .orangeCat {
@@ -113,4 +114,5 @@
   margin-right: 950px;
   margin-top: 250px;
   background-color: #d65f06;
+  cursor: pointer;
 }
