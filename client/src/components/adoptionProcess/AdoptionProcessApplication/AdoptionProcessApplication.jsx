@@ -72,8 +72,8 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
     event.preventDefault();
     updateApplicant({
       ...applicant,
-      houseIndicator: true,
-      apartmentIndicator: false,
+      houseIndicator: "Yes",
+      apartmentIndicator: "No",
       homeTypeOther: '',
     });
   };
@@ -82,9 +82,9 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
     event.preventDefault();
     updateApplicant({
       ...applicant,
-      houseIndicator: false,
-      apartmentIndicator: true,
-      homeTypeOther: '',
+      houseIndicator: "No",
+      apartmentIndicator: "Yes",
+      homeTypeOther: "",
     });
   };
 
@@ -261,7 +261,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
           </label>
           <input
             className={`form-input-button ${
-              applicant.houseIndicator ? "button-shade" : "none"
+              applicant.houseIndicator === "Yes" ? "button-shade" : "none"
             }`}
             type="button"
             name="houseIndicator"
@@ -271,7 +271,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
           />
           <input
             className={`form-input-button ${
-              applicant.apartmentIndicator ? "button-shade" : "none"
+              applicant.apartmentIndicator === "Yes" ? "button-shade" : "none"
             }`}
             type="button"
             name="apartmentIndicator"
