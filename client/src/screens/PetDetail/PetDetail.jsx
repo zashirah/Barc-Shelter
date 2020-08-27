@@ -40,8 +40,6 @@ const PetDetail = () => {
               bioPersonality={pet.bioPersonality}
             />
           </div>
-          <button>Edit</button>
-          <button onClick={() => deletePet(pet._id)}>Delete</button>
           <EligibilityInformationSection />
         </div>
       </Layout>
