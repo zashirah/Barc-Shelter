@@ -7,12 +7,14 @@
   align-content:center;
   grid-row-gap: 50px;
   grid-column-gap: 50px;
+  margin:10px;
 }
 
 .sort{
 max-width:1040px;
 display:grid;
 justify-content: flex-end;
+margin:20px;
 }
 
 .big-box{
