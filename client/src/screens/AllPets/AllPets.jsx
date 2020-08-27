@@ -47,14 +47,14 @@ const AllPets = () => {
       case "age-descending":
         setQueriedPets(OY(queriedPets));
         break;
-      case "shelteredTime-ascending":
-        setQueriedPets(shelterYoungest(queriedPets));
-        break;
-      case "shelteredTime-descending":
-        setQueriedPets(shelterLongest(queriedPets));
-        break;
-      default:
-        break;
+      // case "shelteredTime-ascending":
+      //   setQueriedPets(shelterYoungest(queriedPets));
+      //   break;
+      // case "shelteredTime-descending":
+      //   setQueriedPets(shelterLongest(queriedPets));
+      //   break;
+      // default:
+      //   break;
     }
   };
 
@@ -65,6 +65,8 @@ const AllPets = () => {
         name={pet.name}
         age={pet.age}
         images={pet.images[0]}
+        // type={pet.type}
+        id={pet._id}
         key={index}
       />
     ));
