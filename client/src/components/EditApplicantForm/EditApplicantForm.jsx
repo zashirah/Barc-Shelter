@@ -1,8 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-import "./AdoptionProcessApplication.css";
+import { useParams, Redirect } from 'react-router-dom' 
 
-const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
+import "./EditApplicantForm.css"
+
+import { updateApplicantInfo, getApplicant } from "../../services/applicant"
+
+const EditApplicantForm = () => {
+  const params = useParams()
+
+  const [applicant, updateApplicant] = useState({
+    applicantName: "",
+    dateOfBirth: "",
+    address: "",
+    aptNum: "",
+    cityState: "",
+    phone: "",
+    mobile: "",
+    hearAboutUs: "",
+    employer: "",
+    position: "",
+    workSchedule: "",
+    employmentLength: "",
+    yearlyIncome: "",
+    apartmentIndicator: "",
+    houseIndicator: "",
+    homeTypeOther: "",
+    yardIndicator: "",
+    fenceIndicator: "",
+    windowScreenIndicator: "",
+    currentlyOwnPetIndicator: "",
+    email: "",
+    appointment: "",
+  })
+
+  const [isUpdated, setUpdated] = useState(false);
+
+  useEffect(() => {
+    const fetchApplicant = async () => {
+      const applicant = await getApplicant(params.applicantId)
+      updateApplicant(applicant)
+    }
+    fetchApplicant()
+  }, [params.id])
+ 
   const handleChange = (event) => {
     const { name, value } = event.target;
     if (name === "homeTypeOther") {
@@ -74,7 +115,7 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
       ...applicant,
       houseIndicator: true,
       apartmentIndicator: false,
-      homeTypeOther: '',
+      homeTypeOther: "",
     });
   };
 
@@ -84,14 +125,29 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
       ...applicant,
       houseIndicator: false,
       apartmentIndicator: true,
-      homeTypeOther: '',
+      homeTypeOther: "",
     });
   };
 
+  const handleEditSubmit = async (event) => {
+    event.preventDefault()
+    console.log('checking')
+    const updated = await updateApplicantInfo(applicant._id, applicant);
+    console.log("updated", updated);
+    setUpdated(updated);
+  }
+   
+  if (isUpdated) {
+     return <Redirect to={`/applicants`} />;
+  }
+
   return (
-    <div className="application-form-container">
+    <div className="edit-application-form-container">
       <h2 className="application-form-title">Application Form</h2>
-      <form className="application-form">
+      <form
+        className="application-form"
+        onSubmit={handleEditSubmit}
+      >
         <h3 className="subscetion-title">Personal Information</h3>
         <div className="form-personal-info form-subsection">
           <label className="input-label" htmlFor="applicantName">
@@ -104,7 +160,6 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
             name="applicantName"
             id="applicantName"
             onChange={handleChange}
-            required
             autoFocus
           />
           <label className="input-label" htmlFor="dateOfBirth">
@@ -346,7 +401,9 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
           </label>
           <input
             className={`form-input-button ${
-              applicant.windowScreenIndicator === "Yes" ? "button-shade" : "none"
+              applicant.windowScreenIndicator === "Yes"
+                ? "button-shade"
+                : "none"
             }`}
             type="button"
             name="windowScreenIndicatorYes"
@@ -365,9 +422,16 @@ const AdoptionProcessApplication = ({ applicant, updateApplicant }) => {
             onClick={handleWindowNoClick}
           />
         </div>
+        <label htmlFor="submitButton"></label>
+        <input
+          className="edit-applicant-submit-button"
+          type="submit"
+          name="submitButton"
+          id="submitButton"
+        />
       </form>
     </div>
   );
 };
 
-export default AdoptionProcessApplication;
+export default EditApplicantForm;
