@@ -2,6 +2,7 @@ import React from 'react'
 
 import APStartCTAImageCard from "./APStartCTAImageCard/APStartCTAImageCard";
 import APStartCTAButton from "./APStartCTAButton/APStartCTAButton";
+import APStartCTAButtonSmall from "./APStartCTAButtonSmall/APStartCTAButtonSmall";
 
 import "./APStartCTASection.css"
 
@@ -13,7 +14,10 @@ const APStartCTASection = () => {
     <div className="cta-section">
       <div className="cta-see-our-pets">
         <APStartCTAImageCard imageSrc={_2CatsAndADog} />
-        <APStartCTAButton buttonText={"See our Pets!"} />
+        <div>
+          <APStartCTAButtonSmall buttonText={"See our Pets!"} />
+          <APStartCTAButtonSmall buttonText={"See our Pets!"} />
+        </div>
       </div>
       <div className="cta-sponsor-a-pet">
         <APStartCTAImageCard imageSrc={catYawning} />
