@@ -68,6 +68,7 @@ const AllPets = () => {
         // type={pet.type}
         id={pet._id}
         key={index}
+        type={pet.type}
       />
     ));
     updateTableData(petCardsJSX);
