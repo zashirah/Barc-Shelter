@@ -1,5 +1,6 @@
 .applicant-cards {
-  padding-top: 150px;
+  min-height: 800px;
+  padding-top: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
