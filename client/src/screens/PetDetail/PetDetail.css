@@ -1,6 +1,7 @@
 .pet-detail-top-section {
   display: flex;
   flex-direction: row;
+  margin-top: 30px;
 }
 
 .breadcrumbs-pettype-link {
