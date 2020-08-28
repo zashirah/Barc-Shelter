@@ -70,6 +70,7 @@ const Carousel = ({ petImages }) => {
               width: 97.5,
             }}
             src={petImages[index1]}
+            onClick={() => paginate(1)}
           />
           <img
             style={{
@@ -77,6 +78,7 @@ const Carousel = ({ petImages }) => {
               width: 97.5,
             }}
             src={petImages[index2]}
+            onClick={() => paginate(2)}
           />
           <img
             style={{
@@ -84,6 +86,7 @@ const Carousel = ({ petImages }) => {
               width: 97.5,
             }}
             src={petImages[index3]}
+            onClick={() => paginate(3)}
           />
           <img
             style={{
@@ -91,6 +94,7 @@ const Carousel = ({ petImages }) => {
               width: 97.5,
             }}
             src={petImages[index4]}
+            onClick={() => paginate(4)}
           />
         </div>
       </div>
