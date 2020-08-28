@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import "./Confirmation.css"
+import "./Confirmation.css";
 
 const Confirmation = () => {
   return (
@@ -23,10 +23,12 @@ const Confirmation = () => {
           please call us at 718-486-7489.
         </p>
         <p>We're looking forward to introducing you to your new companion!</p>
-        <h2>-BARC Shelter</h2>
+        <h2 className="ap-confirmation-bs-signature">
+          -<i>BARC</i> Shelter
+        </h2>
       </div>
     </div>
   );
-}
+};
 
-export default Confirmation
+export default Confirmation;

@@ -1,8 +1,37 @@
-.adoption-process-nodes {
+.ap-node-and-name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ap-node-previus-button-div {
+  margin-top: 110px;
+}
+
+.adoption-process-nodes,
+.adoption-process-node-names {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   padding-top: 50px;
+}
+
+.adoption-process-nodes {
+  padding-top: 0px;
+}
+
+.adoption-process-node-name {
+  margin-left: 130px;
+  padding-bottom: 5px;
+}
+
+
+.adoption-process-node-name2 {
+  margin-left: 145px
+}
+
+.adoption-process-node-name3 {
+  margin-left: 115px;
 }
