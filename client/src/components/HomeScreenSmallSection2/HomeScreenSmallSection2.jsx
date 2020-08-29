@@ -11,6 +11,8 @@ const HomeScreenSmallSection2 = ({
   rightImageAlt,
   text,
   extraLeftPaddingTop,
+  extraRightPaddingTop,
+  textWidth
 }) => {
   return (
     <div className="home-small-section-container">
@@ -21,12 +23,14 @@ const HomeScreenSmallSection2 = ({
           alt={leftImageAlt}
         />
       </div>
-      <div>{text}</div>
-      <img
-        className="home-small-section-right-pic"
-        src={rightImage}
-        alt={rightImageAlt}
-      />
+      <di style={{maxWidth: `${textWidth}`}}>{text}</di>
+      <div style={{ paddingTop: extraRightPaddingTop }}>
+        <img
+          className="home-small-section-right-pic"
+          src={rightImage}
+          alt={rightImageAlt}
+        />
+      </div>
     </div>
   );
 };

@@ -5,7 +5,15 @@ import "./HomeScreenLargeSection2.css"
 
 import MainButton from "../MainButton/MainButton"
 
-const HomeScreenLargeSection2 = ({ srcImage, srcImageAlt, text, buttonText, buttonLink, leftPadding}) => {
+const HomeScreenLargeSection2 = ({
+  srcImage,
+  srcImageAlt,
+  text,
+  buttonText,
+  buttonLink,
+  leftPadding,
+  fontColor
+}) => {
   return (
     <div className="home-large-section-div">
       <img
@@ -13,7 +21,7 @@ const HomeScreenLargeSection2 = ({ srcImage, srcImageAlt, text, buttonText, butt
         src={srcImage}
         alt={srcImageAlt}
       />
-      <div className={`home-large-section-text-button ${leftPadding}`}>
+      <div className={`home-large-section-text-button ${leftPadding} ${fontColor}`}>
         <div className="home-large-section-text">{text}</div>
         <Link to={buttonLink}>
           <MainButton buttonColor="orange" buttonText={buttonText} />
@@ -21,6 +29,6 @@ const HomeScreenLargeSection2 = ({ srcImage, srcImageAlt, text, buttonText, butt
       </div>
     </div>
   );
-}
+};
 
 export default HomeScreenLargeSection2

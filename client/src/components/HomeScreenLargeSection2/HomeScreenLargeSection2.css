@@ -20,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   font-size: 24px;
-  color: white;
+  /* color: white; */
 }
 
 .home-large-section-left-padding-5 {
@@ -29,4 +29,12 @@
 
 .home-large-section-left-padding-55 {
   left: 55%;
+}
+
+.home-large-section-black-font {
+  color: black;
+}
+
+.home-large-section-white-font {
+  color: white;
 }
