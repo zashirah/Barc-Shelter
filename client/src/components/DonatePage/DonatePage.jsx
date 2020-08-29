@@ -1,24 +1,25 @@
-import React from "react"
-import "./DonatePage.css"
-import hugingDog from "./huging-dog.jpg"
-import amazonWishList from "./bitmap.jpg"
-import donateNow from "./donate-now.jpg"
-import donateMethod from "./payment-type.jpg"
-import resWalk from "./reswalk.jpg"
-import chairDog from "./chair-dog.jpg"
-import hungryCat from "./hungry-cat.jpg"
+// react
+import React from "react";
+
+// css
+import "./DonatePage.css";
+
+// components
+import SecondaryHeaderImage from "../SecondaryHeaderImage/SecondaryHeaderImage"
+
+// assets
+import hugingDog from "./huging-dog.jpg";
+import amazonWishList from "./bitmap.jpg";
+import donateNow from "./donate-now.jpg";
+import donateMethod from "./payment-type.jpg";
+import resWalk from "./reswalk.jpg";
+import chairDog from "./chair-dog.jpg";
+import hungryCat from "./hungry-cat.jpg";
 
 const DonatePage = () => {
   return (
     <div>
-      <div className="first-diva">
-      {/* <img src={hugingDog} alt="Dog" className="huging-dog" /> */}
-      <div className="title-div">
-      <h1 className="donate-header-text">
-        <i>BARC</i> Shelter
-      </h1>
-      </div>
-      </div>
+      <SecondaryHeaderImage image={hugingDog}/>
       <section className="text-container">
         <h1 className="donation-header">Donation</h1>
         <h2 className="tax-deductible">*All donations are tax-deductible</h2>
@@ -28,15 +29,14 @@ const DonatePage = () => {
           <li> Nutrition - We provide quality food.</li>
           <li> Health – We provide vaccinations and inoculations.</li>
           <li>
-             Spay/Neuter – We spay and neuter all of the animals that come into
+            Spay/Neuter – We spay and neuter all of the animals that come into
             our shelter.
           </li>
           <li>
-             Staff – We hire experienced, devoted staff to care for the
-            animals.
+            Staff – We hire experienced, devoted staff to care for the animals.
           </li>
           <li>
-             Facilities maintenance – Your donation helps us to provide
+            Facilities maintenance – Your donation helps us to provide
             electricity, heat, and upkeep of our shelter.
           </li>
         </ul>
@@ -86,7 +86,7 @@ const DonatePage = () => {
         <img src={hungryCat} alt="Cat" className="hungry-cat" />
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default DonatePage
+export default DonatePage;

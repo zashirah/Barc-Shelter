@@ -6,16 +6,20 @@
 .secondary-header-image-div {
   position: relative;
   background-color: rgb(190,170,154);
+  height: 275px;
+  object-fit: fill;
 }
 
 .secondary-header-image {
+  height: 275px;
   width: 100%;
+  object-fit: cover;
 }
 
 .secondary-header-image-title {
   position: absolute;
-  top: 75px;
-  left: 150px;
+  top: 100px;
+  left: 125px;
   color: #2a2a2a;
   font-family: CrimsonText;
   font-size: 44px;
@@ -24,8 +28,8 @@
 
 .secondary-breadcrumb-name {
   position: absolute;
-  top: 130px;
-  left: 475px;
+  top: 155px;
+  left: 450px;
   color: #2a2a2a;
   font-family: CrimsonText;
   font-size: 44px;
