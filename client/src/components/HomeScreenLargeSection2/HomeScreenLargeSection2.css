@@ -1,0 +1,40 @@
+.home-large-section-div {
+  position: relative;
+  height: 650px;
+  width: 100%;
+  /* object-fit: fill; */
+}
+
+.home-large-section-image {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-large-section-text-button {
+  position: absolute;
+  top: 100px;
+  width: 33%;
+  /* padding-left: 10%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  /* color: white; */
+}
+
+.home-large-section-left-padding-5 {
+  left: 5%;
+}
+
+.home-large-section-left-padding-55 {
+  left: 55%;
+}
+
+.home-large-section-black-font {
+  color: black;
+}
+
+.home-large-section-white-font {
+  color: white;
+}
