@@ -54,6 +54,7 @@ const Carousel = ({ petImages }) => {
             height: 400,
             width: 400,
             marginBottom: 2.5,
+            objectFit: "cover",
           }}
         />
         <div
@@ -68,6 +69,7 @@ const Carousel = ({ petImages }) => {
             style={{
               height: 97.5,
               width: 97.5,
+              objectFit: "cover",
             }}
             src={petImages[index1]}
             onClick={() => paginate(1)}
@@ -76,6 +78,7 @@ const Carousel = ({ petImages }) => {
             style={{
               height: 97.5,
               width: 97.5,
+              objectFit: "cover",
             }}
             src={petImages[index2]}
             onClick={() => paginate(2)}
@@ -84,6 +87,7 @@ const Carousel = ({ petImages }) => {
             style={{
               height: 97.5,
               width: 97.5,
+              objectFit: "cover",
             }}
             src={petImages[index3]}
             onClick={() => paginate(3)}
@@ -92,6 +96,7 @@ const Carousel = ({ petImages }) => {
             style={{
               height: 97.5,
               width: 97.5,
+              objectFit: "cover",
             }}
             src={petImages[index4]}
             onClick={() => paginate(4)}
