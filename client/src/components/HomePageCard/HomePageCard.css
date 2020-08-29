@@ -1,0 +1,25 @@
+.home-screen-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.home-screen-card-image {
+  margin-right: 8vw;
+  margin-left: 8vw;
+  border: 10px solid gray;
+}
+
+.home-screen-card-title {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 5px;
+}
+
+.orange-font {
+  color:rgb(214, 95, 6);
+}
+
+.underlined-font {
+  text-decoration: underline;
+}

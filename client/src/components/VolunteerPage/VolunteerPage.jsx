@@ -1,6 +1,14 @@
+// react
 import React from "react"
+
+// css
 import "./VolunteerPage.css"
-import group from "./group.jpg"
+
+// components
+import SecondaryHeaderImage from "../SecondaryHeaderImage/SecondaryHeaderImage"
+
+// assets
+import group from "./group3.png"
 import human1 from "./human1.jpg"
 import human2 from "./human2.jpg"
 import human3 from "./human3.jpg"
@@ -15,15 +23,8 @@ import human9 from "./human9.jpg"
 
 const VolunteerPage = () => {
   return (
-      <div className="">
-        <div className="first-div">
-        {/* <img src={group} alt="Dog" className="group-of-dogs" /> */}
-        <div className="title-div">
-        <h1 className="volunteer-header-text">
-        <i>BARC</i> Shelter
-      </h1>
-        </div>
-        </div>
+    <div className="">
+      <SecondaryHeaderImage image={group}/>
       <main className="main-body">
         <section className="volunteer-container">
           <h1 className="volunteer-heading">Volunteer</h1>
@@ -79,7 +80,7 @@ const VolunteerPage = () => {
             </ul>
           </section>
           <section className="individual-volunteer">
-            <ul className="volunteer-list">
+            <ul className="volunteer-list-with-bullets">
               <li> All BARC dogs must be kept on the leash at all times.</li>
               <li>
                 Please place your hand through the loop on the leash and keep
@@ -138,20 +139,21 @@ const VolunteerPage = () => {
               </li>
             </ul>
           </section>
-          <section className="individual-volunteer">
-            <h1 className="warning-message">
+          <section >
+            <div className="warning-message">
               FAILURE TO COMPLY WITH THESE RULES MAY LEAD TO YOUR VOLUNTEER
               STATUS BEING REVOKED.
-            </h1>
+            </div>
           </section>
+          <br/>
           <section className="individual-volunteer">
-            <h2 className="keep-in-mind">
+            <div className="keep-in-mind">
               *Please keep in mind that we can only give out easy and friendly
               dogs out for walks. If you come by to help with a lot of people,
               you will be asked to share dogs, as usually, we might not have
               dogs that get along with each other. We do not reserve dogs for
               anybody, dog-walking is first come - first serve.
-            </h2>
+            </div>
           </section>
           <section className="individual-volunteer">
             <h2 className="court-school-style">
