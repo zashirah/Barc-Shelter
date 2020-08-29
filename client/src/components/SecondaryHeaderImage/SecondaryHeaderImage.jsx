@@ -12,7 +12,7 @@ const SecondaryHeaderImage = ({ image, breadcrumbs, name }) => {
         alt="Header Image of Pet(s)"
       />
       <h1 className="secondary-header-image-title">
-        <i>Barc</i> Shelter
+        <i>BARC</i> Shelter
       </h1>
       {breadcrumbs}
 
