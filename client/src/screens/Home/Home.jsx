@@ -12,6 +12,8 @@ import "./Home.css";
 import Layout from "../../components/shared/Layout/Layout";
 import HomeScreenLargeSection2 from "../../components/HomeScreenLargeSection2/HomeScreenLargeSection2";
 import HomeScreenSmallSection2 from "../../components/HomeScreenSmallSection2/HomeScreenSmallSection2";
+import HomePageCards2 from "../../components/HomePageCards2/HomePageCards2";
+import HorizaontalAnimalPictureSection from "../../components/HorizontalAnimcalPictureSection/HorizontalAnimcalPictureSection";
 
 // assets
 import largeSectionImage1 from "../../assets/main-large-section-1.png";
@@ -123,6 +125,8 @@ const Home = () => {
         leftPadding="home-large-section-left-padding-5"
         fontColor="home-large-section-black-font"
       />
+      <HomePageCards2 />
+      <HorizaontalAnimalPictureSection />
     </Layout>
   );
 };
