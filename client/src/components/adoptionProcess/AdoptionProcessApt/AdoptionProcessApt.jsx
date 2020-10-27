@@ -28,6 +28,13 @@ const AdoptionProcessApt = ({ applicants, applicant, updateApplicant }) => {
   return (
     <div className="book-appointment-container">
       <h1>Book an Appointment</h1>
+      <h3 className="apt-warning">
+        To Book an Appointment, answer the question at the bottom then double
+        click the time selector.{" "}
+      </h3>
+      <h3 className="apt-warning">
+        Sorry for the inconvenience, we are working to improve this experience.
+      </h3>
       <div className="date-columns-container">
         {dateArray.map((date) => (
           <DayColumn
@@ -43,12 +50,15 @@ const AdoptionProcessApt = ({ applicants, applicant, updateApplicant }) => {
       </div>
       <form>
         <label htmlFor="currentlyOwnPetIndicator" className="form-have-pet">
-          <span className="required">*</span>Do you have a pet to bring in at the appointment?
+          <span className="required">*</span>Do you have a pet to bring in at
+          the appointment?
         </label>
 
         <input
           className={`form-input-button ${
-            applicant.currentlyOwnPetIndicator === "Yes" ? "button-shade" : "none"
+            applicant.currentlyOwnPetIndicator === "Yes"
+              ? "button-shade"
+              : "none"
           }`}
           type="button"
           name="currentlyOwnPetIndicatorYes"
@@ -58,7 +68,9 @@ const AdoptionProcessApt = ({ applicants, applicant, updateApplicant }) => {
         />
         <input
           className={`form-input-button ${
-            applicant.currentlyOwnPetIndicator === 'No' ? "button-shade" : "none"
+            applicant.currentlyOwnPetIndicator === "No"
+              ? "button-shade"
+              : "none"
           }`}
           type="button"
           name="currentlyOwnPetIndicatorNo"
@@ -69,7 +81,7 @@ const AdoptionProcessApt = ({ applicants, applicant, updateApplicant }) => {
       </form>
       <h3 className="required">* Required</h3>
     </div>
-  );
+  )
 };
 
 export default AdoptionProcessApt;
